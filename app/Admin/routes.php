@@ -57,5 +57,9 @@ Route::group([
     $router->resource('icrinetworks', IcrinetworkController::class);
 
     $router->resource('awards', AwardController::class);
+
+    $router->resource('anantapurcampuses', AnantapurcampusesController::class);
+
+    $router->resource('bhopalcampuses', BhopalcampusesController::class);
   
 });
