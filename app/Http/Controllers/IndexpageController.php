@@ -24,6 +24,7 @@ use App\studenttestimonial;
 use App\usefullink;
 use App\lifeaticri;
 use App\icrinetwork;
+use App\award;
 
 
 
@@ -54,11 +55,12 @@ class IndexpageController extends Controller
         $usefullinks = usefullink::orderBy('title','asc')->get();
         $lifeaticris = lifeaticri::orderBy('title','asc')->get();
         $icrinetworks = icrinetwork::orderBy('title','asc')->get();
+        $awards = award::orderBy('title','asc')->get();
      
         
         
         
-        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks' ));
+        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards' ));
     }
     /**
      * Show the form for creating a new resource.

@@ -419,20 +419,26 @@
 
 		    <div id="menu3" class="tab-pane fade row">
 		    	
-			    <div class="col-lg-4">
-			      <div class="position-relative">
-				      <img src="Images/news_and_media.jpg" class="img-fluid">
-				      <a class="image_content" href="#">
-				      	<div class="image_top_cont d-flex justify-content-between">
-				      		<a class="events_link" href="#">Event</a>
-				      		<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i>
-				      	</div>
-				      	<div class="image_bottom_cont">
-				      		<strong>Webinar on Skills for Career Success:</strong><span>During and Post Covid-19</span>
-				      	</div>
-				      </a>
-			      </div>
-			  	</div> 
+			@if(count($awards) > 0)	
+					@foreach($awards as $award)
+				     <div class="col-lg-4">
+				      <div class="position-relative">
+					      <img src="/icriindia/storage/app/public/{{$award->image}}" class="img-fluid">
+					      <a class="image_content" href="#">
+					      	<div class="image_top_cont d-flex justify-content-between">
+					      		<div class="events_link" href="#">ICRI Network</div>
+					      		<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i>
+					      	</div>
+					      	<div class="image_bottom_cont">
+					      		<strong>{{$award->title}}</strong>
+					      	</div>
+					      </a>
+				      </div>
+				  	</div>
+					  @endforeach
+				@endif
+
+
 		    </div>
 
 		</div>

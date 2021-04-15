@@ -55,5 +55,7 @@ Route::group([
     $router->resource('lifeaticris', LifeaticrisController::class);
 
     $router->resource('icrinetworks', IcrinetworkController::class);
+
+    $router->resource('awards', AwardController::class);
   
 });
