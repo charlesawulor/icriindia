@@ -28,6 +28,7 @@ use App\award;
 use App\anantapurcampus;
 use App\bhopalcampus;
 use App\dehraduncampus;
+use App\jaipurcampus;
 
 
 
@@ -62,12 +63,13 @@ class IndexpageController extends Controller
         $anantapurcampuses = anantapurcampus::orderBy('title','asc')->get();
         $bhopalcampuses = bhopalcampus::orderBy('title','asc')->get();
         $dehraduncampuses = dehraduncampus::orderBy('title','asc')->get();
+        $jaipurcampuses = jaipurcampus::orderBy('title','asc')->get();
        
      
         
         
         
-        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses' ));
+        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses' ));
     }
     /**
      * Show the form for creating a new resource.
