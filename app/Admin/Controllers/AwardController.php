@@ -29,6 +29,7 @@ class AwardController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('image', __('Image'));
         $grid->column('title', __('Title'));
+        $grid->column('content', __('Content'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -48,6 +49,7 @@ class AwardController extends AdminController
         $show->field('id', __('Id'));
         $show->field('image', __('Image'));
         $show->field('title', __('Title'));
+        $show->field('content', __('Content'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -65,6 +67,7 @@ class AwardController extends AdminController
 
         $form->image('image', __('Image'));
         $form->text('title', __('Title'));
+        $form->textarea('content', __('Content'));
 
         return $form;
     }

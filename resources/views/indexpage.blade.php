@@ -375,7 +375,7 @@
 					@foreach($lifeaticris as $lifeaticri)
 				     <div class="col-lg-4">
 				      <div class="position-relative">
-					      <img src="/icriindia/storage/app/public/{{$lifeaticri->image}}" class="img-fluid">
+					      <img style="height:270px;width:100%" src="/icriindia/storage/app/public/{{$lifeaticri->image}}" class="img-fluid">
 					      <a class="image_content" href="#">
 					      	<div class="image_top_cont d-flex justify-content-between">
 					      		<div class="events_link" href="#">Life @ ICRI</div>
@@ -398,7 +398,7 @@
 					@foreach($icrinetworks as $icrinetwork)
 				     <div class="col-lg-4">
 				      <div class="position-relative">
-					      <img src="/icriindia/storage/app/public/{{$icrinetwork->image}}" class="img-fluid">
+					      <img style="height:270px;width:100%" src="/icriindia/storage/app/public/{{$icrinetwork->image}}" class="img-fluid">
 					      <a class="image_content" href="#">
 					      	<div class="image_top_cont d-flex justify-content-between">
 					      		<div class="events_link" href="#">ICRI Network</div>
@@ -406,6 +406,7 @@
 					      	</div>
 					      	<div class="image_bottom_cont">
 					      		<strong>{{$icrinetwork->title}}</strong>
+								  
 					      	</div>
 					      </a>
 				      </div>
@@ -423,14 +424,15 @@
 					@foreach($awards as $award)
 				     <div class="col-lg-4">
 				      <div class="position-relative">
-					      <img src="/icriindia/storage/app/public/{{$award->image}}" class="img-fluid">
+					      <img style="height:270px;width:100%" src="/icriindia/storage/app/public/{{$award->image}}" class="img-fluid">
 					      <a class="image_content" href="#">
 					      	<div class="image_top_cont d-flex justify-content-between">
 					      		<div class="events_link" href="#">ICRI Network</div>
 					      		<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i>
 					      	</div>
 					      	<div class="image_bottom_cont">
-					      		<strong>{{$award->title}}</strong>
+					      		
+								  <strong>{{$award->title}}</strong><span>{{$award->content}}</span>
 					      	</div>
 					      </a>
 				      </div>
