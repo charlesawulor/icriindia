@@ -61,5 +61,7 @@ Route::group([
     $router->resource('anantapurcampuses', AnantapurcampusesController::class);
 
     $router->resource('bhopalcampuses', BhopalcampusesController::class);
+
+    $router->resource('dehraduncampuses', DehraduncampusesController::class);
   
 });
