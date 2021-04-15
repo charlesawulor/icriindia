@@ -351,7 +351,7 @@
 				     <div class="col-lg-4">
 				      <div class="position-relative">
 					      <img src="/icriindia/storage/app/public/{{$event->image}}" class="img-fluid">
-					      <a class="image_content" href="#">
+					      <a class="image_content" href="{{$event->link}}">
 					      	<div class="image_top_cont d-flex justify-content-between">
 					      		<div class="events_link" href="#">Event</div>
 					      		<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i>
@@ -523,7 +523,7 @@
 		
 			{{Form::email('email','',['class' =>'','placeholder' => 'Email'])}}
 			
-			{{Form::submit('Subscribe Now',['class' => 'read_more'])}}
+			{{form::submit('Subscribe Now',['class'=>'btn btn-danger'])}}
 
          {!! Form::close() !!}
 		
