@@ -180,7 +180,7 @@
 			    <a class="nav-link" href="#content_eight" id="tab" role="tab" data-toggle="tab" aria-selected="false">Mangaluru Campus<i class="fa fa-caret-right"></i></a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#content" role="tab" data-toggle="tab" aria-selected="false">Pune Campus<i class="fa fa-caret-right"></i></a>
+			    <a class="nav-link" href="#content_nine" id="tab" role="tab" data-toggle="tab" aria-selected="false">Pune Campus<i class="fa fa-caret-right"></i></a>
 			  </li>
 			</ul>
 
@@ -455,7 +455,7 @@
 
                </div>
 
-				  <div role="tabpanel" class="tab-pane fade" id="content_seven">
+				  <div role="tabpanel" class="tab-pane fade" id="content_nine">
 			  
 			  <div class="campus">
 			  		<div class="camp_title">
@@ -463,19 +463,19 @@
 			  		</div>
 
 
-			  		 @if(count($mumbaicampuses) > 0)	
-					@foreach($mumbaicampuses as $mumbaicampus)    
+			  		 @if(count($punecampuses) > 0)	
+					@foreach($punecampuses as $punecampus)    
 			  		<div class="camp_cont d-flex">
-			  			<img src="/icriindia/storage/app/public/{{$mumbaicampus->image}}" class="img-fluid">
+			  			<img src="/icriindia/storage/app/public/{{$punecampus->image}}" class="img-fluid">
 			  			<div class="camp_cont_disc">
 			  				<div class="camp_cont_disc_title">
-							  {{$mumbaicampus->title}}
+							  {{$punecampus->title}}
 			  				</div>
 			  				<div class="camp_cont_disc_sub_title">
 			  					
 			  				</div>
 			  				<div class="camp_cont_disc_disc">
-			  				{{$mumbaicampus->about}}
+			  				{{$punecampus->about}}
 			  				</div>
 			  				<a href=""><button class="read_more">read<span> more</span></button></a>
 			  			</div>
@@ -758,7 +758,7 @@
 			@if(count($studenttestimonials) > 0)	
 					@foreach($studenttestimonials as $studenttestimonial)
 			   <div id="testi_stdnts" class="tab-pane fade in active show d-flex">
-			    <img src="/icriindia/storage/app/public/{{$studenttestimonial->image}}">
+			    <img  src="/icriindia/storage/app/public/{{$studenttestimonial->image}}">
 			    <div class="reviewer_wrap">
 				    <div class="review">{{$studenttestimonial->message}}
 					</div>
