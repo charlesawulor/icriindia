@@ -30,6 +30,7 @@ use App\bhopalcampus;
 use App\dehraduncampus;
 use App\jaipurcampus;
 use App\mumbaicampus;
+use App\mangalurucampus;
 
 
 
@@ -66,12 +67,13 @@ class IndexpageController extends Controller
         $dehraduncampuses = dehraduncampus::orderBy('title','asc')->get();
         $jaipurcampuses = jaipurcampus::orderBy('title','asc')->get();
         $mumbaicampuses = mumbaicampus::orderBy('title','asc')->get();
+        $mangalurucampuses = mangalurucampus::orderBy('title','asc')->get();
        
      
         
         
         
-        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses' ));
+        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses' ));
     }
     /**
      * Show the form for creating a new resource.

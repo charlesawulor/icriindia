@@ -177,7 +177,7 @@
 			    <a class="nav-link" href="#content_seven" id="tab" role="tab" data-toggle="tab" aria-selected="false">Mumbai Campus<i class="fa fa-caret-right"></i></a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#content" role="tab" data-toggle="tab" aria-selected="false">Mangaluru Campus<i class="fa fa-caret-right"></i></a>
+			    <a class="nav-link" href="#content_eight" id="tab" role="tab" data-toggle="tab" aria-selected="false">Mangaluru Campus<i class="fa fa-caret-right"></i></a>
 			  </li>
 			  <li class="nav-item">
 			    <a class="nav-link" href="#content" role="tab" data-toggle="tab" aria-selected="false">Pune Campus<i class="fa fa-caret-right"></i></a>
@@ -259,9 +259,9 @@
 
 
 
-			  <div role="tabpanel" class="tab-pane fade" id="content_three">
+			    <div role="tabpanel" class="tab-pane fade" id="content_three">
 			  
-			  <div class="campus">
+			      <div class="campus">
 			  		<div class="camp_title">
 			  			<p>Visit</p> <span>Campus</span>
 			  		</div>
@@ -315,7 +315,9 @@
 			  
 			  
 			  </div>
-			  <div role="tabpanel" class="tab-pane fade" id="content_five">
+
+
+		    <div role="tabpanel" class="tab-pane fade" id="content_five">
 			  
 			  <div class="campus">
 			  		<div class="camp_title">
@@ -417,6 +419,76 @@
 			     @endif
 
 			  	</div>
+
+                </div>
+
+
+				  <div role="tabpanel" class="tab-pane fade" id="content_eight">
+			  
+			        <div class="campus">
+			  		<div class="camp_title">
+			  			<p>Visit</p> <span>Campus</span>
+			  		</div>
+
+
+			  		 @if(count($mangalurucampuses) > 0)	
+					@foreach($mangalurucampuses as $mangalurucampus)    
+			  		<div class="camp_cont d-flex">
+			  			<img src="/icriindia/storage/app/public/{{$mangalurucampus->image}}" class="img-fluid">
+			  			<div class="camp_cont_disc">
+			  				<div class="camp_cont_disc_title">
+							  {{$mangalurucampus->title}}
+			  				</div>
+			  				<div class="camp_cont_disc_sub_title">
+			  					
+			  				</div>
+			  				<div class="camp_cont_disc_disc">
+			  				{{$mangalurucampus->about}}
+			  				</div>
+			  				<a href=""><button class="read_more">read<span> more</span></button></a>
+			  			</div>
+			  		</div>
+					  @endforeach
+			     @endif
+
+			  	</div>
+
+               </div>
+
+				  <div role="tabpanel" class="tab-pane fade" id="content_seven">
+			  
+			  <div class="campus">
+			  		<div class="camp_title">
+			  			<p>Visit</p> <span>Campus</span>
+			  		</div>
+
+
+			  		 @if(count($mumbaicampuses) > 0)	
+					@foreach($mumbaicampuses as $mumbaicampus)    
+			  		<div class="camp_cont d-flex">
+			  			<img src="/icriindia/storage/app/public/{{$mumbaicampus->image}}" class="img-fluid">
+			  			<div class="camp_cont_disc">
+			  				<div class="camp_cont_disc_title">
+							  {{$mumbaicampus->title}}
+			  				</div>
+			  				<div class="camp_cont_disc_sub_title">
+			  					
+			  				</div>
+			  				<div class="camp_cont_disc_disc">
+			  				{{$mumbaicampus->about}}
+			  				</div>
+			  				<a href=""><button class="read_more">read<span> more</span></button></a>
+			  			</div>
+			  		</div>
+					  @endforeach
+			     @endif
+
+			  	</div>
+
+
+
+
+
 			  
 			  </div>
 			</div>
