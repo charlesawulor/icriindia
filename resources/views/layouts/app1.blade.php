@@ -166,7 +166,12 @@
 			<div class="socialmedia">
 				<div class="connect_title">Social Connect</div>
 				<div class="social_media_icon">
-					<a href="#"><img src="Images/facebook.png" alt="facebook"></a>
+				@if(count($socialconnectfacebooks) > 0)	
+		     @foreach($socialconnectfacebooks as $socialconnectfacebook)
+					<a href="{{$socialconnectfacebook->link}}"><img src="Images/facebook.png" alt="facebook"></a>
+					@endforeach
+		@endif
+
 					<a href="#"><img src="Images/instagram.png" alt="instagram"></a>
 					<a href="#"><img src="Images/twitter.png" alt="twitter"></a>
 					<a href="#"><img src="Images/linkedin.png" alt="linkedin"></a>

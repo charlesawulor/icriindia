@@ -2,20 +2,20 @@
 
 namespace App\Admin\Controllers;
 
-use App\delhicampus;
+use App\socialconnectfacebook;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class DelhicampusController extends AdminController
+class SocialconnectfacebookController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'delhicampus';
+    protected $title = 'socialconnectfacebook';
 
     /**
      * Make a grid builder.
@@ -24,12 +24,10 @@ class DelhicampusController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new delhicampus());
+        $grid = new Grid(new socialconnectfacebook());
 
         $grid->column('id', __('Id'));
-        $grid->column('image', __('Image'));
-        $grid->column('title', __('Campus Name'));
-        $grid->column('about', __('About Campus'));
+        $grid->column('link', __('Link'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -44,12 +42,10 @@ class DelhicampusController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(delhicampus::findOrFail($id));
+        $show = new Show(socialconnectfacebook::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('image', __('Image'));
-        $show->field('title', __('Campus Name'));
-        $show->field('about', __('About Campus'));
+        $show->field('link', __('Link'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -63,11 +59,9 @@ class DelhicampusController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new delhicampus());
+        $form = new Form(new socialconnectfacebook());
 
-        $form->image('image', __('Image'));
-        $form->text('title', __('Campus Name'));
-        $form->textarea('about', __('About Campus'));
+        $form->url('link', __('Facebook Link'));
 
         return $form;
     }

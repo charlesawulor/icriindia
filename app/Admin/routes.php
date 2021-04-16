@@ -73,5 +73,7 @@ Route::group([
     $router->resource('punecampuses', PunecampusController::class);
 
     $router->resource('delhicampuses', DelhicampusController::class);
+
+    $router->resource('socialconnectfacebooks', SocialconnectfacebookController::class);
   
 });

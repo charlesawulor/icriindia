@@ -32,6 +32,8 @@ use App\jaipurcampus;
 use App\mumbaicampus;
 use App\mangalurucampus;
 use App\punecampus;
+use App\delhicampus;
+use App\socialconnectfacebook;
 
 
 
@@ -70,12 +72,27 @@ class IndexpageController extends Controller
         $mumbaicampuses = mumbaicampus::orderBy('title','asc')->get();
         $mangalurucampuses = mangalurucampus::orderBy('title','asc')->get();
         $punecampuses = punecampus::orderBy('title','asc')->get();
+        $delhicampuses = delhicampus::orderBy('title','asc')->get();
+        $socialconnectfacebooks = socialconnectfacebook::orderBy('link','asc')->get();
+
+
+        
+          
+        
+       
+
+        
        
      
         
         
-        
-        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses' ));
+      
+
+        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks' ));
+
+
+
+
     }
     /**
      * Show the form for creating a new resource.
