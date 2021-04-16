@@ -75,5 +75,9 @@ Route::group([
     $router->resource('delhicampuses', DelhicampusController::class);
 
     $router->resource('socialconnectfacebooks', SocialconnectfacebookController::class);
+
+    $router->resource('socialconnectinstagrams', SocialconnectinstagramController::class);
+
+    $router->resource('socialconnecttwitters', SocialconnecttwitterController::class);
   
 });

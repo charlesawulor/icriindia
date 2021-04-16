@@ -34,6 +34,8 @@ use App\mangalurucampus;
 use App\punecampus;
 use App\delhicampus;
 use App\socialconnectfacebook;
+use App\socialconnectinstagram;
+use App\socialconnecttwitter;
 
 
 
@@ -74,6 +76,8 @@ class IndexpageController extends Controller
         $punecampuses = punecampus::orderBy('title','asc')->get();
         $delhicampuses = delhicampus::orderBy('title','asc')->get();
         $socialconnectfacebooks = socialconnectfacebook::orderBy('link','asc')->get();
+        $socialconnectinstagrams = socialconnectinstagram::orderBy('link','asc')->get();
+        $socialconnecttwitters = socialconnecttwitters::orderBy('link','asc')->get();
 
 
         
@@ -88,7 +92,7 @@ class IndexpageController extends Controller
         
       
 
-        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks' ));
+        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters' ));
 
 
 

@@ -172,8 +172,20 @@
 					@endforeach
 		@endif
 
-					<a href="#"><img src="Images/instagram.png" alt="instagram"></a>
-					<a href="#"><img src="Images/twitter.png" alt="twitter"></a>
+
+		@if(count($socialconnectinstagrams) > 0)	
+		     @foreach($socialconnectinstagrams as $socialconnectinstagram)    
+					<a href="{{$socialconnectinstagram->link}}"><img src="Images/instagram.png" alt="instagram"></a>
+
+					@endforeach
+		@endif
+
+		@if(count($socialconnecttwitters) > 0)	
+		     @foreach($socialconnecttwitters as $socialconnecttwitter)  
+					<a href="#"><img src="{{$socialconnecttwitter->link}}" alt="twitter"></a>
+					@endforeach
+		@endif
+
 					<a href="#"><img src="Images/linkedin.png" alt="linkedin"></a>
 					<a href="#"><img src="Images/youtube.png" alt="youtube"></a>
 					<a href="#"><img src="Images/whats_app.png" alt="whats_app"></a>
