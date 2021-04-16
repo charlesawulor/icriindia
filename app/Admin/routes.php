@@ -69,5 +69,7 @@ Route::group([
     $router->resource('mumbaicampuses', MumbaicampusController::class);
 
     $router->resource('mangalurucampuses', MangalurucampusController::class);
+
+    $router->resource('punecampuses', PunecampusController::class);
   
 });
