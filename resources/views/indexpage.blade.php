@@ -174,7 +174,7 @@
 			    <a class="nav-link" href="#content_six" role="tab" id="tab" data-toggle="tab" aria-selected="false">Jaipur Campus<i class="fa fa-caret-right"></i></a>
 			  </li>
 			  <li class="nav-item">
-			    <a class="nav-link" href="#content" role="tab" data-toggle="tab" aria-selected="false">Mumbai Campus<i class="fa fa-caret-right"></i></a>
+			    <a class="nav-link" href="#content_seven" id="tab" role="tab" data-toggle="tab" aria-selected="false">Mumbai Campus<i class="fa fa-caret-right"></i></a>
 			  </li>
 			  <li class="nav-item">
 			    <a class="nav-link" href="#content" role="tab" data-toggle="tab" aria-selected="false">Mangaluru Campus<i class="fa fa-caret-right"></i></a>
@@ -360,7 +360,7 @@
 			  			<p>Visit</p> <span>Campus</span>
 			  		</div>
 
-					  @if(count($jaipurcampuses) > 0)	
+				 @if(count($jaipurcampuses) > 0)	
 					@foreach($jaipurcampuses as $jaipurcampus)    
 			  		<div class="camp_cont d-flex">
 			  			<img src="/icriindia/storage/app/public/{{$jaipurcampus->image}}" class="img-fluid">
@@ -388,28 +388,33 @@
 			  </div>
 
 
-			  <div role="tabpanel" class="tab-pane fade" id="content_three">
+			  <div role="tabpanel" class="tab-pane fade" id="content_seven">
 			  
 			  <div class="campus">
 			  		<div class="camp_title">
 			  			<p>Visit</p> <span>Campus</span>
 			  		</div>
 
+
+			  		 @if(count($mumbaicampuses) > 0)	
+					@foreach($mumbaicampuses as $mumbaicampus)    
 			  		<div class="camp_cont d-flex">
-			  			<img src="Images/campus.jpg" class="img-fluid">
+			  			<img src="/icriindia/storage/app/public/{{$mumbaicampus->image}}" class="img-fluid">
 			  			<div class="camp_cont_disc">
 			  				<div class="camp_cont_disc_title">
-			  					Anantapur Campus
+							  {{$mumbaicampus->title}}
 			  				</div>
 			  				<div class="camp_cont_disc_sub_title">
-			  					ICRI-Best Innovation University
+			  					
 			  				</div>
 			  				<div class="camp_cont_disc_disc">
-			  					B.E.S.T Innovation University, or by its full name Bharatiya Engineering Science and Technology Innovation University, is a private university situated in Anantapur, Andhra Pradesh, India. ICRI has joined hands with the university with an aim to expand learning horizon for the students. Students can build their careers with specialized BBA, MBA, BSc, MSc programmes in the new-age industries of this decade ie Clinical Research, Healthcare, Logistics, Aviation, AI, Psychology & Nutrition.s
+			  				{{$mumbaicampus->about}}
 			  				</div>
 			  				<a href=""><button class="read_more">read<span> more</span></button></a>
 			  			</div>
 			  		</div>
+					  @endforeach
+			     @endif
 
 			  	</div>
 			  
