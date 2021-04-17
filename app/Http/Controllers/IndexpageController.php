@@ -77,7 +77,7 @@ class IndexpageController extends Controller
         $delhicampuses = delhicampus::orderBy('title','asc')->get();
         $socialconnectfacebooks = socialconnectfacebook::orderBy('link','asc')->get();
         $socialconnectinstagrams = socialconnectinstagram::orderBy('link','asc')->get();
-        $socialconnecttwitters = socialconnecttwitters::orderBy('link','asc')->get();
+        $socialconnecttwitters = socialconnecttwitter::orderBy('link','asc')->get();
 
 
         

@@ -182,7 +182,7 @@
 
 		@if(count($socialconnecttwitters) > 0)	
 		     @foreach($socialconnecttwitters as $socialconnecttwitter)  
-					<a href="#"><img src="{{$socialconnecttwitter->link}}" alt="twitter"></a>
+					<a href="{{$socialconnecttwitter->link}}"><img src="Images/twitter.png" alt="twitter"></a>
 					@endforeach
 		@endif
 
