@@ -81,5 +81,9 @@ Route::group([
     $router->resource('socialconnecttwitters', SocialconnecttwitterController::class);
 
     $router->resource('parenttestimonials', ParenttestimonialController::class);
+
+    $router->resource('industryspeaktestimonials', IndustryspeaktestimonialController::class);
+
+    $router->resource('hiringpartners', HiringpartnerController::class);
   
 });

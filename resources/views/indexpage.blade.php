@@ -785,45 +785,55 @@
 
 			 
 			    <!-- Parents Start -->
+				@if(count($parenttestimonials) > 0)	
+					@foreach($parenttestimonials as $parenttestimonial)
     			<div id="testi_prnts" class="tab-pane fade"> 
     			    <div class="row mt-5">
 			            <div class="col-md-3">
-			                <img  src="/icriindia/storage/app/public/{{$studenttestimonial->image}}">
+			                <img  src="/icriindia/storage/app/public/{{$parenttestimonial->image}}">
 			            </div>
 			            <div class="col-md-9">
 			                <div class="reviewer_wrap">
-            				    <div class="review">{{$studenttestimonial->message}}
+            				    <div class="review">{{$parenttestimonial->message}}
             					</div>
-            					<div class="reviewer">{{$studenttestimonial->name}}</div>
+            					<div class="reviewer">{{$parenttestimonial->name}}</div>
             					<div class="reviewers_designation_view d-flex justify-content-between">
-            						<div class="reviewers_designation">{{$studenttestimonial->course}}</div>
+            						<div class="reviewers_designation">{{$parenttestimonial->course}}</div>
             						<a class="view_all">View all<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i></a>
             					</div>
             				</div>
 			            </div>
 			        </div>
     			</div>
+				@endforeach
+			@endif
     			<!-- Parents End -->
     			
     			<!-- Industry Speaks Start -->
+				@if(count($industryspeaktestimonials) > 0)	
+					@foreach($industryspeaktestimonials as $industryspeaktestimonial)
     			<div id="testi_spkrs" class="tab-pane fade">
     			    <div class="row mt-5">
 			            <div class="col-md-3">
-			                <img  src="/icriindia/storage/app/public/{{$studenttestimonial->image}}">
+			                <img  src="/icriindia/storage/app/public/{{$industryspeaktestimonial->image}}">
 			            </div>
 			            <div class="col-md-9">
 			                <div class="reviewer_wrap">
-            				    <div class="review">{{$studenttestimonial->message}}
+            				    <div class="review">{{$industryspeaktestimonial->message}}
             					</div>
-            					<div class="reviewer">{{$studenttestimonial->name}}</div>
+            					<div class="reviewer">{{$industryspeaktestimonial->name}}</div>
             					<div class="reviewers_designation_view d-flex justify-content-between">
-            						<div class="reviewers_designation">{{$studenttestimonial->course}}</div>
+            						<div class="reviewers_designation">{{$industryspeaktestimonial->course}}</div>
             						<a class="view_all">View all<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i></a>
             					</div>
             				</div>
 			            </div>
 			        </div>
     			</div>
+
+				@endforeach
+			@endif
+
     			<!-- Industry Speaks End -->
 			</div>
 		</div>

@@ -36,6 +36,8 @@ use App\delhicampus;
 use App\socialconnectfacebook;
 use App\socialconnectinstagram;
 use App\socialconnecttwitter;
+use App\parenttestimonial;
+use App\industryspeaktestimonial;
 
 
 
@@ -78,21 +80,13 @@ class IndexpageController extends Controller
         $socialconnectfacebooks = socialconnectfacebook::orderBy('link','asc')->get();
         $socialconnectinstagrams = socialconnectinstagram::orderBy('link','asc')->get();
         $socialconnecttwitters = socialconnecttwitter::orderBy('link','asc')->get();
+        $parenttestimonials = parenttestimonial::orderBy('image','asc')->get();
+        $industryspeaktestimonials = industryspeaktestimonial::orderBy('image','asc')->get();
+        $hiringpartners = hiringpartner::orderBy('image','asc')->get();
 
 
-        
-          
-        
-       
 
-        
-       
-     
-        
-        
-      
-
-        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters' ));
+        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners' ));
 
 
 
