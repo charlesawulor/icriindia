@@ -79,5 +79,7 @@ Route::group([
     $router->resource('socialconnectinstagrams', SocialconnectinstagramController::class);
 
     $router->resource('socialconnecttwitters', SocialconnecttwitterController::class);
+
+    $router->resource('parenttestimonials', ParenttestimonialController::class);
   
 });
