@@ -762,34 +762,69 @@
 			<div class="tab-content test_cont_text">
 			@if(count($studenttestimonials) > 0)	
 					@foreach($studenttestimonials as $studenttestimonial)
-			   <div id="testi_stdnts" class="tab-pane fade in active show d-flex">
-			    <img  src="/icriindia/storage/app/public/{{$studenttestimonial->image}}">
-			    <div class="reviewer_wrap">
-				    <div class="review">{{$studenttestimonial->message}}
-					</div>
-					<div class="reviewer">{{$studenttestimonial->name}}</div>
-					<div class="reviewers_designation_view d-flex justify-content-between">
-						<div class="reviewers_designation">{{$studenttestimonial->course}}</div>
-						<a class="view_all">View all<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i></a>
-					   </div>
-				    </div>
+			   <div id="testi_stdnts" class="tab-pane fade in active show">
+			        <div class="row mt-5">
+			            <div class="col-md-3">
+			                <img  src="/icriindia/storage/app/public/{{$studenttestimonial->image}}">
+			            </div>
+			            <div class="col-md-9">
+			                <div class="reviewer_wrap">
+            				    <div class="review">{{$studenttestimonial->message}}
+            					</div>
+            					<div class="reviewer">{{$studenttestimonial->name}}</div>
+            					<div class="reviewers_designation_view d-flex justify-content-between">
+            						<div class="reviewers_designation">{{$studenttestimonial->course}}</div>
+            						<a class="view_all">View all<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i></a>
+            					</div>
+            				</div>
+			            </div>
+			        </div>
 			  </div>
 			  @endforeach
 			@endif
 
 			 
-			    
-			<div id="testi_prnts" class="tab-pane fade"> 
-			<h3>Menu 1</h3>
-			    <p>Some content in menu 1.</p>
-			  </div>
-
-
-
-			  <div id="testi_spkrs" class="tab-pane fade">
-			    <h3>Menu 2</h3>
-			    <p>Some content in menu 2.</p>
-			  </div>
+			    <!-- Parents Start -->
+    			<div id="testi_prnts" class="tab-pane fade"> 
+    			    <div class="row mt-5">
+			            <div class="col-md-3">
+			                <img  src="/icriindia/storage/app/public/{{$studenttestimonial->image}}">
+			            </div>
+			            <div class="col-md-9">
+			                <div class="reviewer_wrap">
+            				    <div class="review">{{$studenttestimonial->message}}
+            					</div>
+            					<div class="reviewer">{{$studenttestimonial->name}}</div>
+            					<div class="reviewers_designation_view d-flex justify-content-between">
+            						<div class="reviewers_designation">{{$studenttestimonial->course}}</div>
+            						<a class="view_all">View all<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i></a>
+            					</div>
+            				</div>
+			            </div>
+			        </div>
+    			</div>
+    			<!-- Parents End -->
+    			
+    			<!-- Industry Speaks Start -->
+    			<div id="testi_spkrs" class="tab-pane fade">
+    			    <div class="row mt-5">
+			            <div class="col-md-3">
+			                <img  src="/icriindia/storage/app/public/{{$studenttestimonial->image}}">
+			            </div>
+			            <div class="col-md-9">
+			                <div class="reviewer_wrap">
+            				    <div class="review">{{$studenttestimonial->message}}
+            					</div>
+            					<div class="reviewer">{{$studenttestimonial->name}}</div>
+            					<div class="reviewers_designation_view d-flex justify-content-between">
+            						<div class="reviewers_designation">{{$studenttestimonial->course}}</div>
+            						<a class="view_all">View all<i class="fa fa-long-arrow-alt-right" aria-hidden="true"></i></a>
+            					</div>
+            				</div>
+			            </div>
+			        </div>
+    			</div>
+    			<!-- Industry Speaks End -->
 			</div>
 		</div>
 
