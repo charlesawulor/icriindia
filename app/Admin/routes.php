@@ -85,5 +85,7 @@ Route::group([
     $router->resource('industryspeaktestimonials', IndustryspeaktestimonialController::class);
 
     $router->resource('hiringpartners', HiringpartnerController::class);
+
+    $router->resource('courses', courseController::class);
   
 });

@@ -3,6 +3,8 @@
 @extends('layouts.app1')
 
 @section('content')
+
+
 <main>
 <div class="container">
 	
@@ -726,7 +728,6 @@
 		</div>
 	</div>
 </section>
-
 <section class="hostel_facilities">
 	<div class="container d-flex">
 		<div class="right_hostel_content col-lg-6">
@@ -860,4 +861,7 @@
 
 
 </section>
+
+
+
 @endsection

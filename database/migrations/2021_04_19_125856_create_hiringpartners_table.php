@@ -16,12 +16,6 @@ class CreateHiringpartnersTable extends Migration
         Schema::create('hiringpartners', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('image');
-            $table->string('image1');
-            $table->string('image2');
-            $table->string('image3');
-            $table->string('image4');
-            $table->string('image5');
-            $table->string('image6');
             $table->timestamps();
         });
     }

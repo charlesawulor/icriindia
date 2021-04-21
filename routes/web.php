@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +14,20 @@ Route::get('/', function () {
     return view('indexpage');
 });
 
+
+
+
 Route::resource('/','IndexpageController');
 
 Route::resource('subscribers','IndexpageController');
+
+Route::resource('course','CourseController');
+
+Route::resource('header','HeaderController@index');
+
+Route::resource('footer','FooterController');
+
+
+
+
+
