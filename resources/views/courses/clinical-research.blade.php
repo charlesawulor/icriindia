@@ -1,14 +1,19 @@
-<!-- left sticky stuffs end -->
+
+<!-- header end -->
+
+<!-- left sticky stuffs -->
 @extends('layouts.app1')
 
 @section('content')
+<div class="call_func"><img src="Images/call_us_icon.png" class="img-fluid">Free Counselling</div>
+<div class="call_func wp_func"><i class="fa fa-whatsapp"></i>Call Us</div>
+
+<!-- left sticky stuffs end -->
 
 <main class="cr_main">
 	<div class="container">
 		<div class="slider_title">
-	
-			<span>Clinical Research</span>
-	   
+			Clinical<span> Research</span>
 		</div>
 
 	</div>
@@ -50,9 +55,113 @@
 
 
 <section class="cr_clinical_reseach_cont">
-	<div class="row">
+
+	<div class="container d-flex">
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		  <li class="nav-item col-lg-3 col-sm-3 col-3">
+		    <a class="nav-link active" id="tab_ci" data-toggle="tab" href="#tab_ci_tag" role="tab" aria-controls="tab_ci_tag" aria-selected="true">CLINICAL<br>INDUSTRY<span></span></a>
+		  </li>
+		  <li class="nav-item col-lg-5 col-sm-5 col-5">
+		    <a class="nav-link" id="tab_wdpcr" data-toggle="tab" href="#tab_wdpcr_tag" role="tab" aria-controls="tab_wdpcr_tag" aria-selected="false">WHY DEGREE PROGRAMS IN CLINICAL RESEARCH<span></span></a>
+		  </li>
+		  <li class="nav-item col-lg-4 col-sm-4 col-4">
+		    <a class="nav-link" id="tab_dtp" data-toggle="tab" href="#tab_dtp_tag" role="tab" aria-controls="tab_dtp_tag" aria-selected="false">DELIVERABLES OF THE PROGRAM<span></span></a>
+		  </li>
+		</ul>
+	</div>
+
+	<div class="tab-content offer_tab_cont" id="myTabContent">
+		  <div class="tab-pane fade show active" id="tab_ci_tag" role="tabpanel" aria-labelledby="tab_ci_tag">
+		  	<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-sm-6">
+						<div class="cr_sec_disc">
+							Clinical Research industry in India is at its boom as the
+								vaccine development is the global effort which is being done
+								across the nations. In last one year, Clinical Trials are the
+								priority of the nations to make the earth a better place to live.
+								The emergence of Covid19 has impacted lives and is the
+								single factor driving growth in Clinical Trial market. The size of
+								Clinical Trial market is over USD 44.0 billion in 2020 and is
+								expected to grow to double in next 5 years.
+
+						</div>
+					</div>
+			
+					<div class="col-lg-6 col-sm-3 col-sm-6">
+						<img src="Images/clinical_reseach_content.jpg" width="100%" class="cr_cli_re_cont">
+					</div>
+				</div>
+		  	</div>
+
+		  </div>
+		  <div class="tab-pane fade" id="tab_wdpcr_tag" role="tabpanel" aria-labelledby="tab_two">
+		  	<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-sm-6">
+						<div class="cr_sec_disc">
+							<ul>
+								<li><span>Industry has a huge shortage of skilled professionals. The clinical Research
+									Industry is the single filed generating lakhs of job opportunities.</span></li>
+								<li><span>Hence our job oriented program prepares aspirants for niche industries and
+									bridge the gap of demand and supply.</span></li>
+								<li><span>MSc/BSc programme in Clinical Research through ICRI is a unique and
+									well-structured programme to prepare future professionals in Clinical
+									Research, Clinical Data Management / Pharmacovigilance.</span></li>
+							</ul>
+
+						</div>
+					</div>
+			
+					<div class="col-lg-6 col-sm-3 col-sm-6">
+						<div class="cr_sec_disc">
+							<ul>
+								<li><span>The course curriculum is designed to equip aspirants with specialized
+									domain, providing specialized knowledge and training of areas to be
+									served in the clinical Research industry.</span></li>
+								<li><span>This programme provides a blend of practical and classroom teaching
+									which makes you a preferred candidate by your future employer.</span></li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+		  	</div>
+		  </div>
+		  <div class="tab-pane fade" id="tab_dtp_tag" role="tabpanel" aria-labelledby="tab_three">
+		  	<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-sm-6">
+						<div class="cr_sec_disc">
+							<ul>
+								<li><span>Industry Attachments with Project work / Presentations / Industrial
+									Visits / Guest lectures / Seminars / Conferences</span></li>
+								<li><span>This programme provides hands on experience in following training at
+									leading hospitals conducting Clinical Trials in India</span></li>
+								<li><span>Become a part of live projects in clinical trials</span></li>
+							</ul>
+
+						</div>
+					</div>
+			
+					<div class="col-lg-6 col-sm-3 col-sm-6">
+						<div class="cr_sec_disc">
+							<ul>
+								<li><span>Exposure to BAI BE Units</span></li>
+								<li><span>Internship under supervision of doctors</span></li>
+								<li><span>Career opportunity in leading hospitals, CROs and pharma companies</span></li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+		  	</div>
+		  </div>
+		</div>
+
+	<!-- <div class="row">
 		<div class="col-lg-6">
-			<img src="{{ URL::asset('Images/clinical_reseach_content.jpg')}}" class="cr_cli_re_cont"></img>
+			<img src="Images/clinical_reseach_content.jpg" class="cr_cli_re_cont"></img>
 		</div>
 		<div class="col-lg-6">
 			<div class="cr_cli_re_cont_wrap">
@@ -64,19 +173,19 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </section>
 
 
 <section class="cr_why_icri">
-	<div class="container">
+	<div class="container d-flex">
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="position-relative">
 					<div class="cr_icri_hgtxt">ICRi</div>
 					<div class="cr_icri_why">why</div>
 				</div>
-				<img src="{{ URL::asset('Images/why_icri_man.png')}}" class="cr_cli_re_cont_man position-realtive"></img>
+				<img src="Images/why_icri_man.png" class="cr_cli_re_cont_man position-realtive"></img>
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
@@ -101,7 +210,7 @@
 		Offering
 	</div>
 
-	<div class="container d-flex">
+	<div class="d-flex">
 		<div class="selec_prog">Select Your <span>Programe</span></div>
 		<ul class="nav nav-tabs" id="myTab" role="tablist">
 		  <li class="nav-item offer_cont_title">
@@ -140,7 +249,7 @@
 		  		</div>
 		  	</div>
 
-		  	<div class="container">
+		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Clinical Research</span></div>
@@ -178,15 +287,15 @@
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">Data Manager, Regulatory Affair Manager, Auditors, Site manager, Medical Writer, Research Associate</div>
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image.jpg')}}" class="campus_images"><span></span>Delhi Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image_sec.jpg')}}" class="campus_images"><span></span>Mumbai Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image.jpg')}}" class="campus_images"><span></span>Pune Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image_sec.jpg')}}" class="campus_images"><span></span>Bangalore Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image.jpg')}}" class="campus_images"><span></span>Jaipur Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image_sec.jpg')}}" class="campus_images"><span></span>Dehradun Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image.jpg')}}" class="campus_images"><span></span>Mangaluru Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image_sec.jpg')}}" class="campus_images"><span></span>Bhopal Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="{{ URL::asset('Images/campus_floating_image.jpg')}}" class="campus_images"><span></span>Anantapur Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Delhi Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Mumbai Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Pune Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bangalore Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Jaipur Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Dehradun Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Mangaluru Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bhopal Campus</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Anantapur Campus</div>
 			  		</div>
 			  	</div>
 		  	</div>
@@ -219,7 +328,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_one.png')}}">
+							<img src="Images/cr_partner_one.png">
 						</div>
 					</div>
 				</div>
@@ -228,7 +337,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_two.png')}}">
+							<img src="Images/cr_partner_two.png">
 						</div>
 					</div>
 				</div>
@@ -237,7 +346,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_three.png')}}">
+							<img src="Images/cr_partner_three.png">
 						</div>
 					</div>
 				</div>
@@ -246,7 +355,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_four.png')}}">
+							<img src="Images/cr_partner_four.png">
 						</div>
 					</div>
 				</div>
@@ -255,7 +364,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_five.png')}}">
+							<img src="Images/cr_partner_five.png">
 						</div>
 					</div>
 				</div>
@@ -264,7 +373,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_six.png')}}">
+							<img src="Images/cr_partner_six.png">
 						</div>
 					</div>
 				</div>
@@ -273,7 +382,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_seven.png')}}">
+							<img src="Images/cr_partner_seven.png">
 						</div>
 					</div>
 				</div>
@@ -282,7 +391,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_eight.png')}}">
+							<img src="Images/cr_partner_eight.png">
 						</div>
 					</div>
 				</div>
@@ -291,7 +400,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_nine.png')}}">
+							<img src="Images/cr_partner_nine.png">
 						</div>
 					</div>
 				</div>
@@ -300,7 +409,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_ten.png')}}">
+							<img src="Images/cr_partner_ten.png">
 						</div>
 					</div>
 				</div>
@@ -309,7 +418,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_eleven.png')}}">
+							<img src="Images/cr_partner_eleven.png">
 						</div>
 					</div>
 				</div>
@@ -318,7 +427,7 @@
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="{{ URL::asset('Images/cr_partner_twelve.png')}}">
+							<img src="Images/cr_partner_twelve.png">
 						</div>
 					</div>
 				</div>
@@ -337,6 +446,5 @@
 		</form>
 	</div>
 </section>
-
-
 @endsection
+

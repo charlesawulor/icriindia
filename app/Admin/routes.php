@@ -86,6 +86,12 @@ Route::group([
 
     $router->resource('hiringpartners', HiringpartnerController::class);
 
-    $router->resource('courses', courseController::class);
+    $router->resource('clinicalresearches', clinicalresearchController::class);
+
+    $router->resource('whyclinicalresearches', whyclinicalresearchController::class);
+
+    $router->resource('deliverablesclinicalresearches', deliverablesclinicalresearchController::class);
+
+    $router->resource('whyicriclinicalresearches', whyicriclinicalresearchController::class);
   
 });

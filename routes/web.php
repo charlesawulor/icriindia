@@ -21,13 +21,6 @@ Route::resource('/','IndexpageController');
 
 Route::resource('subscribers','IndexpageController');
 
-Route::resource('course','CourseController');
-
-Route::resource('header','HeaderController@index');
-
-Route::resource('footer','FooterController');
-
-
-
+Route::resource('clinical-research','clinicalresearchController');
 
 

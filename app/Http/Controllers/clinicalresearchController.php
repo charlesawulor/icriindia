@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Storage;
-
 use Illuminate\Http\Request;
+
 use App\Admission;
 use App\Research;
 use App\Publication;
@@ -40,8 +39,15 @@ use App\socialconnecttwitter;
 use App\parenttestimonial;
 use App\industryspeaktestimonial;
 use App\hiringpartner;
-use App\course;
-class CourseController extends Controller
+use App\clinicalresearch;
+use App\whyclinicalresearch;
+use App\deliverablesclinicalresearch;
+use App\whyicriclinicalresearch;
+
+
+
+
+class clinicalresearchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -50,42 +56,6 @@ class CourseController extends Controller
      */
     public function index()
     {
-       
-
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-       
-        
-
         $publications = Publication::orderBy('id','asc')->get();
         $admissions = Admission::orderBy('status','asc')->get();
         $researches = Research::orderBy('type','asc')->get();
@@ -119,18 +89,50 @@ class CourseController extends Controller
         $parenttestimonials = parenttestimonial::orderBy('image','asc')->get();
         $industryspeaktestimonials = industryspeaktestimonial::orderBy('image','asc')->get();
         $hiringpartners = hiringpartner::orderBy('image','asc')->get();
-        $courses = course::orderBy('id','asc')->get();
-        
-        
-        return view('course',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'courses' ));
+        $clinicalresearches = clinicalresearch::orderBy('image','asc')->get();
+        $whyclinicalresearches = whyclinicalresearch::orderBy('why_clinical','asc')->get();
+        $deliverablesclinicalresearches = deliverablesclinicalresearch::orderBy('deliverables','asc')->get();
+        $whyicriclinicalresearches = whyicriclinicalresearch::orderBy('why_icri_clinical','asc')->get();
 
-
-      
-       
         
 
+
+
+
+        return view('clinical-research',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches' ));
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -165,6 +167,4 @@ class CourseController extends Controller
     {
         //
     }
-
-   
 }

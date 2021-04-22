@@ -39,7 +39,8 @@ use App\socialconnecttwitter;
 use App\parenttestimonial;
 use App\industryspeaktestimonial;
 use App\hiringpartner;
-use App\course;
+use App\clinicalresearch;
+
 
 
 
@@ -85,13 +86,14 @@ class IndexpageController extends Controller
         $parenttestimonials = parenttestimonial::orderBy('image','asc')->get();
         $industryspeaktestimonials = industryspeaktestimonial::orderBy('image','asc')->get();
         $hiringpartners = hiringpartner::orderBy('image','asc')->get();
-        $courses = course::orderBy('id','asc')->get();
+        $clinicalresearches = clinicalresearch::orderBy('image','asc')->get();
+
         
 
 
 
 
-        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'courses' ));
+        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches'));
 
 
 

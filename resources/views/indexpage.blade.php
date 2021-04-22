@@ -3,8 +3,6 @@
 @extends('layouts.app1')
 
 @section('content')
-
-
 <main>
 <div class="container">
 	
@@ -861,7 +859,4 @@
 
 
 </section>
-
-
-
 @endsection
