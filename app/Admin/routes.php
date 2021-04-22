@@ -93,5 +93,11 @@ Route::group([
     $router->resource('deliverablesclinicalresearches', deliverablesclinicalresearchController::class);
 
     $router->resource('whyicriclinicalresearches', whyicriclinicalresearchController::class);
+
+    $router->resource('msceligibilityclinicalresearches', msceligibilityclinicalresearchController::class);
   
+    $router->resource('msccurriculumclinicalresearches', msccurriculumclinicalresearchController::class);
+
+
+
 });
