@@ -100,5 +100,7 @@ Route::group([
      
     $router->resource('msccareerprospectclinical', msccareerprospectclinicalresearchController::class);
 
+    $router->resource('msccampusclinicalresearches', msccampusclinicalresearchController::class);
+
 
 });

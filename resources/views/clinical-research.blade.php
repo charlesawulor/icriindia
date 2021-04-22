@@ -262,15 +262,12 @@
                       @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Delhi Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Mumbai Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Pune Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bangalore Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Jaipur Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Dehradun Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Mangaluru Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bhopal Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Anantapur Campus</div>
+                      @if(count($msccampusclinicalresearches) > 0)	
+	@foreach($msccampusclinicalresearches as $msccampusclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusclinicalresearch->image}}" class="campus_images"><span></span>{{$msccampusclinicalresearch->campus_name}}</div>
+                          @endforeach
+                      @endif  
+
 			  		</div>
 			  	</div>
 		  	</div>
