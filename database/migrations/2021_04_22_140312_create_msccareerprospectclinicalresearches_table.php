@@ -15,6 +15,7 @@ class CreateMsccareerprospectclinicalresearchesTable extends Migration
     {
         Schema::create('msccareerprospectclinicalresearches', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('career_prospect');
             $table->timestamps();
         });
     }

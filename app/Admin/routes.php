@@ -97,7 +97,8 @@ Route::group([
     $router->resource('msceligibilityclinicalresearches', msceligibilityclinicalresearchController::class);
   
     $router->resource('msccurriculumclinicalresearches', msccurriculumclinicalresearchController::class);
-
+     
+    $router->resource('msccareerprospectclinical', msccareerprospectclinicalresearchController::class);
 
 
 });

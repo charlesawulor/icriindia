@@ -254,10 +254,12 @@
                       @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre"><span>For Doctors</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">Principal Investigators / Co-investigator / Medical Advisor / Drug Developers / Regulatory Affairs Manager / Clinical Research Physician.</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre"><span>Others</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">Data Manager, Regulatory Affair Manager, Auditors, Site manager, Medical Writer, Research Associate</div>
+                      @if(count($msccareerprospectclinicalresearches) > 0)	
+	@foreach($msccareerprospectclinicalresearches as $msccareerprospectclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectclinicalresearch->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Delhi Campus</div>
