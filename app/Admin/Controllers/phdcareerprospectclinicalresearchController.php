@@ -2,20 +2,20 @@
 
 namespace App\Admin\Controllers;
 
-use App\pgdcampusclinicalresearch;
+use App\phdcareerprospectclinicalresearch;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class pgdcampusclinicalresearchController extends AdminController
+class phdcareerprospectclinicalresearchController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'pgdcampusclinicalresearch';
+    protected $title = 'phdcareerprospectclinicalresearch';
 
     /**
      * Make a grid builder.
@@ -24,11 +24,10 @@ class pgdcampusclinicalresearchController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new pgdcampusclinicalresearch());
+        $grid = new Grid(new phdcareerprospectclinicalresearch());
 
         $grid->column('id', __('Id'));
-        $grid->column('image', __('Image'));
-        $grid->column('campus_name', __('Campus name'));
+        $grid->column('career_prospect', __('Career prospect'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -43,11 +42,10 @@ class pgdcampusclinicalresearchController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(pgdcampusclinicalresearch::findOrFail($id));
+        $show = new Show(phdcareerprospectclinicalresearch::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('image', __('Image'));
-        $show->field('campus_name', __('Campus name'));
+        $show->field('career_prospect', __('Career prospect'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -61,10 +59,9 @@ class pgdcampusclinicalresearchController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new pgdcampusclinicalresearch());
+        $form = new Form(new phdcareerprospectclinicalresearch());
 
-        $form->image('image', __('Select Campus Image'));
-        $form->text('campus_name', __('Campus Name'));
+        $form->text('career_prospect', __('Phd Career Prospect-Clinical Research '));
 
         return $form;
     }

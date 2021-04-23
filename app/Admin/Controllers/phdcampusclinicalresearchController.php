@@ -2,20 +2,20 @@
 
 namespace App\Admin\Controllers;
 
-use App\pgdcampusclinicalresearch;
+use App\phdcampusclinicalresearch;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class pgdcampusclinicalresearchController extends AdminController
+class phdcampusclinicalresearchController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'pgdcampusclinicalresearch';
+    protected $title = 'phdcampusclinicalresearch';
 
     /**
      * Make a grid builder.
@@ -24,7 +24,7 @@ class pgdcampusclinicalresearchController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new pgdcampusclinicalresearch());
+        $grid = new Grid(new phdcampusclinicalresearch());
 
         $grid->column('id', __('Id'));
         $grid->column('image', __('Image'));
@@ -43,7 +43,7 @@ class pgdcampusclinicalresearchController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(pgdcampusclinicalresearch::findOrFail($id));
+        $show = new Show(phdcampusclinicalresearch::findOrFail($id));
 
         $show->field('id', __('Id'));
         $show->field('image', __('Image'));
@@ -61,7 +61,7 @@ class pgdcampusclinicalresearchController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new pgdcampusclinicalresearch());
+        $form = new Form(new phdcampusclinicalresearch());
 
         $form->image('image', __('Select Campus Image'));
         $form->text('campus_name', __('Campus Name'));

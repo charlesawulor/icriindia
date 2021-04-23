@@ -61,7 +61,7 @@ class pgdeligibilityclinicalresearchController extends AdminController
     {
         $form = new Form(new pgdeligibilityclinicalresearch());
 
-        $form->text('eligibility', __('MSc Eligibility Clinical Research'));
+        $form->text('eligibility', __('PG Diploma Eligibility Clinical Research'));
 
         return $form;
     }
