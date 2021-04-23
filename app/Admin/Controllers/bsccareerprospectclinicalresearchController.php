@@ -2,20 +2,20 @@
 
 namespace App\Admin\Controllers;
 
-use App\bsccurriculumclinicalresearch;
+use App\bsccareerprospectclinicalresearch;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class bsccurriculumclinicalresearchController extends AdminController
+class bsccareerprospectclinicalresearchController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'bsccurriculumclinicalresearch';
+    protected $title = 'bsccareerprospectclinicalresearch';
 
     /**
      * Make a grid builder.
@@ -24,10 +24,10 @@ class bsccurriculumclinicalresearchController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new bsccurriculumclinicalresearch());
+        $grid = new Grid(new bsccareerprospectclinicalresearch());
 
         $grid->column('id', __('Id'));
-        $grid->column('curriculum', __('Curriculum'));
+        $grid->column('career_prospect', __('Career prospect'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -42,10 +42,10 @@ class bsccurriculumclinicalresearchController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(bsccurriculumclinicalresearch::findOrFail($id));
+        $show = new Show(bsccareerprospectclinicalresearch::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('curriculum', __('Curriculum'));
+        $show->field('career_prospect', __('Career prospect'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -59,9 +59,9 @@ class bsccurriculumclinicalresearchController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new bsccurriculumclinicalresearch());
+        $form = new Form(new bsccareerprospectclinicalresearch());
 
-        $form->text('curriculum', __('BSc Curriculum Clinical Research'));
+        $form->text('career_prospect', __('Career Prospect-BSc Clinical Research '));
 
         return $form;
     }

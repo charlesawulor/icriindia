@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBsccareerprospectclinicalresearchesTable extends Migration
+class CreateBsccampusclinicalresearchesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateBsccareerprospectclinicalresearchesTable extends Migration
      */
     public function up()
     {
-        Schema::create('bsccareerprospectclinicalresearches', function (Blueprint $table) {
+        Schema::create('bsccampusclinicalresearches', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('career_prospect');
+            $table->string('image');
+            $table->string('campus_name');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateBsccareerprospectclinicalresearchesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bsccareerprospectclinicalresearches');
+        Schema::dropIfExists('bsccampusclinicalresearches');
     }
 }

@@ -106,5 +106,9 @@ Route::group([
 
     $router->resource('bsccurriculumclinicalresearches', bsccurriculumclinicalresearchController::class);
 
+    $router->resource('bsccareerprospectclinical', bsccareerprospectclinicalresearchController::class);
+
+    $router->resource('bsccampusclinicalresearches', bsccampusclinicalresearchController::class);
+
 
 });
