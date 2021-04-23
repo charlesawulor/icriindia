@@ -15,7 +15,7 @@
 		<div class="slider_title">
     @if(count($clinicalresearches) > 0)	
 	@foreach($clinicalresearches as $clinicalresearch)
-			Clinical<span>{{$clinicalresearch->course_title}}</span>
+			<span>{{$clinicalresearch->course_title}}</span>
             @endforeach
             @endif
 		</div>
@@ -516,114 +516,24 @@
 			Placements are provided with
 		</div>
 		<div class="cr_part_detials row">
+
+	@if(count($placementclinicalresearches) > 0)	
+	    @foreach($placementclinicalresearches as $placementclinicalresearch)
+
 			<div class="col-lg-3">
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="Images/cr_partner_one.png">
+							<img src="/icriindia/storage/app/public/{{$placementclinicalresearch->image}}">
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_two.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_three.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_four.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_five.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_six.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_seven.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_eight.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_nine.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_ten.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_eleven.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_twelve.png">
-						</div>
-					</div>
-				</div>
-			</div>
+	    @endforeach
+	@endif
+
+	
+
 		</div>
 	</div>
 </section>

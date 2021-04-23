@@ -126,5 +126,7 @@ Route::group([
 
     $router->resource('phdcampusclinicalresearches', phdcampusclinicalresearchController::class);
 
+    $router->resource('placementclinicalresearches', placementclinicalresearchController::class);
+
 
 });

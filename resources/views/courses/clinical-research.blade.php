@@ -13,7 +13,11 @@
 <main class="cr_main">
 	<div class="container">
 		<div class="slider_title">
-			Clinical<span> Research</span>
+    @if(count($clinicalresearches) > 0)	
+	@foreach($clinicalresearches as $clinicalresearch)
+			<span>{{$clinicalresearch->course_title}}</span>
+            @endforeach
+            @endif
 		</div>
 
 	</div>
@@ -73,87 +77,66 @@
 	<div class="tab-content offer_tab_cont" id="myTabContent">
 		  <div class="tab-pane fade show active" id="tab_ci_tag" role="tabpanel" aria-labelledby="tab_ci_tag">
 		  	<div class="container">
+              @if(count($clinicalresearches) > 0)	
+	@foreach($clinicalresearches as $clinicalresearch)
 				<div class="row">
 					<div class="col-lg-6 col-sm-6">
 						<div class="cr_sec_disc">
-							Clinical Research industry in India is at its boom as the
-								vaccine development is the global effort which is being done
-								across the nations. In last one year, Clinical Trials are the
-								priority of the nations to make the earth a better place to live.
-								The emergence of Covid19 has impacted lives and is the
-								single factor driving growth in Clinical Trial market. The size of
-								Clinical Trial market is over USD 44.0 billion in 2020 and is
-								expected to grow to double in next 5 years.
+						{{$clinicalresearch->about_course}}
 
 						</div>
 					</div>
 			
 					<div class="col-lg-6 col-sm-3 col-sm-6">
-						<img src="Images/clinical_reseach_content.jpg" width="100%" class="cr_cli_re_cont">
+						<img src="/icriindia/storage/app/public/{{$clinicalresearch->image}}" width="100%" class="cr_cli_re_cont">
 					</div>
 				</div>
+              @endforeach
+     @endif
 		  	</div>
 
 		  </div>
 		  <div class="tab-pane fade" id="tab_wdpcr_tag" role="tabpanel" aria-labelledby="tab_two">
 		  	<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-sm-6">
+					<div class="col-lg-12 col-sm-12">
 						<div class="cr_sec_disc">
 							<ul>
-								<li><span>Industry has a huge shortage of skilled professionals. The clinical Research
-									Industry is the single filed generating lakhs of job opportunities.</span></li>
-								<li><span>Hence our job oriented program prepares aspirants for niche industries and
-									bridge the gap of demand and supply.</span></li>
-								<li><span>MSc/BSc programme in Clinical Research through ICRI is a unique and
-									well-structured programme to prepare future professionals in Clinical
-									Research, Clinical Data Management / Pharmacovigilance.</span></li>
+
+                            @if(count($whyclinicalresearches) > 0)	
+	@foreach($whyclinicalresearches as $whyclinicalresearch)
+								<li><span>{{$whyclinicalresearch->why_clinical}}</span></li>
+                                    @endforeach
+                                    @endif
+							
 							</ul>
 
 						</div>
 					</div>
 			
-					<div class="col-lg-6 col-sm-3 col-sm-6">
-						<div class="cr_sec_disc">
-							<ul>
-								<li><span>The course curriculum is designed to equip aspirants with specialized
-									domain, providing specialized knowledge and training of areas to be
-									served in the clinical Research industry.</span></li>
-								<li><span>This programme provides a blend of practical and classroom teaching
-									which makes you a preferred candidate by your future employer.</span></li>
-							</ul>
-
-						</div>
-					</div>
+					
 				</div>
 		  	</div>
 		  </div>
 		  <div class="tab-pane fade" id="tab_dtp_tag" role="tabpanel" aria-labelledby="tab_three">
 		  	<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-sm-6">
+					<div class="col-lg-12 col-sm-12">
 						<div class="cr_sec_disc">
 							<ul>
-								<li><span>Industry Attachments with Project work / Presentations / Industrial
-									Visits / Guest lectures / Seminars / Conferences</span></li>
-								<li><span>This programme provides hands on experience in following training at
-									leading hospitals conducting Clinical Trials in India</span></li>
-								<li><span>Become a part of live projects in clinical trials</span></li>
+								
+                            @if(count($deliverablesclinicalresearches) > 0)	
+	@foreach($deliverablesclinicalresearches as $deliverablesclinicalresearch)
+								<li><span>{{$deliverablesclinicalresearch->deliverables}}</span></li>
+                                    @endforeach
+                                    @endif
+							
 							</ul>
 
 						</div>
 					</div>
 			
-					<div class="col-lg-6 col-sm-3 col-sm-6">
-						<div class="cr_sec_disc">
-							<ul>
-								<li><span>Exposure to BAI BE Units</span></li>
-								<li><span>Internship under supervision of doctors</span></li>
-								<li><span>Career opportunity in leading hospitals, CROs and pharma companies</span></li>
-							</ul>
-
-						</div>
-					</div>
+					
 				</div>
 		  	</div>
 		  </div>
@@ -189,15 +172,13 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
-					<div class="cr_why_icri_text_cont position-relative">India's first & largest institution in Clinical Research & Healthcare</div>
-					<div class="cr_why_icri_text_cont position-relative">Providing real time exposure in clinical trials in hospital environment</div>
-					<div class="cr_why_icri_text_cont position-relative">Certificate program by ICRI</div>
-					<div class="cr_why_icri_text_cont position-relative">18000+ Alumni network</div>
-					<div class="cr_why_icri_text_cont position-relative">Classes are provided to ICRI students in India’s leading universities only Internship with leading hospitals only like Medanta, Fortis, NH and Max hospitals </div>
-					<div class="cr_why_icri_text_cont position-relative">Work with the team of doctors on clinical trials</div>
-					<div class="cr_why_icri_text_cont position-relative">Opportunity to get absorbed in the same hospitals</div>
-					<div class="cr_why_icri_text_cont position-relative">100% placement assurance with ICRI 2500+ hiring partners</div>
-					<div class="cr_why_icri_text_cont position-relative">Starting package salary INR 4.0 Lacs PA to INR 6.0 Lacs PA</div>
+                				
+                @if(count($whyicriclinicalresearches) > 0)	
+	@foreach($whyicriclinicalresearches as $whyicriclinicalresearch)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicriclinicalresearch->why_icri_clinical}}</div>
+                @endforeach
+            @endif
+				
 				</div>
 			</div>
 		</div>
@@ -228,8 +209,8 @@
 		</ul>
 	</div>
 
-		<div class="tab-content offer_tab_cont" id="myTabContent">
-		  <div class="tab-pane fade show active" id="tab_one_tag" role="tabpanel" aria-labelledby="tab_one">
+	<div class="tab-content offer_tab_cont" id="myTabContent">
+		<div class="tab-pane fade show active" id="tab_one_tag" role="tabpanel" aria-labelledby="tab_one">
 
 		  	<div class="row offer_tab_head_title">
 		  		<div class="col_auto_set">
@@ -257,54 +238,265 @@
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Microbiology</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Biotechnology</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Pharmacy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Medicine</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Nursing</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Physiotherapy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Dentistry</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Homeopathy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Ayurvedic and Veterinary Science with min 50%</div>
+                          @if(count($msceligibilityclinicalresearches) > 0)	
+	@foreach($msceligibilityclinicalresearches as $msceligibilityclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilityclinicalresearch->eligibility}}</div>
+			  			@endforeach
+                      @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Clinical Research Overview</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Regulation & Ethics in Clinical Research</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Global Regulations</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Molecular mechanism of drug action</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Pharma Regulatory Affairs</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Pharmacovigilance 1& 2</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Designing Clinical Trials</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Advanced Clinical Data Management</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Training - Argus, Clinical Oracle</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Trainings - In India’s leading super specialty hospitals only</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Seminars & Site Visits to Clinical Trial Site</div>
+                      @if(count($msccurriculumclinicalresearches) > 0)	
+	@foreach($msccurriculumclinicalresearches as $msccurriculumclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumclinicalresearch->curriculum}}</div>
+			  			@endforeach
+                      @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre"><span>For Doctors</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">Principal Investigators / Co-investigator / Medical Advisor / Drug Developers / Regulatory Affairs Manager / Clinical Research Physician.</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre"><span>Others</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">Data Manager, Regulatory Affair Manager, Auditors, Site manager, Medical Writer, Research Associate</div>
+                      @if(count($msccareerprospectclinicalresearches) > 0)	
+	@foreach($msccareerprospectclinicalresearches as $msccareerprospectclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectclinicalresearch->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Delhi Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Mumbai Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Pune Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bangalore Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Jaipur Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Dehradun Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Mangaluru Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bhopal Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Anantapur Campus</div>
+                      @if(count($msccampusclinicalresearches) > 0)	
+	@foreach($msccampusclinicalresearches as $msccampusclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusclinicalresearch->image}}" class="campus_images"><span></span>{{$msccampusclinicalresearch->campus_name}}</div>
+                          @endforeach
+                      @endif  
+
 			  		</div>
 			  	</div>
 		  	</div>
 
 		  </div>
-		  <div class="tab-pane fade" id="tab_two_tag" role="tabpanel" aria-labelledby="tab_two">tab two</div>
-		  <div class="tab-pane fade" id="tab_three_tag" role="tabpanel" aria-labelledby="tab_three">tab three</div>
-		  <div class="tab-pane fade" id="tab_four_tag" role="tabpanel" aria-labelledby="tab_four">tab four</div>
-		</div>
+		  <div class="tab-pane fade" id="tab_two_tag" role="tabpanel" aria-labelledby="tab_two">
+          
+
+
+          
+		  	<div class="row offer_tab_head_title">
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_one">Course</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_two">Eligibility</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_three">Curriculum</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_four">Career Prospects</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_five">Select Campus</div>
+		  		</div>
+		  	</div>
+
+		  	<div class="ctm-tab-cont">
+			  	<div class="row offer_tab_cont_row">
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Clinical Research</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
+			  		</div>
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
+
+                          @if(count($bsceligibilityclinicalresearches) > 0)	
+	@foreach($bsceligibilityclinicalresearches as $bsceligibilityclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilityclinicalresearch->eligibility}}</div>
+			  			@endforeach
+                      @endif 
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+                      @if(count($bsccurriculumclinicalresearches) > 0)	
+	@foreach($bsccurriculumclinicalresearches as $bsccurriculumclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumclinicalresearch->curriculum}}</div>
+			  			@endforeach
+                      @endif   
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+                      @if(count($bsccareerprospectclinicalresearches) > 0)	
+	@foreach($bsccareerprospectclinicalresearches as $bsccareerprospectclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectclinicalresearch->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
+
+			  		</div>
+			  		<div class="col_auto_set campus_col">
+
+                      @if(count($bsccampusclinicalresearches) > 0)	
+	@foreach($bsccampusclinicalresearches as $bsccampusclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusclinicalresearch->image}}" class="campus_images"><span></span>{{$bsccampusclinicalresearch->campus_name}}</div>
+                          @endforeach
+                      @endif  
+
+			  		</div>
+			  	</div>
+		  	</div>
+          
+          
+          </div>
+
+
+		  <div class="tab-pane fade" id="tab_three_tag" role="tabpanel" aria-labelledby="tab_three">
+          
+          
+		  	<div class="row offer_tab_head_title">
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_one">Course</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_two">Eligibility</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_three">Curriculum</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_four">Career Prospects</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_five">Select Campus</div>
+		  		</div>
+		  	</div>
+
+		  	<div class="ctm-tab-cont">
+			  	<div class="row offer_tab_cont_row">
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span>Clinical Research</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
+			  		</div>
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
+
+                          @if(count($pgdeligibilityclinicalresearches) > 0)	
+	@foreach($pgdeligibilityclinicalresearches as $pgdeligibilityclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityclinicalresearch->eligibility}}</div>
+			  			@endforeach
+                      @endif 
+
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+                      @if(count($pgdcurriculumclinicalresearches) > 0)	
+	@foreach($pgdcurriculumclinicalresearches as $pgdcurriculumclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumclinicalresearch->curriculum}}</div>
+			  			@endforeach
+                      @endif  
+
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+
+                      @if(count($pgdcareerprospectclinicalresearches) > 0)	
+	@foreach($pgdcareerprospectclinicalresearches as $pgdcareerprospectclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectclinicalresearch->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
+
+
+			  		</div>
+			  		<div class="col_auto_set campus_col">
+
+
+			  		      @if(count($pgdcampusclinicalresearches) > 0)	
+	@foreach($pgdcampusclinicalresearches as $pgdcampusclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampusclinicalresearch->image}}" class="campus_images"><span></span>{{$pgdcampusclinicalresearch->campus_name}}</div>
+                          @endforeach
+                      @endif 
+
+
+			  		</div>
+			  	</div>
+		  	</div>
+          
+          
+          </div>
+		  <div class="tab-pane fade" id="tab_four_tag" role="tabpanel" aria-labelledby="tab_four">
+          
+          
+		  	<div class="row offer_tab_head_title">
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_one">Course</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_two">Eligibility</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_three">Curriculum</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_four">Career Prospects</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_five">Select Campus</div>
+		  		</div>
+		  	</div>
+
+		  	<div class="ctm-tab-cont">
+			  	<div class="row offer_tab_cont_row">
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Clinical Research</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
+			  		</div>
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
+
+                          @if(count($phdeligibilityclinicalresearches) > 0)	
+	@foreach($phdeligibilityclinicalresearches as $phdeligibilityclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdeligibilityclinicalresearch->eligibility}}</div>
+			  			@endforeach
+                      @endif 
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+                      @if(count($phdcurriculumclinicalresearches) > 0)	
+	@foreach($phdcurriculumclinicalresearches as $phdcurriculumclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdcurriculumclinicalresearch->curriculum}}</div>
+			  			@endforeach
+                      @endif 
+
+			  		</div>
+			  		<div class="col_auto_set">
+					  @if(count($phdcareerprospectclinicalresearches) > 0)	
+	@foreach($phdcareerprospectclinicalresearches as $phdcareerprospectclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$phdcareerprospectclinicalresearch->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
+
+			  		</div>
+			  		<div class="col_auto_set campus_col">
+					  @if(count($phdcampusclinicalresearches) > 0)	
+	@foreach($phdcampusclinicalresearches as $phdcampusclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$phdcampusclinicalresearch->image}}" class="campus_images"><span></span>{{$phdcampusclinicalresearch->campus_name}}</div>
+                          @endforeach
+                      @endif 
+
+			  		</div>
+			  	</div>
+		  	</div>
+          
+          <div>
+    </div>
 </section>
 
 <secion class="cr_quote">
@@ -324,114 +516,24 @@
 			Placements are provided with
 		</div>
 		<div class="cr_part_detials row">
+
+	@if(count($placementclinicalresearches) > 0)	
+	    @foreach($placementclinicalresearches as $placementclinicalresearch)
+
 			<div class="col-lg-3">
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="Images/cr_partner_one.png">
+							<img src="/icriindia/storage/app/public/{{$placementclinicalresearch->image}}">
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_two.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_three.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_four.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_five.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_six.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_seven.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_eight.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_nine.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_ten.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_eleven.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="compny_part">
-					<div class="Part_warp">
-						<div class="image_wrap">
-							<img src="Images/cr_partner_twelve.png">
-						</div>
-					</div>
-				</div>
-			</div>
+	    @endforeach
+	@endif
+
+	
+
 		</div>
 	</div>
 </section>
@@ -447,4 +549,3 @@
 	</div>
 </section>
 @endsection
-
