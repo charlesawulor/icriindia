@@ -539,13 +539,4 @@
 </section>
 
 
-<section class="news_letter">
-	<div class="container d-flex">
-		<div class="legacy_title">Subscribe<span> our newsletter</span></div>
-		<form method="" action="">
-			<input type="email" name="email" placeholder="Enter your Email" required="required">
-			<button type="submit" class="read_more">Subsribe <span>Now</span></button>
-		</form>
-	</div>
-</section>
 @endsection

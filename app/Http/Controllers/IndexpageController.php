@@ -125,7 +125,7 @@ class IndexpageController extends Controller
             $subscribers = new subscriber;
             $subscribers->email = $request->input('email');
             $subscribers->save();
-             return redirect('/')->with('success', 'You have successfully subscribed to our newsletter.');
+            return redirect('/')->with('success', 'You have successfully subscribed to our newsletter.');
     }
 
     /**

@@ -840,23 +840,5 @@
 	</div>
 </section>
 
-<section class="news_letter">
-	<div class="container d-flex">
-		<div class="legacy_title">Subscribe<span> our newsletter</span></div>
 
-
-		{!! Form::open(['action' => 'IndexpageController@store', 'method'=>'POST','enctype'=>'multipart/form-data']) !!}
-		
-			{{Form::email('email','',['class' =>'','placeholder' => 'Email'])}}
-			
-			{{form::submit('Subscribe Now',['class'=>'btn btn-danger'])}}
-
-         {!! Form::close() !!}
-		
-
-	</div>
-
-
-
-</section>
 @endsection
