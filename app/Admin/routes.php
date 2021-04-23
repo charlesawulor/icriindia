@@ -110,5 +110,11 @@ Route::group([
 
     $router->resource('bsccampusclinicalresearches', bsccampusclinicalresearchController::class);
 
+    $router->resource('pgdeligibilityclinicalresearches', pgdeligibilityclinicalresearchController::class);
+
+    $router->resource('pgdcurriculumclinicalresearches', pgdcurriculumclinicalresearchController::class);
+
+    $router->resource('pgdcareerprospectclinical', pgdcareerprospectclinicalresearchController::class);
+
 
 });

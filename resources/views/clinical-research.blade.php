@@ -334,15 +334,13 @@
 
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Delhi Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Mumbai Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Pune Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bangalore Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Jaipur Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Dehradun Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Mangaluru Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bhopal Campus</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Anantapur Campus</div>
+
+                      @if(count($bsccampusclinicalresearches) > 0)	
+	@foreach($bsccampusclinicalresearches as $bsccampusclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusclinicalresearch->image}}" class="campus_images"><span></span>{{$bsccampusclinicalresearch->campus_name}}</div>
+                          @endforeach
+                      @endif  
+
 			  		</div>
 			  	</div>
 		  	</div>
@@ -380,34 +378,38 @@
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Microbiology</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Biotechnology</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Pharmacy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Medicine</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Nursing</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Physiotherapy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Dentistry</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Homeopathy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Ayurvedic and Veterinary Science with min 50%</div>
+
+                          @if(count($pgdeligibilityclinicalresearches) > 0)	
+	@foreach($pgdeligibilityclinicalresearches as $pgdeligibilityclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityclinicalresearch->eligibility}}</div>
+			  			@endforeach
+                      @endif 
+
+
 			  		</div>
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Clinical Research Overview</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Regulation & Ethics in Clinical Research</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Global Regulations</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Molecular mechanism of drug action</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Pharma Regulatory Affairs</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Pharmacovigilance 1& 2</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Designing Clinical Trials</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Advanced Clinical Data Management</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Training - Argus, Clinical Oracle</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Trainings - In India’s leading super specialty hospitals only</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Seminars & Site Visits to Clinical Trial Site</div>
+
+                      @if(count($pgdcurriculumclinicalresearches) > 0)	
+	@foreach($pgdcurriculumclinicalresearches as $pgdcurriculumclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumclinicalresearch->curriculum}}</div>
+			  			@endforeach
+                      @endif  
+
+
 			  		</div>
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre"><span>For Doctors</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">Principal Investigators / Co-investigator / Medical Advisor / Drug Developers / Regulatory Affairs Manager / Clinical Research Physician.</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre"><span>Others</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">Data Manager, Regulatory Affair Manager, Auditors, Site manager, Medical Writer, Research Associate</div>
+
+
+                      @if(count($pgdcareerprospectclinicalresearches) > 0)	
+	@foreach($pgdcareerprospectclinicalresearches as $pgdcareerprospectclinicalresearch)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectclinicalresearch->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
+
+
 			  		</div>
 			  		<div class="col_auto_set campus_col">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Delhi Campus</div>
@@ -419,6 +421,8 @@
 			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Mangaluru Campus</div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image_sec.jpg" class="campus_images"><span></span>Bhopal Campus</div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="Images/campus_floating_image.jpg" class="campus_images"><span></span>Anantapur Campus</div>
+
+
 			  		</div>
 			  	</div>
 		  	</div>

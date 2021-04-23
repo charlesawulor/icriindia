@@ -50,6 +50,10 @@ use App\msccampusclinicalresearch;
 use App\bsceligibilityclinicalresearch;
 use App\bsccurriculumclinicalresearch;
 use App\bsccareerprospectclinicalresearch;
+use App\bsccampusclinicalresearch;
+use App\pgdeligibilityclinicalresearch;
+use App\pgdcurriculumclinicalresearch;
+use App\pgdcareerprospectclinicalresearch;
 
 
 
@@ -105,11 +109,20 @@ class clinicalresearchController extends Controller
         $msccareerprospectclinicalresearches = msccareerprospectclinicalresearch::orderBy('career_prospect','asc')->get();
         $msccampusclinicalresearches = msccampusclinicalresearch::orderBy('image','asc')->get();
 
+
+
         $bsceligibilityclinicalresearches = bsceligibilityclinicalresearch::orderBy('eligibility','asc')->get();
 
         $bsccurriculumclinicalresearches = bsccurriculumclinicalresearch::orderBy('curriculum','asc')->get();
             
         $bsccareerprospectclinicalresearches = bsccareerprospectclinicalresearch::orderBy('career_prospect','asc')->get();
+        $bsccampusclinicalresearches = bsccampusclinicalresearch::orderBy('image','asc')->get();
+
+
+
+        $pgdeligibilityclinicalresearches = pgdeligibilityclinicalresearch::orderBy('eligibility','asc')->get();
+        $pgdcurriculumclinicalresearches = pgdcurriculumclinicalresearch::orderBy('curriculum','asc')->get();
+        $pgdcareerprospectclinicalresearches = pgdcareerprospectclinicalresearch::orderBy('career_prospect','asc')->get();
 
 
 
@@ -117,7 +130,7 @@ class clinicalresearchController extends Controller
 
         
 
-        return view('clinical-research',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches' ));
+        return view('clinical-research',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches', 'bsccampusclinicalresearches', 'pgdeligibilityclinicalresearches', 'pgdcurriculumclinicalresearches', 'pgdcareerprospectclinicalresearches' ));
     }
 
     /**

@@ -2,20 +2,20 @@
 
 namespace App\Admin\Controllers;
 
-use App\bsccampusclinicalresearch;
+use App\pgdcurriculumclinicalresearch;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class bsccampusclinicalresearchController extends AdminController
+class pgdcurriculumclinicalresearchController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'bsccampusclinicalresearch';
+    protected $title = 'pgdcurriculumclinicalresearch';
 
     /**
      * Make a grid builder.
@@ -24,11 +24,10 @@ class bsccampusclinicalresearchController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new bsccampusclinicalresearch());
+        $grid = new Grid(new pgdcurriculumclinicalresearch());
 
         $grid->column('id', __('Id'));
-        $grid->column('image', __('Image'));
-        $grid->column('campus_name', __('Campus name'));
+        $grid->column('curriculum', __('Curriculum'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -43,11 +42,10 @@ class bsccampusclinicalresearchController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(bsccampusclinicalresearch::findOrFail($id));
+        $show = new Show(pgdcurriculumclinicalresearch::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('image', __('Image'));
-        $show->field('campus_name', __('Campus name'));
+        $show->field('curriculum', __('Curriculum'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -61,10 +59,9 @@ class bsccampusclinicalresearchController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new bsccampusclinicalresearch());
+        $form = new Form(new pgdcurriculumclinicalresearch());
 
-        $form->image('image', __('Select Campus Image'));
-        $form->text('campus_name', __('Campus Name'));
+        $form->text('curriculum', __('PG Diploma Curriculum Clinical Research'));
 
         return $form;
     }
