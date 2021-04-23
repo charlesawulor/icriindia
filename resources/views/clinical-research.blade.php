@@ -304,15 +304,14 @@
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Microbiology</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Biotechnology</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Pharmacy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Medicine</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Nursing</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Physiotherapy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Dentistry</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Homeopathy</div>
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">Ayurvedic and Veterinary Science with min 50%</div>
+
+                          @if(count($bsceligibilityclinicalresearches) > 0)	
+	@foreach($bsceligibilityclinicalresearches as $bsceligibilityclinicalresearch)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilityclinicalresearch->eligibility}}</div>
+			  			@endforeach
+                      @endif 
+
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_curi_dis">Clinical Research Overview</div>
