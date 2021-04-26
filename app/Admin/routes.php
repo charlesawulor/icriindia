@@ -138,5 +138,11 @@ Route::group([
 
     $router->resource('msceligibilityaviationmanagements', msceligibilityaviationmanagementController::class);
 
+    $router->resource('msccurriculumaviationmanagements', msccurriculumaviationmanagementController::class);
+
+    $router->resource('msccareerprospectaviation', msccareerprospectaviationmanagementaviationmanagementController::class); 
+
+    $router->resource('msccampusaviationmanagements', msccampusaviationmanagementController::class);
+
 
 });

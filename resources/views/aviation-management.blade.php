@@ -233,38 +233,38 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Clinical Research</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Aviation Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-                          @if(count($msceligibilityclinicalresearches) > 0)	
-	@foreach($msceligibilityclinicalresearches as $msceligibilityclinicalresearch)
+                          @if(count($msceligibilityaviationmanagements) > 0)	
+	@foreach($msceligibilityaviationmanagements as $msceligibilityaviationmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilityclinicalresearch->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilityaviationmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-                      @if(count($msccurriculumclinicalresearches) > 0)	
-	@foreach($msccurriculumclinicalresearches as $msccurriculumclinicalresearch)
+                      @if(count($msccurriculumaviationmanagements) > 0)	
+	@foreach($msccurriculumaviationmanagements as $msccurriculumaviationmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumclinicalresearch->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumaviationmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-                      @if(count($msccareerprospectclinicalresearches) > 0)	
-	@foreach($msccareerprospectclinicalresearches as $msccareerprospectclinicalresearch)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectclinicalresearch->career_prospect}}</div>
+                      @if(count($msccareerprospectaviationmanagements) > 0)	
+	@foreach($msccareerprospectaviationmanagements as $msccareerprospectaviationmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectaviationmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-                      @if(count($msccampusclinicalresearches) > 0)	
-	@foreach($msccampusclinicalresearches as $msccampusclinicalresearch)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusclinicalresearch->image}}" class="campus_images"><span></span>{{$msccampusclinicalresearch->campus_name}}</div>
+                      @if(count($msccampusaviationmanagements) > 0)	
+	@foreach($msccampusaviationmanagements as $msccampusaviationmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusaviationmanagement->image}}" class="campus_images"><span></span>{{$msccampusaviationmanagement->campus_name}}</div>
                           @endforeach
                       @endif  
 
