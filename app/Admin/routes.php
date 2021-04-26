@@ -130,5 +130,7 @@ Route::group([
 
     $router->resource('aviationmanagements', aviationmanagementController::class);
 
+    $router->resource('whyaviationmanagements', whyaviationmanagementController::class);
+
 
 });

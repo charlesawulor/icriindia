@@ -2,20 +2,20 @@
 
 namespace App\Admin\Controllers;
 
-use App\aviationmanagement;
+use App\whyaviationmanagement;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class aviationmanagementController extends AdminController
+class whyaviationmanagementController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'aviationmanagement';
+    protected $title = 'whyaviationmanagement';
 
     /**
      * Make a grid builder.
@@ -24,12 +24,10 @@ class aviationmanagementController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new aviationmanagement());
+        $grid = new Grid(new whyaviationmanagement());
 
         $grid->column('id', __('Id'));
-        $grid->column('course_title', __('Course title'));
-        $grid->column('about_course', __('About course'));
-        $grid->column('image', __('Image'));
+        $grid->column('why_aviation', __('Why Aviation Management'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -44,14 +42,12 @@ class aviationmanagementController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(aviationmanagement::findOrFail($id));
-
+        $show = new Show(whyaviationmanagement::findOrFail($id));
         $show->field('id', __('Id'));
-        $show->field('course_title', __('Course title'));
-        $show->field('about_course', __('About course'));
-        $show->field('image', __('Image'));
+        $show->field('why_aviation', __('Why Aviation Management'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
+
 
         return $show;
     }
@@ -63,12 +59,9 @@ class aviationmanagementController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new aviationmanagement());
+        $form = new Form(new whyaviationmanagement());
 
-        $form->text('course_title', __('Course title'));
-        $form->textarea('about_course', __('About Aviation Management'));
-        $form->image('image', __('Image'));
-
+        $form->text('why_aviation', __('Why Aviation Management'));
 
         return $form;
     }

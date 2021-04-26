@@ -103,9 +103,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 
-                            @if(count($whyclinicalresearches) > 0)	
-	@foreach($whyclinicalresearches as $whyclinicalresearch)
-								<li><span>{{$whyclinicalresearch->why_clinical}}</span></li>
+                            @if(count($whyaviationmanagements) > 0)	
+	@foreach($whyaviationmanagements as $whyaviationmanagement)
+								<li><span>{{$whyaviationmanagement->why_aviation}}</span></li>
                                     @endforeach
                                     @endif
 							
