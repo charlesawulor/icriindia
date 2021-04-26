@@ -128,5 +128,7 @@ Route::group([
 
     $router->resource('placementclinicalresearches', placementclinicalresearchController::class);
 
+    $router->resource('aviationmanagements', aviationmanagementController::class);
+
 
 });

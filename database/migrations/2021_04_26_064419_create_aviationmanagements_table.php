@@ -15,6 +15,9 @@ class CreateAviationmanagementsTable extends Migration
     {
         Schema::create('aviationmanagements', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('course_title');
+            $table->string('about_course');
+            $table->string('image');
             $table->timestamps();
         });
     }

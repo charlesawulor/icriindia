@@ -156,6 +156,7 @@
 
 
 			<a class="catag" href="/icriindia/public/clinical-research/">Clinical Research</a>
+			<a class="catag" href="/icriindia/public/aviation-management/">Aviation Management</a>
 
 		
 			
