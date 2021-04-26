@@ -71,6 +71,21 @@ use App\msccurriculumaviationmanagement;
 use App\msccareerprospectaviationmanagement;
 use App\msccampusaviationmanagement;
 
+use App\bsceligibilityaviationmanagement;
+use App\bsccurriculumaviationmanagement;
+use App\bsccareerprospectaviationmanagement;
+use App\bsccampusaviationmanagement;
+
+use App\pgdeligibilityaviationmanagement;
+use App\pgdcurriculumaviationmanagement;
+use App\pgdcareerprospectaviationmanagement;
+use App\pgdcampusaviationmanagement;
+
+use App\phdeligibilityaviationmanagement;
+use App\phdcurriculumaviationmanagement;
+use App\phdcareerprospectaviationmanagement;
+use App\phdcampusaviationmanagement;
+
 
 
 class aviationmanagementController extends Controller
@@ -161,6 +176,30 @@ class aviationmanagementController extends Controller
 
         $msccareerprospectaviationmanagements = msccareerprospectaviationmanagement::orderBy('career_prospect','asc')->get();
         $msccampusaviationmanagements = msccampusaviationmanagement::orderBy('image','asc')->get();
+        $bsceligibilityaviationmanagements = bsceligibilityaviationmanagement::orderBy('eligibility','asc')->get();
+        $bsccurriculumaviationmanagements = bsccurriculumaviationmanagement::orderBy('curriculum','asc')->get();
+
+        $bsccareerprospectaviationmanagements = bsccareerprospectaviationmanagement::orderBy('career_prospect','asc')->get();
+        $bsccampusaviationmanagements = bsccampusaviationmanagement::orderBy('image','asc')->get();
+
+
+
+
+
+        $pgdeligibilityaviationmanagements = pgdeligibilityaviationmanagement::orderBy('eligibility','asc')->get();
+        $pgdcurriculumaviationmanagements = pgdcurriculumaviationmanagement::orderBy('curriculum','asc')->get();
+
+        $pgdcareerprospectaviationmanagements = pgdcareerprospectaviationmanagement::orderBy('career_prospect','asc')->get();
+        $pgdcampusaviationmanagements = pgdcampusaviationmanagement::orderBy('image','asc')->get();
+
+
+
+        
+        $phdeligibilityaviationmanagements = phdeligibilityaviationmanagement::orderBy('eligibility','asc')->get();
+        $phdcurriculumaviationmanagements = phdcurriculumaviationmanagement::orderBy('curriculum','asc')->get();
+
+        $phdcareerprospectaviationmanagements = phdcareerprospectaviationmanagement::orderBy('career_prospect','asc')->get();
+        $phdcampusaviationmanagements = phdcampusaviationmanagement::orderBy('image','asc')->get();
 
 
 
@@ -169,7 +208,7 @@ class aviationmanagementController extends Controller
 
         
 
-        return view('aviation-management',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches', 'bsccampusclinicalresearches', 'pgdeligibilityclinicalresearches', 'pgdcurriculumclinicalresearches', 'pgdcareerprospectclinicalresearches', 'pgdcampusclinicalresearches', 'phdeligibilityclinicalresearches', 'phdcurriculumclinicalresearches', 'phdcareerprospectclinicalresearches', 'phdcampusclinicalresearches', 'placementclinicalresearches', 'aviationmanagements','whyaviationmanagements', 'deliverablesaviationmanagements', 'whyicriaviationmanagements', 'msceligibilityaviationmanagements', 'msccurriculumaviationmanagements', 'msccareerprospectaviationmanagements', 'msccampusaviationmanagements' ));
+        return view('aviation-management',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches', 'bsccampusclinicalresearches', 'pgdeligibilityclinicalresearches', 'pgdcurriculumclinicalresearches', 'pgdcareerprospectclinicalresearches', 'pgdcampusclinicalresearches', 'phdeligibilityclinicalresearches', 'phdcurriculumclinicalresearches', 'phdcareerprospectclinicalresearches', 'phdcampusclinicalresearches', 'placementclinicalresearches', 'aviationmanagements','whyaviationmanagements', 'deliverablesaviationmanagements', 'whyicriaviationmanagements', 'msceligibilityaviationmanagements', 'msccurriculumaviationmanagements', 'msccareerprospectaviationmanagements', 'msccampusaviationmanagements', 'bsceligibilityaviationmanagements', 'bsccurriculumaviationmanagements', 'bsccareerprospectaviationmanagements', 'bsccampusaviationmanagements' , 'pgdeligibilityaviationmanagements', 'pgdcurriculumaviationmanagements', 'pgdcareerprospectaviationmanagements', 'pgdcampusaviationmanagements', 'phdeligibilityaviationmanagements', 'phdcurriculumaviationmanagements', 'phdcareerprospectaviationmanagements', 'phdcampusaviationmanagements' ));
     }
 
     /**

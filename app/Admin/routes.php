@@ -144,5 +144,27 @@ Route::group([
 
     $router->resource('msccampusaviationmanagements', msccampusaviationmanagementController::class);
 
+    $router->resource('bsceligibilityaviationmanagements', bsceligibilityaviationmanagementController::class);
+
+    $router->resource('bsccurriculumaviationmanagements', bsccurriculumaviationmanagementController::class);
+
+    $router->resource('bsccareerprospectaviation', bsccareerprospectaviationmanagementController::class);
+    $router->resource('bsccampusaviationmanagements', bsccampusaviationmanagementController::class);
+
+    $router->resource('pgdeligibilityaviationmanagements', pgdeligibilityaviationmanagementController::class);
+
+    $router->resource('pgdcurriculumaviationmanagements', pgdcurriculumaviationmanagementController::class);
+
+    $router->resource('pgdcareerprospectaviation', phdcareerprospectaviationmanagementController::class);
+
+    $router->resource('pgdcampusaviationmanagements', pgdcampusaviationmanagementController::class);
+
+    $router->resource('phdeligibilityaviationmanagements', phdeligibilityaviationmanagementController::class);
+
+    $router->resource('phdcurriculumaviationmanagements', phdcurriculumaviationmanagementController::class);
+
+    $router->resource('phdcareerprospectaviation', phdcareerprospectaviationmanagementController::class);
+
+    $router->resource('phdcampusaviationmanagements', phdcampusaviationmanagementController::class);
 
 });

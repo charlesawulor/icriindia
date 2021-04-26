@@ -299,35 +299,37 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Clinical Research</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Aviation Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
-			  		<div class="col_auto_set">
+
+
+                      <div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($bsceligibilityclinicalresearches) > 0)	
-	@foreach($bsceligibilityclinicalresearches as $bsceligibilityclinicalresearch)
+                          @if(count($bsceligibilityaviationmanagements) > 0)	
+	@foreach($bsceligibilityaviationmanagements as $bsceligibilityaviationmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilityclinicalresearch->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilityaviationmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccurriculumclinicalresearches) > 0)	
-	@foreach($bsccurriculumclinicalresearches as $bsccurriculumclinicalresearch)
+                      @if(count($bsccurriculumaviationmanagements) > 0)	
+	@foreach($bsccurriculumaviationmanagements as $bsccurriculumaviationmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumclinicalresearch->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumaviationmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif   
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccareerprospectclinicalresearches) > 0)	
-	@foreach($bsccareerprospectclinicalresearches as $bsccareerprospectclinicalresearch)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectclinicalresearch->career_prospect}}</div>
+                      @if(count($bsccareerprospectaviationmanagements) > 0)	
+	@foreach($bsccareerprospectaviationmanagements as $bsccareerprospectaviationmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectaviationmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -335,18 +337,19 @@
 			  		</div>
 			  		<div class="col_auto_set campus_col">
 
-                      @if(count($bsccampusclinicalresearches) > 0)	
-	@foreach($bsccampusclinicalresearches as $bsccampusclinicalresearch)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusclinicalresearch->image}}" class="campus_images"><span></span>{{$bsccampusclinicalresearch->campus_name}}</div>
+                      @if(count($bsccampusaviationmanagements) > 0)	
+	@foreach($bsccampusaviationmanagements as $bsccampusaviationmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusaviationmanagement->image}}" class="campus_images"><span></span>{{$bsccampusaviationmanagement->campus_name}}</div>
                           @endforeach
                       @endif  
 
 			  		</div>
 			  	</div>
-		  	</div>
-          
-          
+		  	</div>          
           </div>
+
+
+
 
 
 		  <div class="tab-pane fade" id="tab_three_tag" role="tabpanel" aria-labelledby="tab_three">
@@ -370,19 +373,19 @@
 		  		</div>
 		  	</div>
 
-		  	<div class="ctm-tab-cont">
+              <div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span>Clinical Research</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span>Aviation Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($pgdeligibilityclinicalresearches) > 0)	
-	@foreach($pgdeligibilityclinicalresearches as $pgdeligibilityclinicalresearch)
+                          @if(count($pgdeligibilityaviationmanagements) > 0)	
+	@foreach($pgdeligibilityaviationmanagements as $pgdeligibilityaviationmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityclinicalresearch->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityaviationmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
@@ -390,10 +393,10 @@
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($pgdcurriculumclinicalresearches) > 0)	
-	@foreach($pgdcurriculumclinicalresearches as $pgdcurriculumclinicalresearch)
+                      @if(count($pgdcurriculumaviationmanagements) > 0)	
+	@foreach($pgdcurriculumaviationmanagements as $pgdcurriculumaviationmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumclinicalresearch->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumaviationmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif  
 
@@ -402,9 +405,9 @@
 			  		<div class="col_auto_set">
 
 
-                      @if(count($pgdcareerprospectclinicalresearches) > 0)	
-	@foreach($pgdcareerprospectclinicalresearches as $pgdcareerprospectclinicalresearch)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectclinicalresearch->career_prospect}}</div>
+                      @if(count($pgdcareerprospectaviationmanagements) > 0)	
+	@foreach($pgdcareerprospectaviationmanagements as $pgdcareerprospectaviationmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectaviationmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -414,9 +417,9 @@
 			  		<div class="col_auto_set campus_col">
 
 
-			  		      @if(count($pgdcampusclinicalresearches) > 0)	
-	@foreach($pgdcampusclinicalresearches as $pgdcampusclinicalresearch)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampusclinicalresearch->image}}" class="campus_images"><span></span>{{$pgdcampusclinicalresearch->campus_name}}</div>
+			  		      @if(count($pgdcampusaviationmanagements) > 0)	
+	@foreach($pgdcampusaviationmanagements as $pgdcampusaviationmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampusaviationmanagement->image}}" class="campus_images"><span></span>{{$pgdcampusaviationmanagement->campus_name}}</div>
                           @endforeach
                       @endif 
 
@@ -424,6 +427,7 @@
 			  		</div>
 			  	</div>
 		  	</div>
+
           
           
           </div>
@@ -448,53 +452,60 @@
 		  		</div>
 		  	</div>
 
+
+
+
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Clinical Research</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Aviation Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($phdeligibilityclinicalresearches) > 0)	
-	@foreach($phdeligibilityclinicalresearches as $phdeligibilityclinicalresearch)
+                          @if(count($phdeligibilityaviationmanagements) > 0)	
+	@foreach($phdeligibilityaviationmanagements as $phdeligibilityaviationmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdeligibilityclinicalresearch->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdeligibilityaviationmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($phdcurriculumclinicalresearches) > 0)	
-	@foreach($phdcurriculumclinicalresearches as $phdcurriculumclinicalresearch)
+                      @if(count($phdcurriculumaviationmanagements) > 0)	
+	@foreach($phdcurriculumaviationmanagements as $phdcurriculumaviationmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdcurriculumclinicalresearch->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdcurriculumaviationmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
-					  @if(count($phdcareerprospectclinicalresearches) > 0)	
-	@foreach($phdcareerprospectclinicalresearches as $phdcareerprospectclinicalresearch)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$phdcareerprospectclinicalresearch->career_prospect}}</div>
+					  @if(count($phdcareerprospectaviationmanagements) > 0)	
+	@foreach($phdcareerprospectaviationmanagements as $phdcareerprospectaviationmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$phdcareerprospectaviationmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
 
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-					  @if(count($phdcampusclinicalresearches) > 0)	
-	@foreach($phdcampusclinicalresearches as $phdcampusclinicalresearch)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$phdcampusclinicalresearch->image}}" class="campus_images"><span></span>{{$phdcampusclinicalresearch->campus_name}}</div>
+					  @if(count($phdcampusaviationmanagements) > 0)	
+	@foreach($phdcampusaviationmanagements as $phdcampusaviationmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$phdcampusaviationmanagement->image}}" class="campus_images"><span></span>{{$phdcampusaviationmanagement->campus_name}}</div>
                           @endforeach
                       @endif 
 
 			  		</div>
 			  	</div>
 		  	</div>
-          
+
+
+
+
+
           <div>
     </div>
 </section>
