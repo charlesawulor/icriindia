@@ -132,5 +132,11 @@ Route::group([
 
     $router->resource('whyaviationmanagements', whyaviationmanagementController::class);
 
+    $router->resource('deliverablesaviationmanagements', deliverablesaviationmanagementController::class);
+
+    $router->resource('whyicriaviationmanagements', whyicriaviationmanagementController::class);
+
+    $router->resource('msceligibilityaviationmanagements', msceligibilityaviationmanagementController::class);
+
 
 });

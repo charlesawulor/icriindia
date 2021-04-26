@@ -125,9 +125,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 								
-                            @if(count($deliverablesclinicalresearches) > 0)	
-	@foreach($deliverablesclinicalresearches as $deliverablesclinicalresearch)
-								<li><span>{{$deliverablesclinicalresearch->deliverables}}</span></li>
+                            @if(count($deliverablesaviationmanagements) > 0)	
+	@foreach($deliverablesaviationmanagements as $deliverablesaviationmanagement)
+								<li><span>{{$deliverablesaviationmanagement->deliverables}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -173,9 +173,9 @@
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
                 				
-                @if(count($whyicriclinicalresearches) > 0)	
-	@foreach($whyicriclinicalresearches as $whyicriclinicalresearch)
-					<div class="cr_why_icri_text_cont position-relative">{{$whyicriclinicalresearch->why_icri_clinical}}</div>
+                @if(count($whyicriaviationmanagements) > 0)	
+	@foreach($whyicriaviationmanagements as $whyicriaviationmanagement)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicriaviationmanagement->why_icri_aviation}}</div>
                 @endforeach
             @endif
 				
