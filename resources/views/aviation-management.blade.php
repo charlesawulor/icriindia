@@ -528,14 +528,14 @@
 		</div>
 		<div class="cr_part_detials row">
 
-	@if(count($placementclinicalresearches) > 0)	
-	    @foreach($placementclinicalresearches as $placementclinicalresearch)
+	@if(count($placementaviationmanagements) > 0)	
+	    @foreach($placementaviationmanagements as $placementaviationmanagement)
 
 			<div class="col-lg-3">
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="/icriindia/storage/app/public/{{$placementclinicalresearch->image}}">
+							<img src="/icriindia/storage/app/public/{{$placementaviationmanagement->image}}">
 						</div>
 					</div>
 				</div>
