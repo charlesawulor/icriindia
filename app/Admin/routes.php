@@ -167,4 +167,9 @@ Route::group([
 
     $router->resource('phdcampusaviationmanagements', phdcampusaviationmanagementController::class);
 
+    $router->resource('placementaviationmanagements', placementaviationmanagementController::class);
+
+
+    
+
 });
