@@ -169,7 +169,13 @@ Route::group([
 
     $router->resource('placementaviationmanagements', placementaviationmanagementController::class);
 
+    $router->resource('logisticsmanagements', logisticsmanagementController::class);
 
-    
+    $router->resource('whylogisticsmanagements', whylogisticsmanagementController::class);
+
+    $router->resource('deliverableslogisticsmanagements', deliverableslogisticsmanagementController::class);
+
+
+
 
 });
