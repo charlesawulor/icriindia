@@ -136,7 +136,7 @@
 <footer>
 	<div class="container">
 		<div class="d-flex top_cont">
-			<a class="footer_logo" href="https://technoids.in.net/icri-india/">
+			<a class="footer_logo" href="http://localhost/icriindia/public/">
 				<img src="Images/logo.png" class="fo_logo">
 			</a>
 			<div class="location d-flex">
