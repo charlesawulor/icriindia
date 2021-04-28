@@ -90,6 +90,21 @@ use App\placementaviationmanagement;
 use App\logisticsmanagement;
 use App\whylogisticsmanagement;
 use App\deliverableslogisticsmanagement;
+use App\whyicrilogisticsmanagement;
+use App\msceligibilitylogisticsmanagement;
+use App\msccurriculumlogisticsmanagement;
+use App\msccareerprospectlogisticsmanagement;
+use App\msccampuslogisticsmanagement;
+use App\bsceligibilitylogisticsmanagement;
+use App\bsccurriculumlogisticsmanagement;
+use App\bsccareerprospectlogisticsmanagement;
+use App\bsccampuslogisticsmanagement;
+
+
+
+
+
+
 
 
 
@@ -136,6 +151,10 @@ class logisticsmanagementController extends Controller
         $parenttestimonials = parenttestimonial::orderBy('image','asc')->get();
         $industryspeaktestimonials = industryspeaktestimonial::orderBy('image','asc')->get();
         $hiringpartners = hiringpartner::orderBy('image','asc')->get();
+
+
+
+        
         $clinicalresearches = clinicalresearch::orderBy('image','asc')->get();
         $whyclinicalresearches = whyclinicalresearch::orderBy('why_clinical','asc')->get();
         $deliverablesclinicalresearches = deliverablesclinicalresearch::orderBy('deliverables','asc')->get();
@@ -210,18 +229,28 @@ class logisticsmanagementController extends Controller
         
 
 
+
+
+
         $logisticsmanagements = logisticsmanagement::orderBy('image','asc')->get();
         $whylogisticsmanagements = whylogisticsmanagement::orderBy('why_logistics','asc')->get();
         $deliverableslogisticsmanagements = deliverableslogisticsmanagement::orderBy('deliverables','asc')->get();
-
-
+        $whyicrilogisticsmanagements = whyicrilogisticsmanagement::orderBy('why_icri_logistics','asc')->get();
+        $msceligibilitylogisticsmanagements = msceligibilitylogisticsmanagement::orderBy('eligibility','asc')->get();
+        $msccurriculumlogisticsmanagements = msccurriculumlogisticsmanagement::orderBy('curriculum','asc')->get();
+        $msccareerprospectlogisticsmanagements = msccareerprospectlogisticsmanagement::orderBy('career_prospect','asc')->get();
+        $msccampuslogisticsmanagements = msccampuslogisticsmanagement::orderBy('image','asc')->get();
+        $bsceligibilitylogisticsmanagements = bsceligibilitylogisticsmanagement::orderBy('eligibility','asc')->get();
+        $bsccurriculumlogisticsmanagements = bsccurriculumlogisticsmanagement::orderBy('curriculum','asc')->get();
+        $bsccareerprospectlogisticsmanagements = bsccareerprospectlogisticsmanagement::orderBy('career_prospect','asc')->get();
+        $bsccampuslogisticsmanagements = bsccampuslogisticsmanagement::orderBy('image','asc')->get();
 
 
 
 
         
 
-        return view('logistics-management',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches', 'bsccampusclinicalresearches', 'pgdeligibilityclinicalresearches', 'pgdcurriculumclinicalresearches', 'pgdcareerprospectclinicalresearches', 'pgdcampusclinicalresearches', 'phdeligibilityclinicalresearches', 'phdcurriculumclinicalresearches', 'phdcareerprospectclinicalresearches', 'phdcampusclinicalresearches', 'placementclinicalresearches', 'aviationmanagements','whyaviationmanagements', 'deliverablesaviationmanagements', 'whyicriaviationmanagements', 'msceligibilityaviationmanagements', 'msccurriculumaviationmanagements', 'msccareerprospectaviationmanagements', 'msccampusaviationmanagements', 'bsceligibilityaviationmanagements', 'bsccurriculumaviationmanagements', 'bsccareerprospectaviationmanagements', 'bsccampusaviationmanagements' , 'pgdeligibilityaviationmanagements', 'pgdcurriculumaviationmanagements', 'pgdcareerprospectaviationmanagements', 'pgdcampusaviationmanagements', 'phdeligibilityaviationmanagements', 'phdcurriculumaviationmanagements', 'phdcareerprospectaviationmanagements', 'phdcampusaviationmanagements', 'placementaviationmanagements', 'logisticsmanagements', 'whylogisticsmanagements', 'deliverableslogisticsmanagements' ));
+        return view('logistics-management',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches', 'bsccampusclinicalresearches', 'pgdeligibilityclinicalresearches', 'pgdcurriculumclinicalresearches', 'pgdcareerprospectclinicalresearches', 'pgdcampusclinicalresearches', 'phdeligibilityclinicalresearches', 'phdcurriculumclinicalresearches', 'phdcareerprospectclinicalresearches', 'phdcampusclinicalresearches', 'placementclinicalresearches', 'aviationmanagements','whyaviationmanagements', 'deliverablesaviationmanagements', 'whyicriaviationmanagements', 'msceligibilityaviationmanagements', 'msccurriculumaviationmanagements', 'msccareerprospectaviationmanagements', 'msccampusaviationmanagements', 'bsceligibilityaviationmanagements', 'bsccurriculumaviationmanagements', 'bsccareerprospectaviationmanagements', 'bsccampusaviationmanagements' , 'pgdeligibilityaviationmanagements', 'pgdcurriculumaviationmanagements', 'pgdcareerprospectaviationmanagements', 'pgdcampusaviationmanagements', 'phdeligibilityaviationmanagements', 'phdcurriculumaviationmanagements', 'phdcareerprospectaviationmanagements', 'phdcampusaviationmanagements', 'placementaviationmanagements', 'logisticsmanagements', 'whylogisticsmanagements', 'deliverableslogisticsmanagements', 'whyicrilogisticsmanagements', 'msceligibilitylogisticsmanagements', 'msccurriculumlogisticsmanagements', 'msccareerprospectlogisticsmanagements', 'msccampuslogisticsmanagements', 'bsceligibilitylogisticsmanagements', 'bsccurriculumlogisticsmanagements', 'bsccareerprospectlogisticsmanagements', 'bsccampuslogisticsmanagements' ));
     }
 
     /**

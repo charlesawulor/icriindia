@@ -172,13 +172,11 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
-                				
-                @if(count($whyicriaviationmanagements) > 0)	
-	@foreach($whyicriaviationmanagements as $whyicriaviationmanagement)
-					<div class="cr_why_icri_text_cont position-relative">{{$whyicriaviationmanagement->why_icri_aviation}}</div>
+                @if(count($whyicrilogisticsmanagements) > 0)	
+	@foreach($whyicrilogisticsmanagements as $whyicrilogisticsmanagement)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicrilogisticsmanagement->why_icri_logistics}}</div>
                 @endforeach
             @endif
-				
 				</div>
 			</div>
 		</div>
@@ -233,38 +231,38 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Aviation Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Logistics Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-                          @if(count($msceligibilityaviationmanagements) > 0)	
-	@foreach($msceligibilityaviationmanagements as $msceligibilityaviationmanagement)
+                          @if(count($msceligibilitylogisticsmanagements) > 0)	
+	@foreach($msceligibilitylogisticsmanagements as $msceligibilitylogisticsmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilityaviationmanagement->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilitylogisticsmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-                      @if(count($msccurriculumaviationmanagements) > 0)	
-	@foreach($msccurriculumaviationmanagements as $msccurriculumaviationmanagement)
+                      @if(count($msccurriculumlogisticsmanagements) > 0)	
+	@foreach($msccurriculumlogisticsmanagements as $msccurriculumlogisticsmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumaviationmanagement->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumlogisticsmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-                      @if(count($msccareerprospectaviationmanagements) > 0)	
-	@foreach($msccareerprospectaviationmanagements as $msccareerprospectaviationmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectaviationmanagement->career_prospect}}</div>
+                      @if(count($msccareerprospectlogisticsmanagements) > 0)	
+	@foreach($msccareerprospectlogisticsmanagements as $msccareerprospectlogisticsmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectlogisticsmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-                      @if(count($msccampusaviationmanagements) > 0)	
-	@foreach($msccampusaviationmanagements as $msccampusaviationmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusaviationmanagement->image}}" class="campus_images"><span></span>{{$msccampusaviationmanagement->campus_name}}</div>
+                      @if(count($msccampuslogisticsmanagements) > 0)	
+	@foreach($msccampuslogisticsmanagements as $msccampuslogisticsmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampuslogisticsmanagement->image}}" class="campus_images"><span></span>{{$msccampuslogisticsmanagement->campus_name}}</div>
                           @endforeach
                       @endif  
 
@@ -299,7 +297,7 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Aviation Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Logistics Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 
@@ -307,29 +305,29 @@
                       <div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($bsceligibilityaviationmanagements) > 0)	
-	@foreach($bsceligibilityaviationmanagements as $bsceligibilityaviationmanagement)
+                          @if(count($bsceligibilitylogisticsmanagements) > 0)	
+	@foreach($bsceligibilitylogisticsmanagements as $bsceligibilitylogisticsmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilityaviationmanagement->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilitylogisticsmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccurriculumaviationmanagements) > 0)	
-	@foreach($bsccurriculumaviationmanagements as $bsccurriculumaviationmanagement)
+                      @if(count($bsccurriculumlogisticsmanagements) > 0)	
+	@foreach($bsccurriculumlogisticsmanagements as $bsccurriculumlogisticsmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumaviationmanagement->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumlogisticsmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif   
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccareerprospectaviationmanagements) > 0)	
-	@foreach($bsccareerprospectaviationmanagements as $bsccareerprospectaviationmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectaviationmanagement->career_prospect}}</div>
+                      @if(count($bsccareerprospectlogisticsmanagements) > 0)	
+	@foreach($bsccareerprospectlogisticsmanagements as $bsccareerprospectlogisticsmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectlogisticsmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -337,9 +335,9 @@
 			  		</div>
 			  		<div class="col_auto_set campus_col">
 
-                      @if(count($bsccampusaviationmanagements) > 0)	
-	@foreach($bsccampusaviationmanagements as $bsccampusaviationmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusaviationmanagement->image}}" class="campus_images"><span></span>{{$bsccampusaviationmanagement->campus_name}}</div>
+                      @if(count($bsccampuslogisticsmanagements) > 0)	
+	@foreach($bsccampuslogisticsmanagements as $bsccampuslogisticsmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampuslogisticsmanagement->image}}" class="campus_images"><span></span>{{$bsccampuslogisticsmanagement->campus_name}}</div>
                           @endforeach
                       @endif  
 

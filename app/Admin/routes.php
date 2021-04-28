@@ -175,6 +175,27 @@ Route::group([
 
     $router->resource('deliverableslogisticsmanagements', deliverableslogisticsmanagementController::class);
 
+    $router->resource('whyicrilogisticsmanagements', whyicrilogisticsmanagementController::class);
+
+    $router->resource('msceligibilitylogistics', msceligibilitylogisticsmanagementController::class);
+
+    $router->resource('msccurriculumlogisticsmanagements', msccurriculumlogisticsmanagementController::class);
+
+    $router->resource('msccareerprospectlogistics', msccareerprospectlogisticsmanagementController::class);
+
+    $router->resource('msccampuslogisticsmanagements', msccampuslogisticsmanagementController::class);
+
+    $router->resource('bsceligibilitylogistics', bsceligibilitylogisticsmanagementController::class);
+
+    $router->resource('bsccurriculumlogisticsmanagements', bsccurriculumlogisticsmanagementController::class);
+
+    $router->resource('bsccareerprospectlogistics', bsccareerprospectlogisticsmanagementController::class);
+    
+    $router->resource('bsccampuslogisticsmanagements', bsccampuslogisticsmanagementController::class);
+
+    
+    
+
 
 
 
