@@ -190,8 +190,18 @@ Route::group([
     $router->resource('bsccurriculumlogisticsmanagements', bsccurriculumlogisticsmanagementController::class);
 
     $router->resource('bsccareerprospectlogistics', bsccareerprospectlogisticsmanagementController::class);
-    
+
     $router->resource('bsccampuslogisticsmanagements', bsccampuslogisticsmanagementController::class);
+
+    $router->resource('pgdeligibilitylogistics', pgdeligibilitylogisticsmanagementController::class);
+
+    $router->resource('pgdcurriculumlogisticsmanagements', pgdcurriculumlogisticsmanagementController::class);
+
+    $router->resource('pgdcareerprospectlogistics', pgdcareerprospectlogisticsmanagementController::class);
+
+    $router->resource('pgdcampuslogisticsmanagements', pgdcampuslogisticsmanagementController::class);
+
+    $router->resource('phdeligibilitylogistics', phdeligibilitylogisticsmanagementController::class);
 
     
     

@@ -374,16 +374,16 @@
               <div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span>Aviation Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span>Logistics Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($pgdeligibilityaviationmanagements) > 0)	
-	@foreach($pgdeligibilityaviationmanagements as $pgdeligibilityaviationmanagement)
+                          @if(count($pgdeligibilitylogisticsmanagements) > 0)	
+	@foreach($pgdeligibilitylogisticsmanagements as $pgdeligibilitylogisticsmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityaviationmanagement->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilitylogisticsmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
@@ -391,10 +391,10 @@
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($pgdcurriculumaviationmanagements) > 0)	
-	@foreach($pgdcurriculumaviationmanagements as $pgdcurriculumaviationmanagement)
+                      @if(count($pgdcurriculumlogisticsmanagements) > 0)	
+	@foreach($pgdcurriculumlogisticsmanagements as $pgdcurriculumlogisticsmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumaviationmanagement->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumlogisticsmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif  
 
@@ -403,9 +403,9 @@
 			  		<div class="col_auto_set">
 
 
-                      @if(count($pgdcareerprospectaviationmanagements) > 0)	
-	@foreach($pgdcareerprospectaviationmanagements as $pgdcareerprospectaviationmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectaviationmanagement->career_prospect}}</div>
+                      @if(count($pgdcareerprospectlogisticsmanagements) > 0)	
+	@foreach($pgdcareerprospectlogisticsmanagements as $pgdcareerprospectlogisticsmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectlogisticsmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -415,9 +415,9 @@
 			  		<div class="col_auto_set campus_col">
 
 
-			  		      @if(count($pgdcampusaviationmanagements) > 0)	
-	@foreach($pgdcampusaviationmanagements as $pgdcampusaviationmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampusaviationmanagement->image}}" class="campus_images"><span></span>{{$pgdcampusaviationmanagement->campus_name}}</div>
+			  		      @if(count($pgdcampuslogisticsmanagements) > 0)	
+	@foreach($pgdcampuslogisticsmanagements as $pgdcampuslogisticsmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampuslogisticsmanagement->image}}" class="campus_images"><span></span>{{$pgdcampuslogisticsmanagement->campus_name}}</div>
                           @endforeach
                       @endif 
 
@@ -456,16 +456,16 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Aviation Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Logistics Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($phdeligibilityaviationmanagements) > 0)	
-	@foreach($phdeligibilityaviationmanagements as $phdeligibilityaviationmanagement)
+                          @if(count($phdeligibilitylogisticsmanagements) > 0)	
+	@foreach($phdeligibilitylogisticsmanagements as $phdeligibilitylogisticsmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdeligibilityaviationmanagement->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdeligibilitylogisticsmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
