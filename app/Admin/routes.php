@@ -203,6 +203,14 @@ Route::group([
 
     $router->resource('phdeligibilitylogistics', phdeligibilitylogisticsmanagementController::class);
 
+    $router->resource('phdcurriculumlogisticsmanagements', phdcurriculumlogisticsmanagementController::class);
+
+    $router->resource('phdcareerprospectlogistics', phdcareerprospectlogisticsmanagementController::class);
+
+    $router->resource('phdcampuslogisticsmanagements', phdcampuslogisticsmanagementController::class);
+
+    $router->resource('placementlogisticsmanagements', placementlogisticsmanagementController::class);
+
     
     
 

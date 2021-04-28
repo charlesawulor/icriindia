@@ -472,27 +472,27 @@
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($phdcurriculumaviationmanagements) > 0)	
-	@foreach($phdcurriculumaviationmanagements as $phdcurriculumaviationmanagement)
+                      @if(count($phdcurriculumlogisticsmanagements) > 0)	
+	@foreach($phdcurriculumlogisticsmanagements as $phdcurriculumlogisticsmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdcurriculumaviationmanagement->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdcurriculumlogisticsmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
-					  @if(count($phdcareerprospectaviationmanagements) > 0)	
-	@foreach($phdcareerprospectaviationmanagements as $phdcareerprospectaviationmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$phdcareerprospectaviationmanagement->career_prospect}}</div>
+					  @if(count($phdcareerprospectlogisticsmanagements) > 0)	
+	@foreach($phdcareerprospectlogisticsmanagements as $phdcareerprospectlogisticsmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$phdcareerprospectlogisticsmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
 
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-					  @if(count($phdcampusaviationmanagements) > 0)	
-	@foreach($phdcampusaviationmanagements as $phdcampusaviationmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$phdcampusaviationmanagement->image}}" class="campus_images"><span></span>{{$phdcampusaviationmanagement->campus_name}}</div>
+					  @if(count($phdcampuslogisticsmanagements) > 0)	
+	@foreach($phdcampuslogisticsmanagements as $phdcampuslogisticsmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$phdcampuslogisticsmanagement->image}}" class="campus_images"><span></span>{{$phdcampuslogisticsmanagement->campus_name}}</div>
                           @endforeach
                       @endif 
 
@@ -526,14 +526,14 @@
 		</div>
 		<div class="cr_part_detials row">
 
-	@if(count($placementaviationmanagements) > 0)	
-	    @foreach($placementaviationmanagements as $placementaviationmanagement)
+	@if(count($placementlogisticsmanagements) > 0)	
+	    @foreach($placementlogisticsmanagements as $placementlogisticsmanagement)
 
 			<div class="col-lg-3">
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="/icriindia/storage/app/public/{{$placementaviationmanagement->image}}">
+							<img src="/icriindia/storage/app/public/{{$placementlogisticsmanagement->image}}">
 						</div>
 					</div>
 				</div>
