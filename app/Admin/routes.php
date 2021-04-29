@@ -238,6 +238,24 @@ Route::group([
 
     $router->resource('bsccampushealthcare', bsccampushealthcarehospitalmanagementController::class);
 
+    $router->resource('pgdeligibilityhealthcare', pgdeligibilityhealthcarehospitalmanagementController::class); 
+
+    $router->resource('pgdcurriculumhealthcare', pgdcurriculumhealthcarehospitalmanagementController::class);
+
+    $router->resource('pgdcareerprospecthealthcare', pgdcareerprospecthealthcarehospitalmanagementController::class);
+
+    $router->resource('pgdcampushealthcare', pgdcampushealthcarehospitalmanagementController::class);
+
+    $router->resource('phdeligibilityhealthcare', phdeligibilityhealthcarehospitalmanagementController::class); 
+
+    $router->resource('phdcurriculumhealthcare', phdcurriculumhealthcarehospitalmanagementController::class);
+
+    $router->resource('phdcareerprospecthealthcare', phdcareerprospecthealthcarehospitalmanagementController::class);
+    
+    $router->resource('phdcampushealthcare', phdcampushealthcarehospitalmanagementController::class);
+
+    $router->resource('placementhealthcare', placementhealthcarehospitalmanagementController::class);
+
     
     
 
