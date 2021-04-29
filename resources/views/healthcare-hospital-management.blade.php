@@ -236,33 +236,32 @@
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-                          @if(count($msceligibilitylogisticsmanagements) > 0)	
-	@foreach($msceligibilitylogisticsmanagements as $msceligibilitylogisticsmanagement)
+                          @if(count($msceligibilityhealthcarehospitalmanagements) > 0)	
+@foreach($msceligibilityhealthcarehospitalmanagements as $msceligibilityhealthcarehospitalmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilitylogisticsmanagement->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilityhealthcarehospitalmanagement->eligibility}}</div>
 			  			@endforeach
                       @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-                      @if(count($msccurriculumlogisticsmanagements) > 0)	
-	@foreach($msccurriculumlogisticsmanagements as $msccurriculumlogisticsmanagement)
+                      @if(count($msccurriculumhealthcarehospitalmanagements) > 0)	
+@foreach($msccurriculumhealthcarehospitalmanagements as $msccurriculumhealthcarehospitalmanagement)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumlogisticsmanagement->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumhealthcarehospitalmanagement->curriculum}}</div>
 			  			@endforeach
                       @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-                      @if(count($msccareerprospectlogisticsmanagements) > 0)	
-	@foreach($msccareerprospectlogisticsmanagements as $msccareerprospectlogisticsmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectlogisticsmanagement->career_prospect}}</div>
+                      @if(count($msccareerprospecthealthcarehospitalmanagements) > 0)	         @foreach($msccareerprospecthealthcarehospitalmanagements as      $msccareerprospecthealthcarehospitalmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospecthealthcarehospitalmanagement->career_prospect}}</div>
 
                           @endforeach
                       @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-                      @if(count($msccampuslogisticsmanagements) > 0)	
-	@foreach($msccampuslogisticsmanagements as $msccampuslogisticsmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampuslogisticsmanagement->image}}" class="campus_images"><span></span>{{$msccampuslogisticsmanagement->campus_name}}</div>
+                      @if(count($msccampushealthcarehospitalmanagements) > 0)	
+	@foreach($msccampushealthcarehospitalmanagements as $msccampushealthcarehospitalmanagement)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampushealthcarehospitalmanagement->image}}" class="campus_images"><span></span>{{$msccampushealthcarehospitalmanagement->campus_name}}</div>
                           @endforeach
                       @endif  
 

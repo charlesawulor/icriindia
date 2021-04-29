@@ -222,6 +222,14 @@ Route::group([
 
     $router->resource('whyicrihealthcare', whyicrihealthcarehospitalmanagementController::class);
 
+    $router->resource('msceligibilityhealthcare', msceligibilityhealthcarehospitalmanagementController::class);
+
+    $router->resource('msccurriculumhealthcare', msccurriculumhealthcarehospitalmanagementController::class);
+
+    $router->resource('msccareerprospecthealthcare', msccareerprospecthealthcarehospitalmanagementController::class);
+
+    $router->resource('msccampushealthcare', msccampushealthcarehospitalmanagementController::class);
+
     
     
 
