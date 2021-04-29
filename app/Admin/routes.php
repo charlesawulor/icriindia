@@ -211,6 +211,17 @@ Route::group([
 
     $router->resource('placementlogisticsmanagements', placementlogisticsmanagementController::class);
 
+
+
+
+
+    $router->resource('healthcarehospitalmanagements', healthcarehospitalmanagementController::class);
+    $router->resource('whyhealthcarehospitalmanagements', whyhealthcarehospitalmanagementController::class);
+
+    $router->resource('deliverableshealthcare', deliverableshealthcarehospitalmanagementController::class);
+
+    $router->resource('whyicrihealthcare', whyicrihealthcarehospitalmanagementController::class);
+
     
     
 

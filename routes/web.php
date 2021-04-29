@@ -24,6 +24,7 @@ Route::resource('subscribers','IndexpageController');
 Route::resource('clinical-research','clinicalresearchController');
 Route::resource('aviation-management','aviationmanagementController');
 Route::resource('logistics-management','logisticsmanagementController');
+Route::resource('healthcare-hospital-management','healthcarehospitalmanagementController');
 
 
 

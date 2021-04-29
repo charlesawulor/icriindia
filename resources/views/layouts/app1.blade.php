@@ -130,9 +130,6 @@
 </section>
 
 
-
-
-
 <footer>
 	<div class="container">
 		<div class="d-flex top_cont">
@@ -153,26 +150,21 @@
 		
           
 		<div class="footer_cata_option d-flex">
-
-
 			<a class="catag" href="/icriindia/public/clinical-research/">Clinical Research</a>
 			<a class="catag" href="/icriindia/public/aviation-management/">Aviation Management</a>
 			<a class="catag" href="/icriindia/public/logistics-management/">Logistics Management</a>
-
-		
-			
+			<a class="catag" href="/icriindia/public/healthcare-hospital-management/">Healthcare & Hospital Management</a>			
 		</div> 
-
 
 		<div class="contact_foo_nav">
 			<div class="cont_title">Useful Links</div>
 			<div class="footer_contnav">
 			@if(count($usefullinks) > 0)	
-		     @foreach($usefullinks as $usefullink)
-				<a href="#" class="foo_nav_cont">{{$usefullink->title}}</a>
+		        @foreach($usefullinks as $usefullink)
+				   <a href="#" class="foo_nav_cont">{{$usefullink->title}}</a>
 				
 				@endforeach
-		@endif 
+		    @endif 
 			</div>
 		</div>
 		<div class="top_courses contact_foo_nav">
@@ -180,11 +172,11 @@
 
       
 			<div class="footer_contnav">
-	    @if(count($topcourses) > 0)	
-		     @foreach($topcourses as $topcourse)
-				<a href="#" class="foo_nav_cont">{{$topcourse->degree}}</a>
+	        @if(count($topcourses) > 0)	
+		        @foreach($topcourses as $topcourse)
+				   <a href="#" class="foo_nav_cont">{{$topcourse->degree}}</a>
 				@endforeach
-		@endif 
+		    @endif 
 			</div>
 			
 
@@ -197,17 +189,17 @@
 				<div class="connect_title">Social Connect</div>
 				<div class="social_media_icon">
 		@if(count($socialconnectfacebooks) > 0)	
-		     @foreach($socialconnectfacebooks as $socialconnectfacebook)
+		      @foreach($socialconnectfacebooks as $socialconnectfacebook)
 					<a href="{{$socialconnectfacebook->link}}"><img src="Images/facebook.png" alt="facebook"></a>
-					@endforeach
+				@endforeach
 		@endif
 
 
 		@if(count($socialconnectinstagrams) > 0)	
-		     @foreach($socialconnectinstagrams as $socialconnectinstagram)    
+		       @foreach($socialconnectinstagrams as $socialconnectinstagram)    
 					<a href="{{$socialconnectinstagram->link}}"><img src="Images/instagram.png" alt="instagram"></a>
 
-					@endforeach
+			    @endforeach
 		@endif
 
 		@if(count($socialconnecttwitters) > 0)	
