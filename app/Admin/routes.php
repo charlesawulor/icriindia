@@ -230,6 +230,14 @@ Route::group([
 
     $router->resource('msccampushealthcare', msccampushealthcarehospitalmanagementController::class);
 
+    $router->resource('bsceligibilityhealthcare', bsceligibilityhealthcarehospitalmanagementController::class); 
+
+    $router->resource('bsccurriculumhealthcare', bsccurriculumhealthcarehospitalmanagementController::class);
+
+    $router->resource('bsccareerprospecthealthcare', bsccareerprospecthealthcarehospitalmanagementController::class); 
+
+    $router->resource('bsccampushealthcare', bsccampushealthcarehospitalmanagementController::class);
+
     
     
 
