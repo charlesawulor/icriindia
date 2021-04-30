@@ -456,43 +456,43 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Healthcare & Hospital Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Pharma Marketing & Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($phdeligibilityhealthcarehospitalmanagements) > 0)	
-	@foreach($phdeligibilityhealthcarehospitalmanagements as $phdeligibilityhealthcarehospitalmanagement)
+                          @if(count($phdeligibilitypharmamktmgts) > 0)	
+	@foreach($phdeligibilitypharmamktmgts as $phdeligibilitypharmamktmgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdeligibilityhealthcarehospitalmanagement->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdeligibilitypharmamktmgt->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($phdcurriculumhealthcarehospitalmanagements) > 0)	
-	@foreach($phdcurriculumhealthcarehospitalmanagements as $phdcurriculumhealthcarehospitalmanagement)
+                      @if(count($phdcurriculumpharmamktmgts) > 0)	
+	@foreach($phdcurriculumpharmamktmgts as $phdcurriculumpharmamktmgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdcurriculumhealthcarehospitalmanagement->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdcurriculumpharmamktmgt->curriculum}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
-					  @if(count($phdcareerprospecthealthcarehospitalmanagements) > 0)	
-	@foreach($phdcareerprospecthealthcarehospitalmanagements as $phdcareerprospecthealthcarehospitalmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$phdcareerprospecthealthcarehospitalmanagement->career_prospect}}</div>
+					  @if(count($phdcareerprospectpharmamktmgts) > 0)	
+	@foreach($phdcareerprospectpharmamktmgts as $phdcareerprospectpharmamktmgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$phdcareerprospectpharmamktmgt->career_prospect}}</div>
 
                           @endforeach
                       @endif  
 
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-					  @if(count($phdcampushealthcarehospitalmanagements) > 0)	
-	@foreach($phdcampushealthcarehospitalmanagements as $phdcampushealthcarehospitalmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$phdcampushealthcarehospitalmanagement->image}}" class="campus_images"><span></span>{{$phdcampushealthcarehospitalmanagement->campus_name}}</div>
+					  @if(count($phdcampuspharmamktmgts) > 0)	
+	@foreach($phdcampuspharmamktmgts as $phdcampuspharmamktmgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$phdcampuspharmamktmgt->image}}" class="campus_images"><span></span>{{$phdcampuspharmamktmgt->campus_name}}</div>
                           @endforeach
                       @endif 
 
@@ -526,14 +526,14 @@
 		</div>
 		<div class="cr_part_detials row">
 
-	@if(count($placementhealthcarehospitalmanagements) > 0)	
-	    @foreach($placementhealthcarehospitalmanagements as $placementhealthcarehospitalmanagement)
+	@if(count($placementpharmamktmgts) > 0)	
+	    @foreach($placementpharmamktmgts as $placementpharmamktmgt)
 
 			<div class="col-lg-3">
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="/icriindia/storage/app/public/{{$placementhealthcarehospitalmanagement->image}}">
+							<img src="/icriindia/storage/app/public/{{$placementpharmamktmgt->image}}">
 						</div>
 					</div>
 				</div>

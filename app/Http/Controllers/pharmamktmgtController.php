@@ -61,6 +61,11 @@ use App\pgdeligibilitypharmamktmgt;
 use App\pgdcurriculumpharmamktmgt;
 use App\pgdcareerprospectpharmamktmgt;
 use App\pgdcampuspharmamktmgt;
+use App\phdeligibilitypharmamktmgt;
+use App\phdcurriculumpharmamktmgt;
+use App\phdcareerprospectpharmamktmgt;
+use App\phdcampuspharmamktmgt;
+use App\placementpharmamktmgt;
 
 
 
@@ -128,6 +133,11 @@ class pharmamktmgtController extends Controller
         $pgdcurriculumpharmamktmgts = pgdcurriculumpharmamktmgt::orderBy('curriculum','asc')->get();
         $pgdcareerprospectpharmamktmgts = pgdcareerprospectpharmamktmgt::orderBy('career_prospect','asc')->get();
         $pgdcampuspharmamktmgts = pgdcampuspharmamktmgt::orderBy('image','asc')->get();
+        $phdeligibilitypharmamktmgts = phdeligibilitypharmamktmgt::orderBy('eligibility','asc')->get();
+        $phdcurriculumpharmamktmgts = phdcurriculumpharmamktmgt::orderBy('curriculum','asc')->get();
+        $phdcareerprospectpharmamktmgts = phdcareerprospectpharmamktmgt::orderBy('career_prospect','asc')->get();
+        $phdcampuspharmamktmgts = phdcampuspharmamktmgt::orderBy('image','asc')->get();
+        $placementpharmamktmgts = placementpharmamktmgt::orderBy('image','asc')->get();
 
          
 
@@ -136,7 +146,7 @@ class pharmamktmgtController extends Controller
      
 
      
-        return view('pharma-marketing-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','logisticsmanagements', 'whylogisticsmanagements', 'deliverableslogisticsmanagements', 'whyicrilogisticsmanagements', 'msceligibilitylogisticsmanagements', 'msccurriculumlogisticsmanagements', 'msccareerprospectlogisticsmanagements', 'msccampuslogisticsmanagements', 'bsceligibilitylogisticsmanagements', 'bsccurriculumlogisticsmanagements', 'bsccareerprospectlogisticsmanagements', 'bsccampuslogisticsmanagements', 'pgdeligibilitylogisticsmanagements', 'pgdcurriculumlogisticsmanagements', 'pgdcareerprospectlogisticsmanagements', 'pgdcampuslogisticsmanagements', 'phdeligibilitylogisticsmanagements', 'phdcurriculumlogisticsmanagements', 'phdcareerprospectlogisticsmanagements', 'phdcampuslogisticsmanagements', 'placementlogisticsmanagements', 'healthcarehospitalmanagements', 'whyhealthcarehospitalmanagements', 'deliverableshealthcarehospitalmanagements', 'whyicrihealthcarehospitalmanagements', 'msceligibilityhealthcarehospitalmanagements', 'msccurriculumhealthcarehospitalmanagements', 'msccareerprospecthealthcarehospitalmanagements', 'msccampushealthcarehospitalmanagements', 'bsceligibilityhealthcarehospitalmanagements', 'bsccurriculumhealthcarehospitalmanagements', 'bsccareerprospecthealthcarehospitalmanagements', 'bsccampushealthcarehospitalmanagements', 'pgdeligibilityhealthcarehospitalmanagements', 'pgdcurriculumhealthcarehospitalmanagements', 'pgdcareerprospecthealthcarehospitalmanagements', 'pgdcampushealthcarehospitalmanagements', 'phdeligibilityhealthcarehospitalmanagements', 'phdcurriculumhealthcarehospitalmanagements', 'phdcareerprospecthealthcarehospitalmanagements', 'phdcampushealthcarehospitalmanagements', 'placementhealthcarehospitalmanagements', 'pharmamktmgts', 'whypharmamktmgts', 'deliverablespharmamktmgts', 'whyicripharmamktmgts', 'msceligibilitypharmamktmgts', 'msccurriculumpharmamktmgts', 'msccareerprospectpharmamktmgts', 'msccampuspharmamktmgts', 'bsceligibilitypharmamktmgts', 'bsccurriculumpharmamktmgts', 'bsccareerprospectpharmamktmgts', 'bsccampuspharmamktmgts', 'pgdeligibilitypharmamktmgts', 'pgdcurriculumpharmamktmgts', 'pgdcareerprospectpharmamktmgts','pgdcampuspharmamktmgts' ));
+        return view('pharma-marketing-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','logisticsmanagements', 'whylogisticsmanagements', 'deliverableslogisticsmanagements', 'whyicrilogisticsmanagements', 'msceligibilitylogisticsmanagements', 'msccurriculumlogisticsmanagements', 'msccareerprospectlogisticsmanagements', 'msccampuslogisticsmanagements', 'bsceligibilitylogisticsmanagements', 'bsccurriculumlogisticsmanagements', 'bsccareerprospectlogisticsmanagements', 'bsccampuslogisticsmanagements', 'pgdeligibilitylogisticsmanagements', 'pgdcurriculumlogisticsmanagements', 'pgdcareerprospectlogisticsmanagements', 'pgdcampuslogisticsmanagements', 'phdeligibilitylogisticsmanagements', 'phdcurriculumlogisticsmanagements', 'phdcareerprospectlogisticsmanagements', 'phdcampuslogisticsmanagements', 'placementlogisticsmanagements', 'healthcarehospitalmanagements', 'whyhealthcarehospitalmanagements', 'deliverableshealthcarehospitalmanagements', 'whyicrihealthcarehospitalmanagements', 'msceligibilityhealthcarehospitalmanagements', 'msccurriculumhealthcarehospitalmanagements', 'msccareerprospecthealthcarehospitalmanagements', 'msccampushealthcarehospitalmanagements', 'bsceligibilityhealthcarehospitalmanagements', 'bsccurriculumhealthcarehospitalmanagements', 'bsccareerprospecthealthcarehospitalmanagements', 'bsccampushealthcarehospitalmanagements', 'pgdeligibilityhealthcarehospitalmanagements', 'pgdcurriculumhealthcarehospitalmanagements', 'pgdcareerprospecthealthcarehospitalmanagements', 'pgdcampushealthcarehospitalmanagements', 'phdeligibilityhealthcarehospitalmanagements', 'phdcurriculumhealthcarehospitalmanagements', 'phdcareerprospecthealthcarehospitalmanagements', 'phdcampushealthcarehospitalmanagements', 'placementhealthcarehospitalmanagements', 'pharmamktmgts', 'whypharmamktmgts', 'deliverablespharmamktmgts', 'whyicripharmamktmgts', 'msceligibilitypharmamktmgts', 'msccurriculumpharmamktmgts', 'msccareerprospectpharmamktmgts', 'msccampuspharmamktmgts', 'bsceligibilitypharmamktmgts', 'bsccurriculumpharmamktmgts', 'bsccareerprospectpharmamktmgts', 'bsccampuspharmamktmgts', 'pgdeligibilitypharmamktmgts', 'pgdcurriculumpharmamktmgts', 'pgdcareerprospectpharmamktmgts','pgdcampuspharmamktmgts', 'phdeligibilitypharmamktmgts', 'phdcurriculumpharmamktmgts', 'phdcareerprospectpharmamktmgts', 'phdcampuspharmamktmgts', 'placementpharmamktmgts' ));
     }
 
     /**
