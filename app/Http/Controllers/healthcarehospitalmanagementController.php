@@ -18,33 +18,6 @@ use App\socialconnectinstagram;
 use App\socialconnecttwitter;
 use App\hiringpartner;
 
-
-
-
-use App\logisticsmanagement;
-use App\whylogisticsmanagement;
-use App\deliverableslogisticsmanagement;
-use App\whyicrilogisticsmanagement;
-use App\msceligibilitylogisticsmanagement;
-use App\msccurriculumlogisticsmanagement;
-use App\msccareerprospectlogisticsmanagement;
-use App\msccampuslogisticsmanagement;
-use App\bsceligibilitylogisticsmanagement;
-use App\bsccurriculumlogisticsmanagement;
-use App\bsccareerprospectlogisticsmanagement;
-use App\bsccampuslogisticsmanagement;
-use App\pgdeligibilitylogisticsmanagement;
-use App\pgdcurriculumlogisticsmanagement;
-use App\pgdcareerprospectlogisticsmanagement;
-use App\pgdcampuslogisticsmanagement;
-use App\phdeligibilitylogisticsmanagement;
-use App\phdcurriculumlogisticsmanagement;
-use App\phdcareerprospectlogisticsmanagement;
-use App\phdcampuslogisticsmanagement;
-use App\placementlogisticsmanagement;
-
-
-
 use App\healthcarehospitalmanagement;
 use App\whyhealthcarehospitalmanagement;
 use App\deliverableshealthcarehospitalmanagement;
@@ -94,43 +67,6 @@ class healthcarehospitalmanagementController extends Controller
         $socialconnecttwitters = socialconnecttwitter::orderBy('link','asc')->get();
         $hiringpartners = hiringpartner::orderBy('image','asc')->get();
 
-        
-
-        $logisticsmanagements = logisticsmanagement::orderBy('image','asc')->get();
-        $whylogisticsmanagements = whylogisticsmanagement::orderBy('why_logistics','asc')->get();
-        $deliverableslogisticsmanagements = deliverableslogisticsmanagement::orderBy('deliverables','asc')->get();
-        $whyicrilogisticsmanagements = whyicrilogisticsmanagement::orderBy('why_icri_logistics','asc')->get();
-
-        
-        $msceligibilitylogisticsmanagements = msceligibilitylogisticsmanagement::orderBy('eligibility','asc')->get();
-        $msccurriculumlogisticsmanagements = msccurriculumlogisticsmanagement::orderBy('curriculum','asc')->get();
-        $msccareerprospectlogisticsmanagements = msccareerprospectlogisticsmanagement::orderBy('career_prospect','asc')->get();
-        $msccampuslogisticsmanagements = msccampuslogisticsmanagement::orderBy('image','asc')->get();
-
-
-        $bsceligibilitylogisticsmanagements = bsceligibilitylogisticsmanagement::orderBy('eligibility','asc')->get();
-        $bsccurriculumlogisticsmanagements = bsccurriculumlogisticsmanagement::orderBy('curriculum','asc')->get();
-        $bsccareerprospectlogisticsmanagements = bsccareerprospectlogisticsmanagement::orderBy('career_prospect','asc')->get();
-        $bsccampuslogisticsmanagements = bsccampuslogisticsmanagement::orderBy('image','asc')->get();
-
-
-        $pgdeligibilitylogisticsmanagements = pgdeligibilitylogisticsmanagement::orderBy('eligibility','asc')->get();
-        $pgdcurriculumlogisticsmanagements = pgdcurriculumlogisticsmanagement::orderBy('curriculum','asc')->get();
-        $pgdcareerprospectlogisticsmanagements = pgdcareerprospectlogisticsmanagement::orderBy('career_prospect','asc')->get();
-        $pgdcampuslogisticsmanagements = pgdcampuslogisticsmanagement::orderBy('image','asc')->get();
-
-
-        $phdeligibilitylogisticsmanagements = phdeligibilitylogisticsmanagement::orderBy('eligibility','asc')->get();
-        $phdcurriculumlogisticsmanagements = phdcurriculumlogisticsmanagement::orderBy('curriculum','asc')->get();
-        $phdcareerprospectlogisticsmanagements = phdcareerprospectlogisticsmanagement::orderBy('career_prospect','asc')->get();
-        $phdcampuslogisticsmanagements = phdcampuslogisticsmanagement::orderBy('image','asc')->get();
-        $placementlogisticsmanagements = placementlogisticsmanagement::orderBy('image','asc')->get();
-
-
-
-
-
-
         $healthcarehospitalmanagements = healthcarehospitalmanagement::orderBy('image','asc')->get();
         $whyhealthcarehospitalmanagements = whyhealthcarehospitalmanagement::orderBy('why_healthcarehospital','asc')->get();
         $deliverableshealthcarehospitalmanagements = deliverableshealthcarehospitalmanagement::orderBy('deliverables','asc')->get();
@@ -154,11 +90,7 @@ class healthcarehospitalmanagementController extends Controller
         $placementhealthcarehospitalmanagements = placementhealthcarehospitalmanagement::orderBy('image','asc')->get();
 
 
-
-     
-
-     
-        return view('healthcare-hospital-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','logisticsmanagements', 'whylogisticsmanagements', 'deliverableslogisticsmanagements', 'whyicrilogisticsmanagements', 'msceligibilitylogisticsmanagements', 'msccurriculumlogisticsmanagements', 'msccareerprospectlogisticsmanagements', 'msccampuslogisticsmanagements', 'bsceligibilitylogisticsmanagements', 'bsccurriculumlogisticsmanagements', 'bsccareerprospectlogisticsmanagements', 'bsccampuslogisticsmanagements', 'pgdeligibilitylogisticsmanagements', 'pgdcurriculumlogisticsmanagements', 'pgdcareerprospectlogisticsmanagements', 'pgdcampuslogisticsmanagements', 'phdeligibilitylogisticsmanagements', 'phdcurriculumlogisticsmanagements', 'phdcareerprospectlogisticsmanagements', 'phdcampuslogisticsmanagements', 'placementlogisticsmanagements', 'healthcarehospitalmanagements', 'whyhealthcarehospitalmanagements', 'deliverableshealthcarehospitalmanagements', 'whyicrihealthcarehospitalmanagements', 'msceligibilityhealthcarehospitalmanagements', 'msccurriculumhealthcarehospitalmanagements', 'msccareerprospecthealthcarehospitalmanagements', 'msccampushealthcarehospitalmanagements', 'bsceligibilityhealthcarehospitalmanagements', 'bsccurriculumhealthcarehospitalmanagements', 'bsccareerprospecthealthcarehospitalmanagements', 'bsccampushealthcarehospitalmanagements', 'pgdeligibilityhealthcarehospitalmanagements', 'pgdcurriculumhealthcarehospitalmanagements', 'pgdcareerprospecthealthcarehospitalmanagements', 'pgdcampushealthcarehospitalmanagements', 'phdeligibilityhealthcarehospitalmanagements', 'phdcurriculumhealthcarehospitalmanagements', 'phdcareerprospecthealthcarehospitalmanagements', 'phdcampushealthcarehospitalmanagements', 'placementhealthcarehospitalmanagements' ));
+        return view('healthcare-hospital-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','healthcarehospitalmanagements', 'whyhealthcarehospitalmanagements', 'deliverableshealthcarehospitalmanagements', 'whyicrihealthcarehospitalmanagements', 'msceligibilityhealthcarehospitalmanagements', 'msccurriculumhealthcarehospitalmanagements', 'msccareerprospecthealthcarehospitalmanagements', 'msccampushealthcarehospitalmanagements', 'bsceligibilityhealthcarehospitalmanagements', 'bsccurriculumhealthcarehospitalmanagements', 'bsccareerprospecthealthcarehospitalmanagements', 'bsccampushealthcarehospitalmanagements', 'pgdeligibilityhealthcarehospitalmanagements', 'pgdcurriculumhealthcarehospitalmanagements', 'pgdcareerprospecthealthcarehospitalmanagements', 'pgdcampushealthcarehospitalmanagements', 'phdeligibilityhealthcarehospitalmanagements', 'phdcurriculumhealthcarehospitalmanagements', 'phdcareerprospecthealthcarehospitalmanagements', 'phdcampushealthcarehospitalmanagements', 'placementhealthcarehospitalmanagements' ));
     }
 
     /**

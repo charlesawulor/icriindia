@@ -18,11 +18,6 @@ use App\socialconnectinstagram;
 use App\socialconnecttwitter;
 use App\hiringpartner;
 
-
-
-
-
-
 use App\aviationmanagement;
 use App\whyaviationmanagement;
 use App\deliverablesaviationmanagement;
@@ -92,10 +87,6 @@ class aviationmanagementController extends Controller
         $bsccareerprospectaviationmanagements = bsccareerprospectaviationmanagement::orderBy('career_prospect','asc')->get();
         $bsccampusaviationmanagements = bsccampusaviationmanagement::orderBy('image','asc')->get();
 
-
-
-
-
         $pgdeligibilityaviationmanagements = pgdeligibilityaviationmanagement::orderBy('eligibility','asc')->get();
         $pgdcurriculumaviationmanagements = pgdcurriculumaviationmanagement::orderBy('curriculum','asc')->get();
 
@@ -119,7 +110,10 @@ class aviationmanagementController extends Controller
 
         
 
-        return view('aviation-management',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches', 'bsccampusclinicalresearches', 'pgdeligibilityclinicalresearches', 'pgdcurriculumclinicalresearches', 'pgdcareerprospectclinicalresearches', 'pgdcampusclinicalresearches', 'phdeligibilityclinicalresearches', 'phdcurriculumclinicalresearches', 'phdcareerprospectclinicalresearches', 'phdcampusclinicalresearches', 'placementclinicalresearches', 'aviationmanagements','whyaviationmanagements', 'deliverablesaviationmanagements', 'whyicriaviationmanagements', 'msceligibilityaviationmanagements', 'msccurriculumaviationmanagements', 'msccareerprospectaviationmanagements', 'msccampusaviationmanagements', 'bsceligibilityaviationmanagements', 'bsccurriculumaviationmanagements', 'bsccareerprospectaviationmanagements', 'bsccampusaviationmanagements' , 'pgdeligibilityaviationmanagements', 'pgdcurriculumaviationmanagements', 'pgdcareerprospectaviationmanagements', 'pgdcampusaviationmanagements', 'phdeligibilityaviationmanagements', 'phdcurriculumaviationmanagements', 'phdcareerprospectaviationmanagements', 'phdcampusaviationmanagements', 'placementaviationmanagements' ));
+        return view('aviation-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners',
+        
+        
+        'aviationmanagements','whyaviationmanagements', 'deliverablesaviationmanagements', 'whyicriaviationmanagements', 'msceligibilityaviationmanagements', 'msccurriculumaviationmanagements', 'msccareerprospectaviationmanagements', 'msccampusaviationmanagements', 'bsceligibilityaviationmanagements', 'bsccurriculumaviationmanagements', 'bsccareerprospectaviationmanagements', 'bsccampusaviationmanagements' , 'pgdeligibilityaviationmanagements', 'pgdcurriculumaviationmanagements', 'pgdcareerprospectaviationmanagements', 'pgdcampusaviationmanagements', 'phdeligibilityaviationmanagements', 'phdcurriculumaviationmanagements', 'phdcareerprospectaviationmanagements', 'phdcampusaviationmanagements', 'placementaviationmanagements' ));
     }
 
     /**
