@@ -261,6 +261,14 @@ Route::group([
     $router->resource('deliverablespharmamktmgts', deliverablespharmamktmgtController::class);
     $router->resource('whyicripharmamktmgts', whyicripharmamktmgtController::class);
     $router->resource('msceligibilitypharmamktmgts', msceligibilitypharmamktmgtController::class);
+    $router->resource('msccurriculumpharmamktmgts', msccurriculumpharmamktmgtController::class);
+    $router->resource('msccareerprospectpharmamktmgts', msccareerprospectpharmamktmgtController::class);
+    $router->resource('msccampuspharmamktmgts', msccampuspharmamktmgtController::class);
+    $router->resource('bsceligibilitypharmamktmgts', bsceligibilitypharmamktmgtController::class);
+    $router->resource('bsccurriculumpharmamktmgts', bsccurriculumpharmamktmgtController::class);
+    $router->resource('bsccareerprospectpharmamktmgts', bsccareerprospectpharmamktmgtController::class);
+    $router->resource('bsccampuspharmamktmgts', bsccampuspharmamktmgtController::class);
+
 
     
     

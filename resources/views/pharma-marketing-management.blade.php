@@ -244,26 +244,27 @@
                       @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-                      @if(count($msccurriculumhealthcarehospitalmanagements) > 0)	
-@foreach($msccurriculumhealthcarehospitalmanagements as $msccurriculumhealthcarehospitalmanagement)
+             @if(count($msccurriculumpharmamktmgts) > 0)	
+                   @foreach($msccurriculumpharmamktmgts as $msccurriculumpharmamktmgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumhealthcarehospitalmanagement->curriculum}}</div>
-			  			@endforeach
-                      @endif   
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumpharmamktmgt->curriculum}}</div>
+			  	  @endforeach
+             @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-                      @if(count($msccareerprospecthealthcarehospitalmanagements) > 0)	         @foreach($msccareerprospecthealthcarehospitalmanagements as      $msccareerprospecthealthcarehospitalmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospecthealthcarehospitalmanagement->career_prospect}}</div>
+           @if(count($msccareerprospectpharmamktmgts) > 0)	         
+                @foreach($msccareerprospectpharmamktmgts as      $msccareerprospectpharmamktmgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectpharmamktmgt->career_prospect}}</div>
 
-                          @endforeach
-                      @endif  
+                @endforeach
+           @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-                      @if(count($msccampushealthcarehospitalmanagements) > 0)	
-	@foreach($msccampushealthcarehospitalmanagements as $msccampushealthcarehospitalmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampushealthcarehospitalmanagement->image}}" class="campus_images"><span></span>{{$msccampushealthcarehospitalmanagement->campus_name}}</div>
-                          @endforeach
-                      @endif  
+             @if(count($msccampuspharmamktmgts) > 0)	
+	              @foreach($msccampuspharmamktmgts as $msccampuspharmamktmgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampuspharmamktmgt->image}}" class="campus_images"><span></span>{{$msccampuspharmamktmgt->campus_name}}</div>
+                   @endforeach
+             @endif  
 
 			  		</div>
 			  	</div>
@@ -296,7 +297,7 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Healthcare & Hospital Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span> Pharma Marketing & Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 
@@ -304,29 +305,29 @@
                       <div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($bsceligibilityhealthcarehospitalmanagements) > 0)	
-	@foreach($bsceligibilityhealthcarehospitalmanagements as $bsceligibilityhealthcarehospitalmanagement)
+                          @if(count($bsceligibilitypharmamktmgts) > 0)	
+	@foreach($bsceligibilitypharmamktmgts as $bsceligibilitypharmamktmgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilityhealthcarehospitalmanagement->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilitypharmamktmgt->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccurriculumhealthcarehospitalmanagements) > 0)	
-	@foreach($bsccurriculumhealthcarehospitalmanagements as $bsccurriculumhealthcarehospitalmanagement)
+                      @if(count($bsccurriculumpharmamktmgts) > 0)	
+	@foreach($bsccurriculumpharmamktmgts as $bsccurriculumpharmamktmgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumhealthcarehospitalmanagement->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumpharmamktmgt->curriculum}}</div>
 			  			@endforeach
                       @endif   
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccareerprospecthealthcarehospitalmanagements) > 0)	
-	@foreach($bsccareerprospecthealthcarehospitalmanagements as $bsccareerprospecthealthcarehospitalmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospecthealthcarehospitalmanagement->career_prospect}}</div>
+                      @if(count($bsccareerprospectpharmamktmgts) > 0)	
+	@foreach($bsccareerprospectpharmamktmgts as $bsccareerprospectpharmamktmgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectpharmamktmgt->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -334,9 +335,9 @@
 			  		</div>
 			  		<div class="col_auto_set campus_col">
 
-                      @if(count($bsccampushealthcarehospitalmanagements) > 0)	
-	@foreach($bsccampushealthcarehospitalmanagements as $bsccampushealthcarehospitalmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampushealthcarehospitalmanagement->image}}" class="campus_images"><span></span>{{$bsccampushealthcarehospitalmanagement->campus_name}}</div>
+                      @if(count($bsccampuspharmamktmgts) > 0)	
+	@foreach($bsccampuspharmamktmgts as $bsccampuspharmamktmgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampuspharmamktmgt->image}}" class="campus_images"><span></span>{{$bsccampuspharmamktmgt->campus_name}}</div>
                           @endforeach
                       @endif  
 
