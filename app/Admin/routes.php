@@ -268,6 +268,10 @@ Route::group([
     $router->resource('bsccurriculumpharmamktmgts', bsccurriculumpharmamktmgtController::class);
     $router->resource('bsccareerprospectpharmamktmgts', bsccareerprospectpharmamktmgtController::class);
     $router->resource('bsccampuspharmamktmgts', bsccampuspharmamktmgtController::class);
+    $router->resource('pgdeligibilitypharmamktmgts', pgdeligibilitypharmamktmgtController::class);
+    $router->resource('pgdcurriculumpharmamktmgts', pgdcurriculumpharmamktmgtController::class);
+    $router->resource('pgdcareerprospectpharmamktmgts', pgdcareerprospectpharmamktmgtController::class);
+    $router->resource('pgdcampuspharmamktmgts', pgdcampuspharmamktmgtController::class);
 
 
     

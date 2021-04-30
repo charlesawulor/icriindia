@@ -374,16 +374,16 @@
               <div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span>Healthcare & Hospital Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span> Pharma Marketing & Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($pgdeligibilityhealthcarehospitalmanagements) > 0)	
-	@foreach($pgdeligibilityhealthcarehospitalmanagements as $pgdeligibilityhealthcarehospitalmanagement)
+                          @if(count($pgdeligibilitypharmamktmgts) > 0)	
+	@foreach($pgdeligibilitypharmamktmgts as $pgdeligibilitypharmamktmgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityhealthcarehospitalmanagement->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilitypharmamktmgt->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
@@ -391,10 +391,10 @@
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($pgdcurriculumhealthcarehospitalmanagements) > 0)	
-	@foreach($pgdcurriculumhealthcarehospitalmanagements as $pgdcurriculumhealthcarehospitalmanagement)
+                      @if(count($pgdcurriculumpharmamktmgts) > 0)	
+	@foreach($pgdcurriculumpharmamktmgts as $pgdcurriculumpharmamktmgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumhealthcarehospitalmanagement->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumpharmamktmgt->curriculum}}</div>
 			  			@endforeach
                       @endif  
 
@@ -403,9 +403,9 @@
 			  		<div class="col_auto_set">
 
 
-                      @if(count($pgdcareerprospecthealthcarehospitalmanagements) > 0)	
-	@foreach($pgdcareerprospecthealthcarehospitalmanagements as $pgdcareerprospecthealthcarehospitalmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospecthealthcarehospitalmanagement->career_prospect}}</div>
+                      @if(count($pgdcareerprospectpharmamktmgts) > 0)	
+	@foreach($pgdcareerprospectpharmamktmgts as $pgdcareerprospectpharmamktmgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectpharmamktmgt->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -415,9 +415,9 @@
 			  		<div class="col_auto_set campus_col">
 
 
-			  		      @if(count($pgdcampushealthcarehospitalmanagements) > 0)	
-	@foreach($pgdcampushealthcarehospitalmanagements as $pgdcampushealthcarehospitalmanagement)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampushealthcarehospitalmanagement->image}}" class="campus_images"><span></span>{{$pgdcampushealthcarehospitalmanagement->campus_name}}</div>
+			  		      @if(count($pgdcampuspharmamktmgts) > 0)	
+	@foreach($pgdcampuspharmamktmgts as $pgdcampuspharmamktmgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampuspharmamktmgt->image}}" class="campus_images"><span></span>{{$pgdcampuspharmamktmgt->campus_name}}</div>
                           @endforeach
                       @endif 
 
