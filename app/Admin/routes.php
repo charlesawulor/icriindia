@@ -256,6 +256,12 @@ Route::group([
 
     $router->resource('placementhealthcare', placementhealthcarehospitalmanagementController::class);
 
+    $router->resource('pharmamktmgts', pharmamktmgtController::class);
+    $router->resource('whypharmamktmgts', whypharmamktmgtController::class);
+    $router->resource('deliverablespharmamktmgts', deliverablespharmamktmgtController::class);
+    $router->resource('whyicripharmamktmgts', whyicripharmamktmgtController::class);
+    $router->resource('msceligibilitypharmamktmgts', msceligibilitypharmamktmgtController::class);
+
     
     
 

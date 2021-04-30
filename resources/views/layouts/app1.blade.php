@@ -153,7 +153,11 @@
 			<a class="catag" href="/icriindia/public/clinical-research/">Clinical Research</a>
 			<a class="catag" href="/icriindia/public/aviation-management/">Aviation Management</a>
 			<a class="catag" href="/icriindia/public/logistics-management/">Logistics Management</a>
-			<a class="catag" href="/icriindia/public/healthcare-hospital-management/">Healthcare & Hospital Management</a>			
+			<a class="catag" href="/icriindia/public/healthcare-hospital-management/">Healthcare & Hospital Management</a>	
+			<a class="catag" href="/icriindia/public/pharma-marketing-management/">Pharma Marketing & Management</a>	
+
+
+				
 		</div> 
 
 		<div class="contact_foo_nav">
