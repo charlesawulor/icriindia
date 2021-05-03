@@ -244,25 +244,25 @@
                       @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-             @if(count($msccurriculumpharmamktmgts) > 0)	
-                   @foreach($msccurriculumpharmamktmgts as $msccurriculumpharmamktmgt)
+             @if(count($msccurriculummktautomgts) > 0)	
+                   @foreach($msccurriculummktautomgts as $msccurriculummktautomgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumpharmamktmgt->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculummktautomgt->curriculum}}</div>
 			  	  @endforeach
              @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-           @if(count($msccareerprospectpharmamktmgts) > 0)	         
-                @foreach($msccareerprospectpharmamktmgts as      $msccareerprospectpharmamktmgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectpharmamktmgt->career_prospect}}</div>
+           @if(count($msccareerprospectmktautomgts) > 0)	         
+                @foreach($msccareerprospectmktautomgts as      $msccareerprospectmktautomgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectmktautomgt->career_prospect}}</div>
 
                 @endforeach
            @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-             @if(count($msccampuspharmamktmgts) > 0)	
-	              @foreach($msccampuspharmamktmgts as $msccampuspharmamktmgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampuspharmamktmgt->image}}" class="campus_images"><span></span>{{$msccampuspharmamktmgt->campus_name}}</div>
+             @if(count($msccampusmktautomgts) > 0)	
+	              @foreach($msccampusmktautomgts as $msccampusmktautomgt)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusmktautomgt->image}}" class="campus_images"><span></span>{{$msccampusmktautomgt->campus_name}}</div>
                    @endforeach
              @endif  
 

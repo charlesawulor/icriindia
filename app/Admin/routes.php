@@ -285,6 +285,9 @@ Route::group([
     $router->resource('deliverablesmktautomgts', deliverablesmktautomgtController::class);
     $router->resource('whyicrimktautomgts', whyicrimktautomgtController::class);
     $router->resource('msceligibilitymktautomgts', msceligibilitymktautomgtController::class);
+    $router->resource('msccurriculummktautomgts', msccurriculummktautomgtController::class);
+    $router->resource('msccareerprospectmktautomgts', msccareerprospectmktautomgtController::class);
+    $router->resource('msccampusmktautomgts', msccampusmktautomgtController::class);
 
 
     
