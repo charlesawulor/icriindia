@@ -26,6 +26,7 @@ Route::resource('aviation-management','aviationmanagementController');
 Route::resource('logistics-management','logisticsmanagementController');
 Route::resource('healthcare-hospital-management','healthcarehospitalmanagementController');
 Route::resource('pharma-marketing-management','pharmamktmgtController');
+Route::resource('marketing-automobile-management','mktautomgtController');
 
 
 

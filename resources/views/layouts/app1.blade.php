@@ -155,6 +155,9 @@
 			<a class="catag" href="/icriindia/public/logistics-management/">Logistics Management</a>
 			<a class="catag" href="/icriindia/public/healthcare-hospital-management/">Healthcare & Hospital Management</a>	
 			<a class="catag" href="/icriindia/public/pharma-marketing-management/">Pharma Marketing & Management</a>	
+			<a class="catag" href="/icriindia/public/marketing-automobile-management/">Marketing & Automobile Management</a>	
+
+
 
 
 				

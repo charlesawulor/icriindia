@@ -279,6 +279,10 @@ Route::group([
     $router->resource('placementpharmamktmgts', placementpharmamktmgtController::class);
 
 
+
+    $router->resource('mktautomgts', mktautomgtController::class);
+
+
     
     
 
