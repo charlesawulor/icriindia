@@ -63,10 +63,10 @@
 	<div class="container d-flex">
 		<ul class="nav nav-tabs" id="myTab" role="tablist">
 		  <li class="nav-item col-lg-3 col-sm-3 col-3">
-		    <a class="nav-link active" id="tab_ci" data-toggle="tab" href="#tab_ci_tag" role="tab" aria-controls="tab_ci_tag" aria-selected="true">Pharma Marketing & Management<br>INDUSTRY<span></span></a>
+		    <a class="nav-link active" id="tab_ci" data-toggle="tab" href="#tab_ci_tag" role="tab" aria-controls="tab_ci_tag" aria-selected="true">Marketing & Automobile Management<br>INDUSTRY<span></span></a>
 		  </li>
 		  <li class="nav-item col-lg-5 col-sm-5 col-5">
-		    <a class="nav-link" id="tab_wdpcr" data-toggle="tab" href="#tab_wdpcr_tag" role="tab" aria-controls="tab_wdpcr_tag" aria-selected="false">WHY DEGREE PROGRAMS IN Pharma Marketing & Management<span></span></a>
+		    <a class="nav-link" id="tab_wdpcr" data-toggle="tab" href="#tab_wdpcr_tag" role="tab" aria-controls="tab_wdpcr_tag" aria-selected="false">WHY DEGREE PROGRAMS IN Marketing & Automobile Management<span></span></a>
 		  </li>
 		  <li class="nav-item col-lg-4 col-sm-4 col-4">
 		    <a class="nav-link" id="tab_dtp" data-toggle="tab" href="#tab_dtp_tag" role="tab" aria-controls="tab_dtp_tag" aria-selected="false">DELIVERABLES OF THE PROGRAM<span></span></a>
@@ -77,18 +77,18 @@
 	<div class="tab-content offer_tab_cont" id="myTabContent">
 		  <div class="tab-pane fade show active" id="tab_ci_tag" role="tabpanel" aria-labelledby="tab_ci_tag">
 		  	<div class="container">
-              @if(count($pharmamktmgts) > 0)	
-	@foreach($pharmamktmgts as $pharmamktmgt)
+              @if(count($mktautomgts) > 0)	
+	@foreach($mktautomgts as $mktautomgt)
 				<div class="row">
 					<div class="col-lg-6 col-sm-6">
 						<div class="cr_sec_disc">
-						{{$pharmamktmgt->about_course}}
+						{{$mktautomgt->about_course}}
 
 						</div>
 					</div>
 			
 					<div class="col-lg-6 col-sm-3 col-sm-6">
-						<img src="/icriindia/storage/app/public/{{$pharmamktmgt->image}}" width="100%" class="cr_cli_re_cont">
+						<img src="/icriindia/storage/app/public/{{$mktautomgt->image}}" width="100%" class="cr_cli_re_cont">
 					</div>
 				</div>
               @endforeach
@@ -103,9 +103,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 
-                            @if(count($whypharmamktmgts) > 0)	
-	@foreach($whypharmamktmgts as $whypharmamktmgt)
-								<li><span>{{$whypharmamktmgt->why_pharma}}</span></li>
+                            @if(count($whymktautomgts) > 0)	
+	@foreach($whymktautomgts as $whymktautomgt)
+								<li><span>{{$whymktautomgt->why_auto}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -125,9 +125,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 								
-                            @if(count($deliverablespharmamktmgts) > 0)	
-	@foreach($deliverablespharmamktmgts as $deliverablespharmamktmgt)
-								<li><span>{{$deliverablespharmamktmgt->deliverables}}</span></li>
+                            @if(count($deliverablesmktautomgts) > 0)	
+	@foreach($deliverablesmktautomgts as $deliverablesmktautomgt)
+								<li><span>{{$deliverablesmktautomgt->deliverables}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -172,9 +172,9 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
-                @if(count($whyicripharmamktmgts) > 0)	
-	@foreach($whyicripharmamktmgts as $whyicripharmamktmgt)
-					<div class="cr_why_icri_text_cont position-relative">{{$whyicripharmamktmgt->why_icri_pharma}}</div>
+                @if(count($whyicrimktautomgts) > 0)	
+	@foreach($whyicrimktautomgts as $whyicrimktautomgt)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicrimktautomgt->why_icri_auto}}</div>
                 @endforeach
             @endif
 				</div>
@@ -231,15 +231,15 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Pharma Marketing & Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Marketing & Automobile Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-                          @if(count($msceligibilitypharmamktmgts) > 0)	
-@foreach($msceligibilitypharmamktmgts as $msceligibilitypharmamktmgt)
+                          @if(count($msceligibilitymktautomgts) > 0)	
+@foreach($msceligibilitymktautomgts as $msceligibilitymktautomgt)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilitypharmamktmgt->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilitymktautomgt->eligibility}}</div>
 			  			@endforeach
                       @endif    
 			  		</div>
@@ -297,7 +297,7 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span> Pharma Marketing & Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Marketing & Automobile Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 
@@ -374,7 +374,7 @@
               <div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span> Pharma Marketing & Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span> Marketing & Automobile Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">
@@ -456,7 +456,7 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Pharma Marketing & Management</span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Marketing & Automobile Management</span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
 			  		<div class="col_auto_set">

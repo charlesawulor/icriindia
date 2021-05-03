@@ -281,6 +281,10 @@ Route::group([
 
 
     $router->resource('mktautomgts', mktautomgtController::class);
+    $router->resource('whymktautomgts', whymktautomgtController::class);
+    $router->resource('deliverablesmktautomgts', deliverablesmktautomgtController::class);
+    $router->resource('whyicrimktautomgts', whyicrimktautomgtController::class);
+    $router->resource('msceligibilitymktautomgts', msceligibilitymktautomgtController::class);
 
 
     

@@ -44,6 +44,10 @@ use App\placementpharmamktmgt;
 
 
 use App\mktautomgt;
+use App\whymktautomgt;
+use App\deliverablesmktautomgt;
+use App\whyicrimktautomgt;
+use App\msceligibilitymktautomgt;
 
 
 
@@ -100,10 +104,14 @@ class mktautomgtController extends Controller
 
 
         $mktautomgts = mktautomgt::orderBy('image','asc')->get();
+        $whymktautomgts = whymktautomgt::orderBy('why_auto','asc')->get();
+        $deliverablesmktautomgts = deliverablesmktautomgt::orderBy('deliverables','asc')->get();
+        $whyicrimktautomgts = whyicrimktautomgt::orderBy('why_icri_auto','asc')->get();
+        $msceligibilitymktautomgts = msceligibilitymktautomgt::orderBy('eligibility','asc')->get();
      
 
      
-        return view('marketing-automobile-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','pharmamktmgts', 'whypharmamktmgts', 'deliverablespharmamktmgts', 'whyicripharmamktmgts', 'msceligibilitypharmamktmgts', 'msccurriculumpharmamktmgts', 'msccareerprospectpharmamktmgts', 'msccampuspharmamktmgts', 'bsceligibilitypharmamktmgts', 'bsccurriculumpharmamktmgts', 'bsccareerprospectpharmamktmgts', 'bsccampuspharmamktmgts', 'pgdeligibilitypharmamktmgts', 'pgdcurriculumpharmamktmgts', 'pgdcareerprospectpharmamktmgts','pgdcampuspharmamktmgts', 'phdeligibilitypharmamktmgts', 'phdcurriculumpharmamktmgts', 'phdcareerprospectpharmamktmgts', 'phdcampuspharmamktmgts', 'placementpharmamktmgts', 'mktautomgts' ));
+        return view('marketing-automobile-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','pharmamktmgts', 'whypharmamktmgts', 'deliverablespharmamktmgts', 'whyicripharmamktmgts', 'msceligibilitypharmamktmgts', 'msccurriculumpharmamktmgts', 'msccareerprospectpharmamktmgts', 'msccampuspharmamktmgts', 'bsceligibilitypharmamktmgts', 'bsccurriculumpharmamktmgts', 'bsccareerprospectpharmamktmgts', 'bsccampuspharmamktmgts', 'pgdeligibilitypharmamktmgts', 'pgdcurriculumpharmamktmgts', 'pgdcareerprospectpharmamktmgts','pgdcampuspharmamktmgts', 'phdeligibilitypharmamktmgts', 'phdcurriculumpharmamktmgts', 'phdcareerprospectpharmamktmgts', 'phdcampuspharmamktmgts', 'placementpharmamktmgts', 'mktautomgts', 'whymktautomgts', 'deliverablesmktautomgts', 'whyicrimktautomgts', 'msceligibilitymktautomgts' ));
     }
 
     /**
