@@ -51,7 +51,10 @@ use App\msceligibilitymktautomgt;
 use App\msccurriculummktautomgt;
 use App\msccareerprospectmktautomgt;
 use App\msccampusmktautomgt;
-
+use App\bsceligibilitymktautomgt;
+use App\bsccurriculummktautomgt;
+use App\bsccareerprospectmktautomgt;
+use App\bsccampusmktautomgt;
 
 
 
@@ -114,10 +117,14 @@ class mktautomgtController extends Controller
         $msccurriculummktautomgts = msccurriculummktautomgt::orderBy('curriculum','asc')->get();
         $msccareerprospectmktautomgts = msccareerprospectmktautomgt::orderBy('career_prospect','asc')->get();
         $msccampusmktautomgts = msccampusmktautomgt::orderBy('image','asc')->get();
+        $bsceligibilitymktautomgts = bsceligibilitymktautomgt::orderBy('eligibility','asc')->get();
+        $bsccurriculummktautomgts = bsccurriculummktautomgt::orderBy('curriculum','asc')->get();
+        $bsccareerprospectmktautomgts = bsccareerprospectmktautomgt::orderBy('career_prospect','asc')->get();
+        $bsccampusmktautomgts = bsccampusmktautomgt::orderBy('image','asc')->get();
      
 
      
-        return view('marketing-automobile-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','pharmamktmgts', 'whypharmamktmgts', 'deliverablespharmamktmgts', 'whyicripharmamktmgts', 'msceligibilitypharmamktmgts', 'msccurriculumpharmamktmgts', 'msccareerprospectpharmamktmgts', 'msccampuspharmamktmgts', 'bsceligibilitypharmamktmgts', 'bsccurriculumpharmamktmgts', 'bsccareerprospectpharmamktmgts', 'bsccampuspharmamktmgts', 'pgdeligibilitypharmamktmgts', 'pgdcurriculumpharmamktmgts', 'pgdcareerprospectpharmamktmgts','pgdcampuspharmamktmgts', 'phdeligibilitypharmamktmgts', 'phdcurriculumpharmamktmgts', 'phdcareerprospectpharmamktmgts', 'phdcampuspharmamktmgts', 'placementpharmamktmgts', 'mktautomgts', 'whymktautomgts', 'deliverablesmktautomgts', 'whyicrimktautomgts', 'msceligibilitymktautomgts', 'msccurriculummktautomgts', 'msccareerprospectmktautomgts', 'msccampusmktautomgts' ));
+        return view('marketing-automobile-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','pharmamktmgts', 'whypharmamktmgts', 'deliverablespharmamktmgts', 'whyicripharmamktmgts', 'msceligibilitypharmamktmgts', 'msccurriculumpharmamktmgts', 'msccareerprospectpharmamktmgts', 'msccampuspharmamktmgts', 'bsceligibilitypharmamktmgts', 'bsccurriculumpharmamktmgts', 'bsccareerprospectpharmamktmgts', 'bsccampuspharmamktmgts', 'pgdeligibilitypharmamktmgts', 'pgdcurriculumpharmamktmgts', 'pgdcareerprospectpharmamktmgts','pgdcampuspharmamktmgts', 'phdeligibilitypharmamktmgts', 'phdcurriculumpharmamktmgts', 'phdcareerprospectpharmamktmgts', 'phdcampuspharmamktmgts', 'placementpharmamktmgts', 'mktautomgts', 'whymktautomgts', 'deliverablesmktautomgts', 'whyicrimktautomgts', 'msceligibilitymktautomgts', 'msccurriculummktautomgts', 'msccareerprospectmktautomgts', 'msccampusmktautomgts', 'bsceligibilitymktautomgts', 'bsccurriculummktautomgts', 'bsccareerprospectmktautomgts', 'bsccampusmktautomgts' ));
     }
 
     /**

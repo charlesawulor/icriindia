@@ -277,6 +277,7 @@ Route::group([
     $router->resource('phdcareerprospectpharmamktmgts', phdcareerprospectpharmamktmgtController::class);
     $router->resource('phdcampuspharmamktmgts', phdcampuspharmamktmgtController::class);
     $router->resource('placementpharmamktmgts', placementpharmamktmgtController::class);
+    
 
 
 
@@ -288,6 +289,10 @@ Route::group([
     $router->resource('msccurriculummktautomgts', msccurriculummktautomgtController::class);
     $router->resource('msccareerprospectmktautomgts', msccareerprospectmktautomgtController::class);
     $router->resource('msccampusmktautomgts', msccampusmktautomgtController::class);
+    $router->resource('bsceligibilitymktautomgts', bsceligibilitymktautomgtController::class);
+    $router->resource('bsccurriculummktautomgts', bsccurriculummktautomgtController::class);
+    $router->resource('bsccareerprospectmktautomgts', bsccareerprospectmktautomgtController::class);
+    $router->resource('bsccampusmktautomgts', bsccampusmktautomgtController::class);
 
 
     
