@@ -293,6 +293,10 @@ Route::group([
     $router->resource('bsccurriculummktautomgts', bsccurriculummktautomgtController::class);
     $router->resource('bsccareerprospectmktautomgts', bsccareerprospectmktautomgtController::class);
     $router->resource('bsccampusmktautomgts', bsccampusmktautomgtController::class);
+    $router->resource('pgdeligibilitymktautomgts', pgdeligibilitymktautomgtController::class);
+    $router->resource('pgdcurriculummktautomgts', pgdcurriculummktautomgtController::class);
+    $router->resource('pgdcareerprospectmktautomgts', pgdcareerprospectmktautomgtController::class);
+    $router->resource('pgdcampusmktautomgts', pgdcampusmktautomgtController::class);
 
 
     
