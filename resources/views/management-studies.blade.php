@@ -380,10 +380,10 @@
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($pgdeligibilitymktautomgts) > 0)	
-	@foreach($pgdeligibilitymktautomgts as $pgdeligibilitymktautomgt)
+                          @if(count($pgdeligibilitymanagementstudies) > 0)	
+	@foreach($pgdeligibilitymanagementstudies as $pgdeligibilitymanagementstudie)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilitymktautomgt->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilitymanagementstudie->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
@@ -391,10 +391,10 @@
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($pgdcurriculummktautomgts) > 0)	
-	@foreach($pgdcurriculummktautomgts as $pgdcurriculummktautomgt)
+                      @if(count($pgdcurriculummanagementstudies) > 0)	
+	@foreach($pgdcurriculummanagementstudies as $pgdcurriculummanagementstudie)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculummktautomgt->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculummanagementstudie->curriculum}}</div>
 			  			@endforeach
                       @endif  
 
@@ -403,9 +403,9 @@
 			  		<div class="col_auto_set">
 
 
-                      @if(count($pgdcareerprospectmktautomgts) > 0)	
-	@foreach($pgdcareerprospectmktautomgts as $pgdcareerprospectmktautomgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectmktautomgt->career_prospect}}</div>
+                      @if(count($pgdcareerprospectmanagementstudies) > 0)	
+	@foreach($pgdcareerprospectmanagementstudies as $pgdcareerprospectmanagementstudie)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectmanagementstudie->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -415,9 +415,9 @@
 			  		<div class="col_auto_set campus_col">
 
 
-			  		      @if(count($pgdcampusmktautomgts) > 0)	
-	@foreach($pgdcampusmktautomgts as $pgdcampusmktautomgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampusmktautomgt->image}}" class="campus_images"><span></span>{{$pgdcampusmktautomgt->campus_name}}</div>
+			  		      @if(count($pgdcampusmanagementstudies) > 0)	
+	@foreach($pgdcampusmanagementstudies as $pgdcampusmanagementstudie)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampusmanagementstudie->image}}" class="campus_images"><span></span>{{$pgdcampusmanagementstudie->campus_name}}</div>
                           @endforeach
                       @endif 
 

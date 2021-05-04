@@ -315,6 +315,16 @@ Route::group([
     $router->resource('bsccurriculummanagementstudies', bsccurriculummanagementstudyController::class);
     $router->resource('bsccareerprospectmanagementstudies', bsccareerprospectmanagementstudyController::class);
     $router->resource('bsccampusmanagementstudies', bsccampusmanagementstudyController::class);
+    $router->resource('pgdeligibilitymanagementstudies', pgdeligibilitymanagementstudyController::class);
+    $router->resource('pgdcurriculummanagementstudies', pgdcurriculummanagementstudyController::class);
+    $router->resource('pgdcareerprospectmanagementstudies', pgdcareerprospectmanagementstudyController::class);
+    $router->resource('pgdcampusmanagementstudies', pgdcampusmanagementstudyController::class);
+
+
+
+
+
+
 
 
 
