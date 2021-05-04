@@ -307,6 +307,14 @@ Route::group([
     $router->resource('whymanagementstudies', whymanagementstudyController::class);
     $router->resource('deliverablesmanagementstudies', deliverablesmanagementstudyController::class);
     $router->resource('whyicrimanagementstudies', whyicrimanagementstudyController::class);
+    $router->resource('msceligibilitymanagementstudies', msceligibilitymanagementstudyController::class);
+    $router->resource('msccurriculummanagementstudies', msccurriculummanagementstudyController::class);
+    $router->resource('msccareerprospectmanagementstudies', msccareerprospectmanagementstudyController::class);
+    $router->resource('msccampusmanagementstudies', msccampusmanagementstudyController::class);
+    $router->resource('bsceligibilitymanagementstudies', bsceligibilitymanagementstudyController::class);
+    $router->resource('bsccurriculummanagementstudies', bsccurriculummanagementstudyController::class);
+    $router->resource('bsccareerprospectmanagementstudies', bsccareerprospectmanagementstudyController::class);
+    $router->resource('bsccampusmanagementstudies', bsccampusmanagementstudyController::class);
 
 
 

@@ -236,33 +236,33 @@
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-                          @if(count($msceligibilitymktautomgts) > 0)	
-@foreach($msceligibilitymktautomgts as $msceligibilitymktautomgt)
+                          @if(count($msceligibilitymanagementstudies) > 0)	
+@foreach($msceligibilitymanagementstudies as $msceligibilitymanagementstudie)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilitymktautomgt->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilitymanagementstudie->eligibility}}</div>
 			  			@endforeach
                       @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-             @if(count($msccurriculummktautomgts) > 0)	
-                   @foreach($msccurriculummktautomgts as $msccurriculummktautomgt)
+             @if(count($msccurriculummanagementstudies) > 0)	
+                   @foreach($msccurriculummanagementstudies as $msccurriculummanagementstudie)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculummktautomgt->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculummanagementstudie->curriculum}}</div>
 			  	  @endforeach
              @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-           @if(count($msccareerprospectmktautomgts) > 0)	         
-                @foreach($msccareerprospectmktautomgts as      $msccareerprospectmktautomgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectmktautomgt->career_prospect}}</div>
+           @if(count($msccareerprospectmanagementstudies) > 0)	         
+                @foreach($msccareerprospectmanagementstudies as      $msccareerprospectmanagementstudie)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectmanagementstudie->career_prospect}}</div>
 
                 @endforeach
            @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-             @if(count($msccampusmktautomgts) > 0)	
-	              @foreach($msccampusmktautomgts as $msccampusmktautomgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusmktautomgt->image}}" class="campus_images"><span></span>{{$msccampusmktautomgt->campus_name}}</div>
+             @if(count($msccampusmanagementstudies) > 0)	
+	              @foreach($msccampusmanagementstudies as $msccampusmanagementstudie)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusmanagementstudie->image}}" class="campus_images"><span></span>{{$msccampusmanagementstudie->campus_name}}</div>
                    @endforeach
              @endif  
 
@@ -305,29 +305,29 @@
                       <div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($bsceligibilitymktautomgts) > 0)	
-	@foreach($bsceligibilitymktautomgts as $bsceligibilitymktautomgt)
+                          @if(count($bsceligibilitymanagementstudies) > 0)	
+	@foreach($bsceligibilitymanagementstudies as $bsceligibilitymanagementstudie)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilitymktautomgt->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilitymanagementstudie->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccurriculummktautomgts) > 0)	
-	@foreach($bsccurriculummktautomgts as $bsccurriculummktautomgt)
+                      @if(count($bsccurriculummanagementstudies) > 0)	
+	@foreach($bsccurriculummanagementstudies as $bsccurriculummanagementstudie)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculummktautomgt->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculummanagementstudie->curriculum}}</div>
 			  			@endforeach
                       @endif   
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccareerprospectmktautomgts) > 0)	
-	@foreach($bsccareerprospectmktautomgts as $bsccareerprospectmktautomgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectmktautomgt->career_prospect}}</div>
+                      @if(count($bsccareerprospectmanagementstudies) > 0)	
+	@foreach($bsccareerprospectmanagementstudies as $bsccareerprospectmanagementstudie)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectmanagementstudie->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -335,9 +335,9 @@
 			  		</div>
 			  		<div class="col_auto_set campus_col">
 
-                      @if(count($bsccampusmktautomgts) > 0)	
-	@foreach($bsccampusmktautomgts as $bsccampusmktautomgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusmktautomgt->image}}" class="campus_images"><span></span>{{$bsccampusmktautomgt->campus_name}}</div>
+                      @if(count($bsccampusmanagementstudies) > 0)	
+	@foreach($bsccampusmanagementstudies as $bsccampusmanagementstudie)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusmanagementstudie->image}}" class="campus_images"><span></span>{{$bsccampusmanagementstudie->campus_name}}</div>
                           @endforeach
                       @endif  
 
