@@ -302,6 +302,12 @@ Route::group([
     $router->resource('phdcareerprospectmktautomgts', phdcareerprospectmktautomgtController::class);
     $router->resource('phdcampusmktautomgts', phdcampusmktautomgtController::class);
     $router->resource('placementmktautomgts', placementmktautomgtController::class);
+    
+    $router->resource('managementstudies', managementstudyController::class);
+    $router->resource('whymanagementstudies', whymanagementstudyController::class);
+    $router->resource('deliverablesmanagementstudies', deliverablesmanagementstudyController::class);
+
+
 
 
     
