@@ -306,6 +306,7 @@ Route::group([
     $router->resource('managementstudies', managementstudyController::class);
     $router->resource('whymanagementstudies', whymanagementstudyController::class);
     $router->resource('deliverablesmanagementstudies', deliverablesmanagementstudyController::class);
+    $router->resource('whyicrimanagementstudies', whyicrimanagementstudyController::class);
 
 
 

@@ -15,6 +15,7 @@ class CreateWhyicrimanagementstudiesTable extends Migration
     {
         Schema::create('whyicrimanagementstudies', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('why_icri_management');
             $table->timestamps();
         });
     }

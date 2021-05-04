@@ -97,7 +97,7 @@ class managementstudiesController extends Controller
         $managementstudies = managementstudy::orderBy('image','asc')->get();
         $whymanagementstudies = whymanagementstudy::orderBy('why_management','asc')->get();
         $deliverablesmanagementstudies = deliverablesmanagementstudy::orderBy('deliverables','asc')->get();
-        $whyicrimanagementstudies = whyicrimanagementstudy::orderBy('why_icri_auto','asc')->get();
+        $whyicrimanagementstudies = whyicrimanagementstudy::orderBy('why_icri_management','asc')->get();
      
 
      

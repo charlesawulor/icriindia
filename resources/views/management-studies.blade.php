@@ -172,9 +172,9 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
-                @if(count($whyicrimktautomgts) > 0)	
-	@foreach($whyicrimktautomgts as $whyicrimktautomgt)
-					<div class="cr_why_icri_text_cont position-relative">{{$whyicrimktautomgt->why_icri_auto}}</div>
+                @if(count($whyicrimanagementstudies) > 0)	
+	@foreach($whyicrimanagementstudies as $whyicrimanagementstudie)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicrimanagementstudie->why_icri_management}}</div>
                 @endforeach
             @endif
 				</div>
