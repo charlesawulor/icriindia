@@ -327,6 +327,16 @@ Route::group([
 
     $router->resource('bankwltmgts', bankwltmgtController::class);
     $router->resource('whybankwltmgts', whybankwltmgtController::class);
+    $router->resource('deliverablesbankwltmgts', deliverablesbankwltmgtController::class);
+    $router->resource('whyicribankwltmgts', whyicribankwltmgtController::class);
+    $router->resource('msceligibilitybankwltmgts', msceligibilitybankwltmgtController::class);
+    $router->resource('msccurriculumbankwltmgts', msccurriculumbankwltmgtController::class);
+    $router->resource('msccareerprospectbankwltmgts', msccareerprospectbankwltmgtController::class);
+    $router->resource('msccampusbankwltmgts', msccampusbankwltmgtController::class);
+    $router->resource('bsceligibilitybankwltmgts', bsceligibilitybankwltmgtController::class);
+    $router->resource('bsccurriculumbankwltmgts', bsccurriculumbankwltmgtController::class);
+    $router->resource('bsccareerprospectbankwltmgts', bsccareerprospectbankwltmgtController::class);
+    $router->resource('bsccampusbankwltmgts', bsccampusbankwltmgtController::class);
 
 
 
