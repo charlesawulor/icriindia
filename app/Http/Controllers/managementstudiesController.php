@@ -18,28 +18,6 @@ use App\socialconnecttwitter;
 use App\hiringpartner;
 
 
-use App\mktautomgt;
-use App\whymktautomgt;
-use App\deliverablesmktautomgt;
-use App\whyicrimktautomgt;
-use App\msceligibilitymktautomgt;
-use App\msccurriculummktautomgt;
-use App\msccareerprospectmktautomgt;
-use App\msccampusmktautomgt;
-use App\bsceligibilitymktautomgt;
-use App\bsccurriculummktautomgt;
-use App\bsccareerprospectmktautomgt;
-use App\bsccampusmktautomgt;
-use App\pgdeligibilitymktautomgt;
-use App\pgdcurriculummktautomgt;
-use App\pgdcareerprospectmktautomgt;
-use App\pgdcampusmktautomgt;
-use App\phdeligibilitymktautomgt;
-use App\phdcurriculummktautomgt;
-use App\phdcareerprospectmktautomgt;
-use App\phdcampusmktautomgt;
-use App\placementmktautomgt;
-
 use App\managementstudy;
 use App\whymanagementstudy;
 use App\deliverablesmanagementstudy;
@@ -86,32 +64,6 @@ class managementstudiesController extends Controller
         $hiringpartners = hiringpartner::orderBy('image','asc')->get();
 
 
-
-
-        $mktautomgts = mktautomgt::orderBy('image','asc')->get();
-        $whymktautomgts = whymktautomgt::orderBy('why_auto','asc')->get();
-        $deliverablesmktautomgts = deliverablesmktautomgt::orderBy('deliverables','asc')->get();
-        $whyicrimktautomgts = whyicrimktautomgt::orderBy('why_icri_auto','asc')->get();
-        $msceligibilitymktautomgts = msceligibilitymktautomgt::orderBy('eligibility','asc')->get();
-        $msccurriculummktautomgts = msccurriculummktautomgt::orderBy('curriculum','asc')->get();
-        $msccareerprospectmktautomgts = msccareerprospectmktautomgt::orderBy('career_prospect','asc')->get();
-        $msccampusmktautomgts = msccampusmktautomgt::orderBy('image','asc')->get();
-        $bsceligibilitymktautomgts = bsceligibilitymktautomgt::orderBy('eligibility','asc')->get();
-        $bsccurriculummktautomgts = bsccurriculummktautomgt::orderBy('curriculum','asc')->get();
-        $bsccareerprospectmktautomgts = bsccareerprospectmktautomgt::orderBy('career_prospect','asc')->get();
-        $bsccampusmktautomgts = bsccampusmktautomgt::orderBy('image','asc')->get();
-        $pgdeligibilitymktautomgts = pgdeligibilitymktautomgt::orderBy('eligibility','asc')->get();
-        $pgdcurriculummktautomgts = pgdcurriculummktautomgt::orderBy('curriculum','asc')->get();
-        $pgdcareerprospectmktautomgts = pgdcareerprospectmktautomgt::orderBy('career_prospect','asc')->get();
-        $pgdcampusmktautomgts = pgdcampusmktautomgt::orderBy('image','asc')->get();
-        $phdeligibilitymktautomgts = phdeligibilitymktautomgt::orderBy('eligibility','asc')->get();
-        $phdcurriculummktautomgts = phdcurriculummktautomgt::orderBy('curriculum','asc')->get();
-        $phdcareerprospectmktautomgts = phdcareerprospectmktautomgt::orderBy('career_prospect','asc')->get();
-        $phdcampusmktautomgts = phdcampusmktautomgt::orderBy('image','asc')->get();
-        $placementmktautomgts = placementmktautomgt::orderBy('image','asc')->get();
-
-
-
         $managementstudies = managementstudy::orderBy('image','asc')->get();
         $whymanagementstudies = whymanagementstudy::orderBy('why_management','asc')->get();
         $deliverablesmanagementstudies = deliverablesmanagementstudy::orderBy('deliverables','asc')->get();
@@ -135,7 +87,7 @@ class managementstudiesController extends Controller
         $placementmanagementstudies = placementmanagementstudy::orderBy('image','asc')->get();
 
      
-        return view('management-studies',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','mktautomgts', 'whymktautomgts', 'deliverablesmktautomgts', 'whyicrimktautomgts', 'msceligibilitymktautomgts', 'msccurriculummktautomgts', 'msccareerprospectmktautomgts', 'msccampusmktautomgts', 'bsceligibilitymktautomgts', 'bsccurriculummktautomgts', 'bsccareerprospectmktautomgts', 'bsccampusmktautomgts', 'pgdeligibilitymktautomgts', 'pgdcurriculummktautomgts', 'pgdcareerprospectmktautomgts', 'pgdcampusmktautomgts', 'phdeligibilitymktautomgts', 'phdcurriculummktautomgts', 'phdcareerprospectmktautomgts', 'phdcampusmktautomgts', 'placementmktautomgts', 'managementstudies', 'whymanagementstudies', 'deliverablesmanagementstudies', 'whyicrimanagementstudies', 'msceligibilitymanagementstudies', 'msccurriculummanagementstudies', 'msccareerprospectmanagementstudies', 'msccampusmanagementstudies', 'bsceligibilitymanagementstudies', 'bsccurriculummanagementstudies', 'bsccareerprospectmanagementstudies', 'bsccampusmanagementstudies', 'pgdeligibilitymanagementstudies', 'pgdcurriculummanagementstudies', 'pgdcareerprospectmanagementstudies', 'pgdcampusmanagementstudies', 'phdeligibilitymanagementstudies', 'phdcurriculummanagementstudies', 'phdcareerprospectmanagementstudies', 'phdcampusmanagementstudies', 'placementmanagementstudies' ));
+        return view('management-studies',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'managementstudies', 'whymanagementstudies', 'deliverablesmanagementstudies', 'whyicrimanagementstudies', 'msceligibilitymanagementstudies', 'msccurriculummanagementstudies', 'msccareerprospectmanagementstudies', 'msccampusmanagementstudies', 'bsceligibilitymanagementstudies', 'bsccurriculummanagementstudies', 'bsccareerprospectmanagementstudies', 'bsccampusmanagementstudies', 'pgdeligibilitymanagementstudies', 'pgdcurriculummanagementstudies', 'pgdcareerprospectmanagementstudies', 'pgdcampusmanagementstudies', 'phdeligibilitymanagementstudies', 'phdcurriculummanagementstudies', 'phdcareerprospectmanagementstudies', 'phdcampusmanagementstudies', 'placementmanagementstudies' ));
     }
 
     /**
