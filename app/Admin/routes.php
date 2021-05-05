@@ -341,6 +341,11 @@ Route::group([
     $router->resource('pgdcurriculumbankwltmgts', pgdcurriculumbankwltmgtController::class);
     $router->resource('pgdcareerprospectbankwltmgts', pgdcareerprospectbankwltmgtController::class);
     $router->resource('pgdcampusbankwltmgts', pgdcampusbankwltmgtController::class);
+    $router->resource('phdeligibilitybankwltmgts', phdeligibilitybankwltmgtController::class);
+    $router->resource('phdcurriculumbankwltmgts', phdcurriculumbankwltmgtController::class);
+    $router->resource('phdcareerprospectbankwltmgts', phdcareerprospectbankwltmgtController::class);
+    $router->resource('phdcampusbankwltmgts', phdcampusbankwltmgtController::class);
+    $router->resource('placementbankwltmgts', placementbankwltmgtController::class);
 
 
 

@@ -82,6 +82,11 @@ use App\pgdeligibilitybankwltmgt;
 use App\pgdcurriculumbankwltmgt;
 use App\pgdcareerprospectbankwltmgt;
 use App\pgdcampusbankwltmgt;
+use App\phdeligibilitybankwltmgt;
+use App\phdcurriculumbankwltmgt;
+use App\phdcareerprospectbankwltmgt;
+use App\phdcampusbankwltmgt;
+use App\placementbankwltmgt;
 
 
 
@@ -148,10 +153,15 @@ class bankingwealthmanagementController extends Controller
         $pgdcurriculumbankwltmgts = pgdcurriculumbankwltmgt::orderBy('curriculum','asc')->get();
         $pgdcareerprospectbankwltmgts = pgdcareerprospectbankwltmgt::orderBy('career_prospect','asc')->get();
         $pgdcampusbankwltmgts = pgdcampusbankwltmgt::orderBy('image','asc')->get();
+        $phdeligibilitybankwltmgts = phdeligibilitybankwltmgt::orderBy('eligibility','asc')->get();
+        $phdcurriculumbankwltmgts = phdcurriculumbankwltmgt::orderBy('curriculum','asc')->get();
+        $phdcareerprospectbankwltmgts = phdcareerprospectbankwltmgt::orderBy('career_prospect','asc')->get();
+        $phdcampusbankwltmgts = phdcampusbankwltmgt::orderBy('image','asc')->get();
+        $placementbankwltmgts = placementbankwltmgt::orderBy('image','asc')->get();
 
 
      
-        return view('banking-wealth-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','managementstudies', 'whymanagementstudies', 'deliverablesmanagementstudies', 'whyicrimanagementstudies', 'msceligibilitymanagementstudies', 'msccurriculummanagementstudies', 'msccareerprospectmanagementstudies', 'msccampusmanagementstudies', 'bsceligibilitymanagementstudies', 'bsccurriculummanagementstudies', 'bsccareerprospectmanagementstudies', 'bsccampusmanagementstudies', 'pgdeligibilitymanagementstudies', 'pgdcurriculummanagementstudies', 'pgdcareerprospectmanagementstudies', 'pgdcampusmanagementstudies', 'phdeligibilitymanagementstudies', 'phdcurriculummanagementstudies', 'phdcareerprospectmanagementstudies', 'phdcampusmanagementstudies', 'placementmanagementstudies', 'bankwltmgts', 'whybankwltmgts', 'deliverablesbankwltmgts', 'whyicribankwltmgts', 'msceligibilitybankwltmgts', 'msccurriculumbankwltmgts', 'msccareerprospectbankwltmgts','msccampusbankwltmgts', 'bsceligibilitybankwltmgts', 'bsccurriculumbankwltmgts', 'bsccareerprospectbankwltmgts', 'bsccampusbankwltmgts', 'pgdeligibilitybankwltmgts', 'pgdcurriculumbankwltmgts', 'pgdcareerprospectbankwltmgts', 'pgdcampusbankwltmgts' ));
+        return view('banking-wealth-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','managementstudies', 'whymanagementstudies', 'deliverablesmanagementstudies', 'whyicrimanagementstudies', 'msceligibilitymanagementstudies', 'msccurriculummanagementstudies', 'msccareerprospectmanagementstudies', 'msccampusmanagementstudies', 'bsceligibilitymanagementstudies', 'bsccurriculummanagementstudies', 'bsccareerprospectmanagementstudies', 'bsccampusmanagementstudies', 'pgdeligibilitymanagementstudies', 'pgdcurriculummanagementstudies', 'pgdcareerprospectmanagementstudies', 'pgdcampusmanagementstudies', 'phdeligibilitymanagementstudies', 'phdcurriculummanagementstudies', 'phdcareerprospectmanagementstudies', 'phdcampusmanagementstudies', 'placementmanagementstudies', 'bankwltmgts', 'whybankwltmgts', 'deliverablesbankwltmgts', 'whyicribankwltmgts', 'msceligibilitybankwltmgts', 'msccurriculumbankwltmgts', 'msccareerprospectbankwltmgts','msccampusbankwltmgts', 'bsceligibilitybankwltmgts', 'bsccurriculumbankwltmgts', 'bsccareerprospectbankwltmgts', 'bsccampusbankwltmgts', 'pgdeligibilitybankwltmgts', 'pgdcurriculumbankwltmgts', 'pgdcareerprospectbankwltmgts', 'pgdcampusbankwltmgts', 'phdeligibilitybankwltmgts', 'phdcurriculumbankwltmgts', 'phdcareerprospectbankwltmgts', 'phdcampusbankwltmgts', 'placementbankwltmgts' ));
     }
 
     /**
