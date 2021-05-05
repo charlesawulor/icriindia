@@ -337,7 +337,10 @@ Route::group([
     $router->resource('bsccurriculumbankwltmgts', bsccurriculumbankwltmgtController::class);
     $router->resource('bsccareerprospectbankwltmgts', bsccareerprospectbankwltmgtController::class);
     $router->resource('bsccampusbankwltmgts', bsccampusbankwltmgtController::class);
-
+    $router->resource('pgdeligibilitybankwltmgts', pgdeligibilitybankwltmgtController::class);
+    $router->resource('pgdcurriculumbankwltmgts', pgdcurriculumbankwltmgtController::class);
+    $router->resource('pgdcareerprospectbankwltmgts', pgdcareerprospectbankwltmgtController::class);
+    $router->resource('pgdcampusbankwltmgts', pgdcampusbankwltmgtController::class);
 
 
 
