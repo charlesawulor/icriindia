@@ -19,53 +19,6 @@ use App\socialconnecttwitter;
 use App\hiringpartner;
 
 
-use App\mktautomgt;
-use App\whymktautomgt;
-use App\deliverablesmktautomgt;
-use App\whyicrimktautomgt;
-use App\msceligibilitymktautomgt;
-use App\msccurriculummktautomgt;
-use App\msccareerprospectmktautomgt;
-use App\msccampusmktautomgt;
-use App\bsceligibilitymktautomgt;
-use App\bsccurriculummktautomgt;
-use App\bsccareerprospectmktautomgt;
-use App\bsccampusmktautomgt;
-use App\pgdeligibilitymktautomgt;
-use App\pgdcurriculummktautomgt;
-use App\pgdcareerprospectmktautomgt;
-use App\pgdcampusmktautomgt;
-use App\phdeligibilitymktautomgt;
-use App\phdcurriculummktautomgt;
-use App\phdcareerprospectmktautomgt;
-use App\phdcampusmktautomgt;
-use App\placementmktautomgt;
-
-use App\managementstudy;
-use App\whymanagementstudy;
-use App\deliverablesmanagementstudy;
-use App\whyicrimanagementstudy;
-use App\msceligibilitymanagementstudy;
-use App\msccurriculummanagementstudy;
-use App\msccareerprospectmanagementstudy;
-use App\msccampusmanagementstudy;
-use App\bsceligibilitymanagementstudy;
-use App\bsccurriculummanagementstudy;
-use App\bsccareerprospectmanagementstudy;
-use App\bsccampusmanagementstudy;
-use App\pgdeligibilitymanagementstudy;
-use App\pgdcurriculummanagementstudy;
-use App\pgdcareerprospectmanagementstudy;
-use App\pgdcampusmanagementstudy;
-use App\phdeligibilitymanagementstudy;
-use App\phdcurriculummanagementstudy;
-use App\phdcareerprospectmanagementstudy;
-use App\phdcampusmanagementstudy;
-use App\placementmanagementstudy;
-
-
-
-
 use App\bankwltmgt;
 use App\whybankwltmgt;
 use App\deliverablesbankwltmgt;
@@ -112,31 +65,6 @@ class bankingwealthmanagementController extends Controller
         $hiringpartners = hiringpartner::orderBy('image','asc')->get();
 
 
-        $managementstudies = managementstudy::orderBy('image','asc')->get();
-        $whymanagementstudies = whymanagementstudy::orderBy('why_management','asc')->get();
-        $deliverablesmanagementstudies = deliverablesmanagementstudy::orderBy('deliverables','asc')->get();
-        $whyicrimanagementstudies = whyicrimanagementstudy::orderBy('why_icri_management','asc')->get();
-        $msceligibilitymanagementstudies = msceligibilitymanagementstudy::orderBy('eligibility','asc')->get();
-        $msccurriculummanagementstudies = msccurriculummanagementstudy::orderBy('curriculum','asc')->get();
-        $msccareerprospectmanagementstudies = msccareerprospectmanagementstudy::orderBy('career_prospect','asc')->get();
-        $msccampusmanagementstudies = msccampusmanagementstudy::orderBy('image','asc')->get();
-        $bsceligibilitymanagementstudies = bsceligibilitymanagementstudy::orderBy('eligibility','asc')->get();
-        $bsccurriculummanagementstudies = bsccurriculummanagementstudy::orderBy('curriculum','asc')->get();
-        $bsccareerprospectmanagementstudies = bsccareerprospectmanagementstudy::orderBy('career_prospect','asc')->get();
-        $bsccampusmanagementstudies = bsccampusmanagementstudy::orderBy('image','asc')->get();
-        $pgdeligibilitymanagementstudies = pgdeligibilitymanagementstudy::orderBy('eligibility','asc')->get();
-        $pgdcurriculummanagementstudies = pgdcurriculummanagementstudy::orderBy('curriculum','asc')->get();
-        $pgdcareerprospectmanagementstudies = pgdcareerprospectmanagementstudy::orderBy('career_prospect','asc')->get();
-        $pgdcampusmanagementstudies = pgdcampusmanagementstudy::orderBy('image','asc')->get();
-        $phdeligibilitymanagementstudies = phdeligibilitymanagementstudy::orderBy('eligibility','asc')->get();
-        $phdcurriculummanagementstudies = phdcurriculummanagementstudy::orderBy('curriculum','asc')->get();
-        $phdcareerprospectmanagementstudies = phdcareerprospectmanagementstudy::orderBy('career_prospect','asc')->get();
-        $phdcampusmanagementstudies = phdcampusmanagementstudy::orderBy('image','asc')->get();
-        $placementmanagementstudies = placementmanagementstudy::orderBy('image','asc')->get();
-
-
-
-
         $bankwltmgts = bankwltmgt::orderBy('image','asc')->get();
         $whybankwltmgts = whybankwltmgt::orderBy('why_bankwealth','asc')->get();
         $deliverablesbankwltmgts = deliverablesbankwltmgt::orderBy('deliverables','asc')->get();
@@ -161,7 +89,7 @@ class bankingwealthmanagementController extends Controller
 
 
      
-        return view('banking-wealth-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','managementstudies', 'whymanagementstudies', 'deliverablesmanagementstudies', 'whyicrimanagementstudies', 'msceligibilitymanagementstudies', 'msccurriculummanagementstudies', 'msccareerprospectmanagementstudies', 'msccampusmanagementstudies', 'bsceligibilitymanagementstudies', 'bsccurriculummanagementstudies', 'bsccareerprospectmanagementstudies', 'bsccampusmanagementstudies', 'pgdeligibilitymanagementstudies', 'pgdcurriculummanagementstudies', 'pgdcareerprospectmanagementstudies', 'pgdcampusmanagementstudies', 'phdeligibilitymanagementstudies', 'phdcurriculummanagementstudies', 'phdcareerprospectmanagementstudies', 'phdcampusmanagementstudies', 'placementmanagementstudies', 'bankwltmgts', 'whybankwltmgts', 'deliverablesbankwltmgts', 'whyicribankwltmgts', 'msceligibilitybankwltmgts', 'msccurriculumbankwltmgts', 'msccareerprospectbankwltmgts','msccampusbankwltmgts', 'bsceligibilitybankwltmgts', 'bsccurriculumbankwltmgts', 'bsccareerprospectbankwltmgts', 'bsccampusbankwltmgts', 'pgdeligibilitybankwltmgts', 'pgdcurriculumbankwltmgts', 'pgdcareerprospectbankwltmgts', 'pgdcampusbankwltmgts', 'phdeligibilitybankwltmgts', 'phdcurriculumbankwltmgts', 'phdcareerprospectbankwltmgts', 'phdcampusbankwltmgts', 'placementbankwltmgts' ));
+        return view('banking-wealth-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'bankwltmgts', 'whybankwltmgts', 'deliverablesbankwltmgts', 'whyicribankwltmgts', 'msceligibilitybankwltmgts', 'msccurriculumbankwltmgts', 'msccareerprospectbankwltmgts','msccampusbankwltmgts', 'bsceligibilitybankwltmgts', 'bsccurriculumbankwltmgts', 'bsccareerprospectbankwltmgts', 'bsccampusbankwltmgts', 'pgdeligibilitybankwltmgts', 'pgdcurriculumbankwltmgts', 'pgdcareerprospectbankwltmgts', 'pgdcampusbankwltmgts', 'phdeligibilitybankwltmgts', 'phdcurriculumbankwltmgts', 'phdcareerprospectbankwltmgts', 'phdcampusbankwltmgts', 'placementbankwltmgts' ));
     }
 
     /**
