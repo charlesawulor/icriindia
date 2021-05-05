@@ -325,6 +325,9 @@ Route::group([
     $router->resource('phdcampusmanagementstudies', phdcampusmanagementstudyController::class);
     $router->resource('placementmanagementstudies', placementmanagementstudyController::class);
 
+    $router->resource('bankwltmgts', bankwltmgtController::class);
+    $router->resource('whybankwltmgts', whybankwltmgtController::class);
+
 
 
 
