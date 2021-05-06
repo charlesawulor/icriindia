@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWhyclinicalpsiesTable extends Migration
+class CreateWhyicriclinicalpsiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateWhyclinicalpsiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('whyclinicalpsies', function (Blueprint $table) {
+        Schema::create('whyicriclinicalpsies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('why_clinicalpsy');
+            $table->string('why_icri_clinicalpsy');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateWhyclinicalpsiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('whyclinicalpsies');
+        Schema::dropIfExists('whyicriclinicalpsies');
     }
 }

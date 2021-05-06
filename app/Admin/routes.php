@@ -348,7 +348,9 @@ Route::group([
     $router->resource('placementbankwltmgts', placementbankwltmgtController::class);
 
     $router->resource('clinicalpsies', clinicalpsyController::class);
-
+    $router->resource('whyclinicalpsies', whyclinicalpsyController::class);
+    $router->resource('deliverablesclinicalpsies', deliverablesclinicalpsyController::class);
+    $router->resource('whyicriclinicalpsies', whyicriclinicalpsyController::class);
 
 
 

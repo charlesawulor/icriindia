@@ -107,7 +107,7 @@
 
                             @if(count($whyclinicalpsies) > 0)	
 	@foreach($whyclinicalpsies as $whyclinicalpsie)
-								<li><span>{{$whyclinicalpsie->why_bankwealth}}</span></li>
+								<li><span>{{$whyclinicalpsie->why_clinicalpsy}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -127,9 +127,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 								
-                            @if(count($deliverablesbankwltmgts) > 0)	
-	@foreach($deliverablesbankwltmgts as $deliverablesbankwltmgt)
-								<li><span>{{$deliverablesbankwltmgt->deliverables}}</span></li>
+                            @if(count($deliverablesclinicalpsies) > 0)	
+	@foreach($deliverablesclinicalpsies as $deliverablesclinicalpsie)
+								<li><span>{{$deliverablesclinicalpsie->deliverables}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -174,9 +174,9 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
-                @if(count($whyicribankwltmgts) > 0)	
-	@foreach($whyicribankwltmgts as $whyicribankwltmgt)
-					<div class="cr_why_icri_text_cont position-relative">{{$whyicribankwltmgt->why_icri_bankwealth}}</div>
+                @if(count($whyicriclinicalpsies) > 0)	
+	@foreach($whyicriclinicalpsies as $whyicriclinicalpsie)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicriclinicalpsie->	why_icri_clinicalpsy}}</div>
                 @endforeach
             @endif
 				</div>
@@ -239,10 +239,10 @@
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-                          @if(count($msceligibilitybankwltmgts) > 0)	
-@foreach($msceligibilitybankwltmgts as $msceligibilitybankwltmgt)
+                          @if(count($msceligibilityclinicalpsies) > 0)	
+@foreach($msceligibilityclinicalpsies as $msceligibilityclinicalpsie)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilitybankwltmgt->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilityclinicalpsie->eligibility}}</div>
 			  			@endforeach
                       @endif    
 			  		</div>
