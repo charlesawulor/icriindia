@@ -351,6 +351,10 @@ Route::group([
     $router->resource('whyclinicalpsies', whyclinicalpsyController::class);
     $router->resource('deliverablesclinicalpsies', deliverablesclinicalpsyController::class);
     $router->resource('whyicriclinicalpsies', whyicriclinicalpsyController::class);
+    $router->resource('msceligibilityclinicalpsies', msceligibilityclinicalpsyController::class);
+    $router->resource('msccurriculumclinicalpsies', msccurriculumclinicalpsyController::class);
+    $router->resource('msccareerprospectclinicalpsies', msccareerprospectclinicalpsyController::class);
+    $router->resource('msccampusclinicalpsies', msccampusclinicalpsyController::class);
 
 
 

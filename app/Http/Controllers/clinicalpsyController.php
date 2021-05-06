@@ -46,6 +46,9 @@ use App\whyclinicalpsy;
 use App\deliverablesclinicalpsy;
 use App\whyicriclinicalpsy;
 use App\msceligibilityclinicalpsy;
+use App\msccurriculumclinicalpsy;
+use App\msccareerprospectclinicalpsy;
+use App\msccampusclinicalpsy;
 
 
 
@@ -103,10 +106,13 @@ class clinicalpsyController extends Controller
         $deliverablesclinicalpsies = deliverablesclinicalpsy::orderBy('deliverables','asc')->get();
         $whyicriclinicalpsies = whyicriclinicalpsy::orderBy('why_icri_clinicalpsy','asc')->get();
         $msceligibilityclinicalpsies = msceligibilityclinicalpsy::orderBy('eligibility','asc')->get();
+        $msccurriculumclinicalpsies = msccurriculumclinicalpsy::orderBy('curriculum','asc')->get();
+        $msccareerprospectclinicalpsies = msccareerprospectclinicalpsy::orderBy('career_prospect','asc')->get();
+        $msccampusclinicalpsies = msccampusclinicalpsy::orderBy('image','asc')->get();
 
 
      
-        return view('clinical-psychology',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'bankwltmgts', 'whybankwltmgts', 'deliverablesbankwltmgts', 'whyicribankwltmgts', 'msceligibilitybankwltmgts', 'msccurriculumbankwltmgts', 'msccareerprospectbankwltmgts','msccampusbankwltmgts', 'bsceligibilitybankwltmgts', 'bsccurriculumbankwltmgts', 'bsccareerprospectbankwltmgts', 'bsccampusbankwltmgts', 'pgdeligibilitybankwltmgts', 'pgdcurriculumbankwltmgts', 'pgdcareerprospectbankwltmgts', 'pgdcampusbankwltmgts', 'phdeligibilitybankwltmgts', 'phdcurriculumbankwltmgts', 'phdcareerprospectbankwltmgts', 'phdcampusbankwltmgts', 'placementbankwltmgts', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies' ));
+        return view('clinical-psychology',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'bankwltmgts', 'whybankwltmgts', 'deliverablesbankwltmgts', 'whyicribankwltmgts', 'msceligibilitybankwltmgts', 'msccurriculumbankwltmgts', 'msccareerprospectbankwltmgts','msccampusbankwltmgts', 'bsceligibilitybankwltmgts', 'bsccurriculumbankwltmgts', 'bsccareerprospectbankwltmgts', 'bsccampusbankwltmgts', 'pgdeligibilitybankwltmgts', 'pgdcurriculumbankwltmgts', 'pgdcareerprospectbankwltmgts', 'pgdcampusbankwltmgts', 'phdeligibilitybankwltmgts', 'phdcurriculumbankwltmgts', 'phdcareerprospectbankwltmgts', 'phdcampusbankwltmgts', 'placementbankwltmgts', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies' ));
     }
 
     /**

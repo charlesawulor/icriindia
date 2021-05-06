@@ -247,25 +247,25 @@
                       @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-             @if(count($msccurriculumbankwltmgts) > 0)	
-                   @foreach($msccurriculumbankwltmgts as $msccurriculumbankwltmgt)
+             @if(count($msccurriculumclinicalpsies) > 0)	
+                   @foreach($msccurriculumclinicalpsies as $msccurriculumclinicalpsie)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumbankwltmgt->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumclinicalpsie->curriculum}}</div>
 			  	  @endforeach
              @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-           @if(count($msccareerprospectbankwltmgts) > 0)	         
-                @foreach($msccareerprospectbankwltmgts as      $msccareerprospectbankwltmgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectbankwltmgt->career_prospect}}</div>
+           @if(count($msccareerprospectclinicalpsies) > 0)	         
+                @foreach($msccareerprospectclinicalpsies as      $msccareerprospectclinicalpsie)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectclinicalpsie->career_prospect}}</div>
 
                 @endforeach
            @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-             @if(count($msccampusbankwltmgts) > 0)	
-	              @foreach($msccampusbankwltmgts as $msccampusbankwltmgt)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusbankwltmgt->image}}" class="campus_images"><span></span>{{$msccampusbankwltmgt->campus_name}}</div>
+             @if(count($msccampusclinicalpsies) > 0)	
+	              @foreach($msccampusclinicalpsies as $msccampusclinicalpsie)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusclinicalpsie->image}}" class="campus_images"><span></span>{{$msccampusclinicalpsie->campus_name}}</div>
                    @endforeach
              @endif  
 
