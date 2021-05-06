@@ -157,7 +157,8 @@
 			<a class="catag" href="/icriindia/public/pharma-marketing-management/">Pharma Marketing & Management</a>	
 			<a class="catag" href="/icriindia/public/marketing-automobile-management/">Marketing & Automobile Management</a>	
 			<a class="catag" href="/icriindia/public/management-studies/">Management Studies</a>
-			<a class="catag" href="/icriindia/public/banking-wealth-management/">Banking & Wealth Management</a>	
+			<a class="catag" href="/icriindia/public/banking-wealth-management/">Banking & Wealth Management</a>
+			<a class="catag" href="/icriindia/public/clinical-psychology/">Clinical Psychology</a>	
 
 
 

@@ -29,6 +29,9 @@ Route::resource('pharma-marketing-management','pharmamktmgtController');
 Route::resource('marketing-automobile-management','mktautomgtController');
 Route::resource('management-studies','managementstudiesController');
 Route::resource('banking-wealth-management','bankingwealthmanagementController');
+Route::resource('clinical-psychology','clinicalpsyController');
+
+
 
 
 
