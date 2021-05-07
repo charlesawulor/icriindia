@@ -363,6 +363,17 @@ Route::group([
     $router->resource('pgdcurriculumclinicalpsies', pgdcurriculumclinicalpsyController::class);
     $router->resource('pgdcareerprospectclinicalpsies', pgdcareerprospectclinicalpsyController::class);
     $router->resource('pgdcampusclinicalpsies', pgdcampusclinicalpsyController::class);
+    $router->resource('phdeligibilityclinicalpsies', phdeligibilityclinicalpsyController::class);
+    $router->resource('phdcurriculumclinicalpsies', phdcurriculumclinicalpsyController::class);
+    $router->resource('phdcareerprospectclinicalpsies', phdcareerprospectclinicalpsyController::class);
+    $router->resource('phdcampusclinicalpsies', phdcampusclinicalpsyController::class);
+    $router->resource('placementclinicalpsies', placementclinicalpsyController::class);
+
+
+
+    $router->resource('publichlths', publichlthController::class);
+    $router->resource('whypublichlths', whypublichlthController::class);
+    $router->resource('deliverablespublichlths', deliverablespublichlthController::class);
     
 
 

@@ -13,9 +13,9 @@
 <main class="cr_main">
 <div class="container">
 		<div class="slider_title">
-    @if(count($clinicalpsies) > 0)	
-	@foreach($clinicalpsies as $clinicalpsie)
-			<span>{{$clinicalpsie->course_title}}</span>
+    @if(count($publichlths) > 0)	
+	@foreach($publichlths as $publichlth)
+			<span>{{$publichlth->course_title}}</span>
             @endforeach
             @endif
 		</div>
@@ -63,11 +63,12 @@
 	<div class="container d-flex">
 		<ul class="nav nav-tabs" id="myTab" role="tablist">
 		  <li class="nav-item col-lg-3 col-sm-3 col-3">
-		    <a class="nav-link active" id="tab_ci" data-toggle="tab" href="#tab_ci_tag" role="tab" aria-controls="tab_ci_tag" aria-selected="true">Clinical Psychology
+		    <a class="nav-link active" id="tab_ci" data-toggle="tab" href="#tab_ci_tag" role="tab" aria-controls="tab_ci_tag" aria-selected="true">Public Health
             <br>INDUSTRY<span></span></a>
 		  </li>
 		  <li class="nav-item col-lg-5 col-sm-5 col-5">
-		    <a class="nav-link" id="tab_wdpcr" data-toggle="tab" href="#tab_wdpcr_tag" role="tab" aria-controls="tab_wdpcr_tag" aria-selected="false">WHY DEGREE PROGRAMS IN Clinical Psychology
+		    <a class="nav-link" id="tab_wdpcr" data-toggle="tab" href="#tab_wdpcr_tag" role="tab" aria-controls="tab_wdpcr_tag" aria-selected="false">WHY DEGREE PROGRAMS IN Public Health
+
             <span></span></a>
 		  </li>
 		  <li class="nav-item col-lg-4 col-sm-4 col-4">
@@ -79,18 +80,18 @@
 	<div class="tab-content offer_tab_cont" id="myTabContent">
 		  <div class="tab-pane fade show active" id="tab_ci_tag" role="tabpanel" aria-labelledby="tab_ci_tag">
 		  	<div class="container">
-              @if(count($clinicalpsies) > 0)	
-	@foreach($clinicalpsies as $clinicalpsie)
+              @if(count($publichlths) > 0)	
+	@foreach($publichlths as $publichlth)
 				<div class="row">
 					<div class="col-lg-6 col-sm-6">
 						<div class="cr_sec_disc">
-						{{$clinicalpsie->about_course}}
+						{{$publichlth->about_course}}
 
 						</div>
 					</div>
 			
 					<div class="col-lg-6 col-sm-3 col-sm-6">
-						<img src="/icriindia/storage/app/public/{{$clinicalpsie->image}}" width="100%" class="cr_cli_re_cont">
+						<img src="/icriindia/storage/app/public/{{$publichlth->image}}" width="100%" class="cr_cli_re_cont">
 					</div>
 				</div>
               @endforeach
@@ -105,9 +106,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 
-                            @if(count($whyclinicalpsies) > 0)	
-	@foreach($whyclinicalpsies as $whyclinicalpsie)
-								<li><span>{{$whyclinicalpsie->why_clinicalpsy}}</span></li>
+                            @if(count($whypublichlths) > 0)	
+	@foreach($whypublichlths as $whypublichlth)
+								<li><span>{{$whypublichlth->why_public_health}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -127,9 +128,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 								
-                            @if(count($deliverablesclinicalpsies) > 0)	
-	@foreach($deliverablesclinicalpsies as $deliverablesclinicalpsie)
-								<li><span>{{$deliverablesclinicalpsie->deliverables}}</span></li>
+                            @if(count($deliverablespublichlths) > 0)	
+	@foreach($deliverablespublichlths as $deliverablespublichlth)
+								<li><span>{{$deliverablespublichlth->deliverables}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -233,7 +234,8 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Clinical Psychology
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Public Health
+
                           </span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
@@ -300,7 +302,8 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Clinical Psychology
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Public Health
+
                           </span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
@@ -378,7 +381,8 @@
               <div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span> Clinical Psychology
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span> Public Health
+
                           </span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
@@ -461,7 +465,8 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Clinical Psychology
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Public Health
+
                           </span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
 			  		</div>
