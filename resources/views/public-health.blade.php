@@ -175,9 +175,9 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
-                @if(count($whyicriclinicalpsies) > 0)	
-	@foreach($whyicriclinicalpsies as $whyicriclinicalpsie)
-					<div class="cr_why_icri_text_cont position-relative">{{$whyicriclinicalpsie->	why_icri_clinicalpsy}}</div>
+                @if(count($whyicripublichlths) > 0)	
+	@foreach($whyicripublichlths as $whyicripublichlth)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicripublichlth->	why_icri_public_health}}</div>
                 @endforeach
             @endif
 				</div>

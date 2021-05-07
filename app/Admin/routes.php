@@ -374,6 +374,7 @@ Route::group([
     $router->resource('publichlths', publichlthController::class);
     $router->resource('whypublichlths', whypublichlthController::class);
     $router->resource('deliverablespublichlths', deliverablespublichlthController::class);
+    $router->resource('whyicripublichlths', whyicripublichlthController::class);
     
 
 
