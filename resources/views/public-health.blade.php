@@ -389,10 +389,10 @@
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($pgdeligibilityclinicalpsies) > 0)	
-	@foreach($pgdeligibilityclinicalpsies as $pgdeligibilityclinicalpsie)
+                          @if(count($pgdeligibilitypublichlths) > 0)	
+	@foreach($pgdeligibilitypublichlths as $pgdeligibilitypublichlth)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityclinicalpsie->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilitypublichlth->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
@@ -400,10 +400,10 @@
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($pgdcurriculumclinicalpsies) > 0)	
-	@foreach($pgdcurriculumclinicalpsies as $pgdcurriculumclinicalpsie)
+                      @if(count($pgdcurriculumpublichlths) > 0)	
+	@foreach($pgdcurriculumpublichlths as $pgdcurriculumpublichlth)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumclinicalpsie->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumpublichlth->curriculum}}</div>
 			  			@endforeach
                       @endif  
 
@@ -412,9 +412,9 @@
 			  		<div class="col_auto_set">
 
 
-                      @if(count($pgdcareerprospectclinicalpsies) > 0)	
-	@foreach($pgdcareerprospectclinicalpsies as $pgdcareerprospectclinicalpsie)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectclinicalpsie->career_prospect}}</div>
+                      @if(count($pgdcareerprospectpublichlths) > 0)	
+	@foreach($pgdcareerprospectpublichlths as $pgdcareerprospectpublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectpublichlth->career_prospect}}</div>
 
                           @endforeach
                       @endif  
@@ -424,9 +424,9 @@
 			  		<div class="col_auto_set campus_col">
 
 
-			  		      @if(count($pgdcampusclinicalpsies) > 0)	
-	@foreach($pgdcampusclinicalpsies as $pgdcampusclinicalpsie)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampusclinicalpsie->image}}" class="campus_images"><span></span>{{$pgdcampusclinicalpsie->campus_name}}</div>
+			  		      @if(count($pgdcampuspublichlths) > 0)	
+	@foreach($pgdcampuspublichlths as $pgdcampuspublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampuspublichlth->image}}" class="campus_images"><span></span>{{$pgdcampuspublichlth->campus_name}}</div>
                           @endforeach
                       @endif 
 
