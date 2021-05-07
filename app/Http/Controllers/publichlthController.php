@@ -52,7 +52,10 @@ use App\publichlth;
 use App\whypublichlth;
 use App\deliverablespublichlth;
 use App\whyicripublichlth;
-
+use App\msceligibilitypublichlth;
+use App\msccurriculumpublichlth;
+use App\msccareerprospectpublichlth;
+use App\msccampuspublichlth;
 
 
 
@@ -113,11 +116,15 @@ class publichlthController extends Controller
         $whypublichlths = whypublichlth::orderBy('why_public_health','asc')->get();
         $deliverablespublichlths = deliverablespublichlth::orderBy('deliverables','asc')->get();
         $whyicripublichlths = whyicripublichlth::orderBy('why_icri_public_health','asc')->get();
+        $msceligibilitypublichlths = msceligibilitypublichlth::orderBy('eligibility','asc')->get();
+        $msccurriculumpublichlths = msccurriculumpublichlth::orderBy('curriculum','asc')->get();
+        $msccareerprospectpublichlths = msccareerprospectpublichlth::orderBy('career_prospect','asc')->get();
+        $msccampuspublichlths = msccampuspublichlth::orderBy('image','asc')->get();
 
 
 
      
-        return view('public-health',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies', 'bsceligibilityclinicalpsies', 'bsccurriculumclinicalpsies', 'bsccareerprospectclinicalpsies', 'bsccampusclinicalpsies', 'pgdeligibilityclinicalpsies', 'pgdcurriculumclinicalpsies', 'pgdcareerprospectclinicalpsies', 'pgdcampusclinicalpsies', 'phdeligibilityclinicalpsies', 'phdcurriculumclinicalpsies', 'phdcareerprospectclinicalpsies', 'phdcampusclinicalpsies', 'placementclinicalpsies', 'publichlths', 'whypublichlths', 'deliverablespublichlths', 'whyicripublichlths' ));
+        return view('public-health',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies', 'bsceligibilityclinicalpsies', 'bsccurriculumclinicalpsies', 'bsccareerprospectclinicalpsies', 'bsccampusclinicalpsies', 'pgdeligibilityclinicalpsies', 'pgdcurriculumclinicalpsies', 'pgdcareerprospectclinicalpsies', 'pgdcampusclinicalpsies', 'phdeligibilityclinicalpsies', 'phdcurriculumclinicalpsies', 'phdcareerprospectclinicalpsies', 'phdcampusclinicalpsies', 'placementclinicalpsies', 'publichlths', 'whypublichlths', 'deliverablespublichlths', 'whyicripublichlths', 'msceligibilitypublichlths', 'msccurriculumpublichlths', 'msccareerprospectpublichlths', 'msccampuspublichlths' ));
     }
 
     /**

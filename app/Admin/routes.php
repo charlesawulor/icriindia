@@ -375,6 +375,12 @@ Route::group([
     $router->resource('whypublichlths', whypublichlthController::class);
     $router->resource('deliverablespublichlths', deliverablespublichlthController::class);
     $router->resource('whyicripublichlths', whyicripublichlthController::class);
+    $router->resource('msceligibilitypublichlths', msceligibilitypublichlthController::class);
+    $router->resource('msccurriculumpublichlths', msccurriculumpublichlthController::class);
+    $router->resource('msccareerprospectpublichlths', msccareerprospectpublichlthController::class);
+    $router->resource('msccampuspublichlths', msccampuspublichlthController::class);
+
+    
     
 
 
