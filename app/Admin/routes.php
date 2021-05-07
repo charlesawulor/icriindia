@@ -387,6 +387,11 @@ Route::group([
     $router->resource('pgdcurriculumpublichlths', pgdcurriculumpublichlthController::class);
     $router->resource('pgdcareerprospectpublichlths', pgdcareerprospectpublichlthController::class);
     $router->resource('pgdcampuspublichlths', pgdcampuspublichlthController::class);
+    $router->resource('phdeligibilitypublichlths', phdeligibilitypublichlthController::class);
+    $router->resource('phdcurriculumpublichlths', phdcurriculumpublichlthController::class);
+    $router->resource('phdcareerprospectpublichlths', phdcareerprospectpublichlthController::class);
+    $router->resource('phdcampuspublichlths', phdcampuspublichlthController::class);
+    $router->resource('placementpublichlths', placementpublichlthController::class);
 
     
     
