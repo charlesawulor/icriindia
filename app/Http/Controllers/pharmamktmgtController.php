@@ -54,7 +54,7 @@ class pharmamktmgtController extends Controller
     {
         $admissions = Admission::orderBy('status','asc')->get();
         $legacies = legacy::orderBy('volume','asc')->get();
-        $campuses = campus::orderBy('cities','asc')->get();
+        $campuses = campus::orderBy('id','asc')->get();
         $recruiters = recruiter::orderBy('image','asc')->get();
         $topcourses = topcourse::orderBy('degree','asc')->get();
         $addresses = address::orderBy('location','asc')->get();

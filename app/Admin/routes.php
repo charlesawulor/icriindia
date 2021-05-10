@@ -395,6 +395,9 @@ Route::group([
 
 
     $router->resource('architectures', architectureController::class);
+    $router->resource('whyarchitectures', whyarchitectureController::class);
+    $router->resource('deliverablesarchitectures', deliverablesarchitectureController::class);
+    $router->resource('whyicriarchitectures', whyicriarchitectureController::class);
 
     
     

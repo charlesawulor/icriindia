@@ -106,9 +106,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 
-                            @if(count($whypublichlths) > 0)	
-	@foreach($whypublichlths as $whypublichlth)
-								<li><span>{{$whypublichlth->why_public_health}}</span></li>
+                            @if(count($whyarchitectures) > 0)	
+	@foreach($whyarchitectures as $whyarchitecture)
+								<li><span>{{$whyarchitecture->why_architecture}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -128,9 +128,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 								
-                            @if(count($deliverablespublichlths) > 0)	
-	@foreach($deliverablespublichlths as $deliverablespublichlth)
-								<li><span>{{$deliverablespublichlth->deliverables}}</span></li>
+                            @if(count($deliverablesarchitectures) > 0)	
+	@foreach($deliverablesarchitectures as $deliverablesarchitecture)
+								<li><span>{{$deliverablesarchitecture->deliverables}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -175,9 +175,9 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
-                @if(count($whyicripublichlths) > 0)	
-	@foreach($whyicripublichlths as $whyicripublichlth)
-					<div class="cr_why_icri_text_cont position-relative">{{$whyicripublichlth->	why_icri_public_health}}</div>
+                @if(count($whyicriarchitectures) > 0)	
+	@foreach($whyicriarchitectures as $whyicriarchitecture)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicriarchitecture->	why_icri_architecture}}</div>
                 @endforeach
             @endif
 				</div>

@@ -58,7 +58,7 @@ class IndexpageController extends Controller
         $researches = Research::orderBy('type','asc')->get();
         $legacies = legacy::orderBy('volume','asc')->get();
         $whyicris = whyicri::orderBy('value','asc')->get();
-        $campuses = campus::orderBy('cities','asc')->get();
+        $campuses = campus::orderBy('id','asc')->get();
         $whyicricontents = whyicricontent::orderBy('content','asc')->get();
         $applications = application::orderBy('content','asc')->get();
         $admissioncourses = admissioncourse::orderBy('course','asc')->get();
