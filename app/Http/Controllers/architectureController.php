@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 
 
+
 use App\Admission;
 use App\legacy;
 use App\campus;
@@ -19,33 +20,6 @@ use App\socialconnectinstagram;
 use App\socialconnecttwitter;
 use App\hiringpartner;
 
-
-
-use App\clinicalpsy;
-use App\whyclinicalpsy;
-use App\deliverablesclinicalpsy;
-use App\whyicriclinicalpsy;
-use App\msceligibilityclinicalpsy;
-use App\msccurriculumclinicalpsy;
-use App\msccareerprospectclinicalpsy;
-use App\msccampusclinicalpsy;
-
-use App\bsceligibilityclinicalpsy;
-use App\bsccurriculumclinicalpsy;
-use App\bsccareerprospectclinicalpsy;
-use App\bsccampusclinicalpsy;
-
-use App\pgdeligibilityclinicalpsy;
-use App\pgdcurriculumclinicalpsy;
-use App\pgdcareerprospectclinicalpsy;
-use App\pgdcampusclinicalpsy;
-
-use App\phdeligibilityclinicalpsy;
-use App\phdcurriculumclinicalpsy;
-use App\phdcareerprospectclinicalpsy;
-use App\phdcampusclinicalpsy;
-
-use App\placementclinicalpsy;
 
 
 use App\publichlth;
@@ -71,9 +45,12 @@ use App\phdcampuspublichlth;
 use App\placementpublichlth;
 
 
+use App\architecture;
 
 
-class publichlthController extends Controller
+
+
+class architectureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -93,36 +70,6 @@ class publichlthController extends Controller
         $socialconnectinstagrams = socialconnectinstagram::orderBy('link','asc')->get();
         $socialconnecttwitters = socialconnecttwitter::orderBy('link','asc')->get();
         $hiringpartners = hiringpartner::orderBy('image','asc')->get();
-
-
-
-        $clinicalpsies = clinicalpsy::orderBy('image','asc')->get();
-        $whyclinicalpsies = whyclinicalpsy::orderBy('why_clinicalpsy','asc')->get();
-        $deliverablesclinicalpsies = deliverablesclinicalpsy::orderBy('deliverables','asc')->get();
-        $whyicriclinicalpsies = whyicriclinicalpsy::orderBy('why_icri_clinicalpsy','asc')->get();
-        $msceligibilityclinicalpsies = msceligibilityclinicalpsy::orderBy('eligibility','asc')->get();
-        $msccurriculumclinicalpsies = msccurriculumclinicalpsy::orderBy('curriculum','asc')->get();
-        $msccareerprospectclinicalpsies = msccareerprospectclinicalpsy::orderBy('career_prospect','asc')->get();
-        $msccampusclinicalpsies = msccampusclinicalpsy::orderBy('image','asc')->get();
-
-        $bsceligibilityclinicalpsies = bsceligibilityclinicalpsy::orderBy('eligibility','asc')->get();
-        $bsccurriculumclinicalpsies = bsccurriculumclinicalpsy::orderBy('curriculum','asc')->get();
-        $bsccareerprospectclinicalpsies = bsccareerprospectclinicalpsy::orderBy('career_prospect','asc')->get();
-        $bsccampusclinicalpsies = bsccampusclinicalpsy::orderBy('image','asc')->get();
-
-        $pgdeligibilityclinicalpsies = pgdeligibilityclinicalpsy::orderBy('eligibility','asc')->get();
-        $pgdcurriculumclinicalpsies = pgdcurriculumclinicalpsy::orderBy('curriculum','asc')->get();
-        $pgdcareerprospectclinicalpsies = pgdcareerprospectclinicalpsy::orderBy('career_prospect','asc')->get();
-        $pgdcampusclinicalpsies = pgdcampusclinicalpsy::orderBy('image','asc')->get();
-
-        $phdeligibilityclinicalpsies = phdeligibilityclinicalpsy::orderBy('eligibility','asc')->get();
-        $phdcurriculumclinicalpsies = phdcurriculumclinicalpsy::orderBy('curriculum','asc')->get();
-        $phdcareerprospectclinicalpsies = phdcareerprospectclinicalpsy::orderBy('career_prospect','asc')->get();
-        $phdcampusclinicalpsies = phdcampusclinicalpsy::orderBy('image','asc')->get();
-        $placementclinicalpsies = placementclinicalpsy::orderBy('image','asc')->get();
-
-
-
 
 
         $publichlths = publichlth::orderBy('image','asc')->get();
@@ -150,10 +97,14 @@ class publichlthController extends Controller
         $placementpublichlths = placementpublichlth::orderBy('image','asc')->get();
 
 
+
+        $architectures = architecture::orderBy('image','asc')->get();
+
+
      
-        return view('public-health',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies', 'bsceligibilityclinicalpsies', 'bsccurriculumclinicalpsies', 'bsccareerprospectclinicalpsies', 'bsccampusclinicalpsies', 'pgdeligibilityclinicalpsies', 'pgdcurriculumclinicalpsies', 'pgdcareerprospectclinicalpsies', 'pgdcampusclinicalpsies', 'phdeligibilityclinicalpsies', 'phdcurriculumclinicalpsies', 'phdcareerprospectclinicalpsies', 'phdcampusclinicalpsies', 'placementclinicalpsies', 'publichlths', 'whypublichlths', 'deliverablespublichlths', 'whyicripublichlths', 'msceligibilitypublichlths', 'msccurriculumpublichlths', 'msccareerprospectpublichlths', 'msccampuspublichlths', 'bsceligibilitypublichlths', 'bsccurriculumpublichlths', 'bsccareerprospectpublichlths','bsccampuspublichlths', 'pgdeligibilitypublichlths', 'pgdcurriculumpublichlths', 'pgdcareerprospectpublichlths', 'pgdcampuspublichlths', 'phdeligibilitypublichlths', 'phdcurriculumpublichlths', 'phdcareerprospectpublichlths', 'phdcampuspublichlths', 'placementpublichlths' ));
+        return view('architecture',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies', 'bsceligibilityclinicalpsies', 'bsccurriculumclinicalpsies', 'bsccareerprospectclinicalpsies', 'bsccampusclinicalpsies', 'pgdeligibilityclinicalpsies', 'pgdcurriculumclinicalpsies', 'pgdcareerprospectclinicalpsies', 'pgdcampusclinicalpsies', 'phdeligibilityclinicalpsies', 'phdcurriculumclinicalpsies', 'phdcareerprospectclinicalpsies', 'phdcampusclinicalpsies', 'placementclinicalpsies', 'publichlths', 'whypublichlths', 'deliverablespublichlths', 'whyicripublichlths', 'msceligibilitypublichlths', 'msccurriculumpublichlths', 'msccareerprospectpublichlths', 'msccampuspublichlths', 'bsceligibilitypublichlths', 'bsccurriculumpublichlths', 'bsccareerprospectpublichlths','bsccampuspublichlths', 'pgdeligibilitypublichlths', 'pgdcurriculumpublichlths', 'pgdcareerprospectpublichlths', 'pgdcampuspublichlths', 'phdeligibilitypublichlths', 'phdcurriculumpublichlths', 'phdcareerprospectpublichlths', 'phdcampuspublichlths', 'placementpublichlths', 'architectures' ));
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *

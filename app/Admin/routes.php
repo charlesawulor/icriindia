@@ -393,6 +393,9 @@ Route::group([
     $router->resource('phdcampuspublichlths', phdcampuspublichlthController::class);
     $router->resource('placementpublichlths', placementpublichlthController::class);
 
+
+    $router->resource('architectures', architectureController::class);
+
     
     
 

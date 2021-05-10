@@ -160,6 +160,7 @@
 			<a class="catag" href="/icriindia/public/banking-wealth-management/">Banking & Wealth Management</a>
 			<a class="catag" href="/icriindia/public/clinical-psychology/">Clinical Psychology</a>
 			<a class="catag" href="/icriindia/public/public-health/">Public Health</a>	
+			<a class="catag" href="/icriindia/public/architecture/">Architecture</a>	
 
 
 

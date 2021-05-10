@@ -1,0 +1,562 @@
+
+<!-- header end -->
+
+<!-- left sticky stuffs -->
+@extends('layouts.app1')
+
+@section('content')
+<div class="call_func"><img src="Images/call_us_icon.png" class="img-fluid">Free Counselling</div>
+<div class="call_func wp_func"><i class="fa fa-whatsapp"></i>Call Us</div>
+
+<!-- left sticky stuffs end -->
+
+<main class="cr_main">
+<div class="container">
+		<div class="slider_title">
+    @if(count($architectures) > 0)	
+	@foreach($architectures as $architecture)
+			<span>{{$architecture->course_title}}</span>
+            @endforeach
+            @endif
+		</div>
+
+	</div>
+
+	<!-- popup form -->
+	<div class="fixed_btn_quick_inquery">
+		<div type="button" class="btn btn-primary popup_form" data-toggle="modal" data-target="#myModal">Quick Query</div>
+	</div>
+
+	<!-- The Modal -->
+	<div class="modal" id="myModal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <!-- Modal Header -->
+	      <div class="modal-header">
+	        <h4 class="modal-title">Modal Heading</h4>
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      </div>
+
+	      <!-- Modal body -->
+	      <div class="modal-body">
+	        Modal body..
+	      </div>
+
+	      <!-- Modal footer -->
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+
+	<!-- popup form end -->
+
+</main>
+
+
+
+<section class="cr_clinical_reseach_cont">
+
+	<div class="container d-flex">
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		  <li class="nav-item col-lg-3 col-sm-3 col-3">
+		    <a class="nav-link active" id="tab_ci" data-toggle="tab" href="#tab_ci_tag" role="tab" aria-controls="tab_ci_tag" aria-selected="true">Architecture
+            <br>INDUSTRY<span></span></a>
+		  </li>
+		  <li class="nav-item col-lg-5 col-sm-5 col-5">
+		    <a class="nav-link" id="tab_wdpcr" data-toggle="tab" href="#tab_wdpcr_tag" role="tab" aria-controls="tab_wdpcr_tag" aria-selected="false">WHY DEGREE PROGRAMS IN Architecture
+
+            <span></span></a>
+		  </li>
+		  <li class="nav-item col-lg-4 col-sm-4 col-4">
+		    <a class="nav-link" id="tab_dtp" data-toggle="tab" href="#tab_dtp_tag" role="tab" aria-controls="tab_dtp_tag" aria-selected="false">DELIVERABLES OF THE PROGRAM<span></span></a>
+		  </li>
+		</ul>
+	</div>
+
+	<div class="tab-content offer_tab_cont" id="myTabContent">
+		  <div class="tab-pane fade show active" id="tab_ci_tag" role="tabpanel" aria-labelledby="tab_ci_tag">
+		  	<div class="container">
+              @if(count($architectures) > 0)	
+	@foreach($architectures as $architecture)
+				<div class="row">
+					<div class="col-lg-6 col-sm-6">
+						<div class="cr_sec_disc">
+						{{$architecture->about_course}}
+
+						</div>
+					</div>
+			
+					<div class="col-lg-6 col-sm-3 col-sm-6">
+						<img src="/icriindia/storage/app/public/{{$architecture->image}}" width="100%" class="cr_cli_re_cont">
+					</div>
+				</div>
+              @endforeach
+     @endif
+		  	</div>
+
+		  </div>
+		  <div class="tab-pane fade" id="tab_wdpcr_tag" role="tabpanel" aria-labelledby="tab_two">
+		  	<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-sm-12">
+						<div class="cr_sec_disc">
+							<ul>
+
+                            @if(count($whypublichlths) > 0)	
+	@foreach($whypublichlths as $whypublichlth)
+								<li><span>{{$whypublichlth->why_public_health}}</span></li>
+                                    @endforeach
+                                    @endif
+							
+							</ul>
+
+						</div>
+					</div>
+			
+					
+				</div>
+		  	</div>
+		  </div>
+		  <div class="tab-pane fade" id="tab_dtp_tag" role="tabpanel" aria-labelledby="tab_three">
+		  	<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-sm-12">
+						<div class="cr_sec_disc">
+							<ul>
+								
+                            @if(count($deliverablespublichlths) > 0)	
+	@foreach($deliverablespublichlths as $deliverablespublichlth)
+								<li><span>{{$deliverablespublichlth->deliverables}}</span></li>
+                                    @endforeach
+                                    @endif
+							
+							</ul>
+
+						</div>
+					</div>
+			
+					
+				</div>
+		  	</div>
+		  </div>
+		</div>
+
+	<!-- <div class="row">
+		<div class="col-lg-6">
+			<img src="Images/clinical_reseach_content.jpg" class="cr_cli_re_cont"></img>
+		</div>
+		<div class="col-lg-6">
+			<div class="cr_cli_re_cont_wrap">
+				<div class="cr_sec_title">
+					Clinical Research 
+				</div>
+				<div class="cr_sec_disc">
+					Industry in India has seen unpredictable growth in the last 10 years. The global clinical trials market size is expected to reach USD 68.9 billion by 2026. The growing prevalence of disease and new disease cases is expected to give a further boost to the clinical trial market.
+				</div>
+			</div>
+		</div>
+	</div> -->
+</section>
+
+
+<section class="cr_why_icri">
+	<div class="container d-flex">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="position-relative">
+					<div class="cr_icri_hgtxt">ICRi</div>
+					<div class="cr_icri_why">why</div>
+				</div>
+				<img src="Images/why_icri_man.png" class="cr_cli_re_cont_man position-realtive"></img>
+			</div>
+			<div class="col-lg-6">
+				<div class="cr_why_icri_conten_wrap">
+                @if(count($whyicripublichlths) > 0)	
+	@foreach($whyicripublichlths as $whyicripublichlth)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicripublichlth->	why_icri_public_health}}</div>
+                @endforeach
+            @endif
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="offering">
+	<div class="cr_part_title offering_title">
+		<strong>Offering</strong>
+		Offering
+	</div>
+
+	<div class="d-flex">
+		<div class="selec_prog">Select Your <span>Programe</span></div>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		  <li class="nav-item offer_cont_title">
+		    <a class="nav-link active" id="tab_one" data-toggle="tab" href="#tab_one_tag" role="tab" aria-controls="tab_one_tag" aria-selected="true">MSc<span></span></a>
+		  </li>
+		  <li class="nav-item offer_cont_title">
+		    <a class="nav-link" id="tab_two" data-toggle="tab" href="#tab_two_tag" role="tab" aria-controls="tab_two_tag" aria-selected="false">BSc<span></span></a>
+		  </li>
+		  <li class="nav-item offer_cont_title">
+		    <a class="nav-link" id="tab_three" data-toggle="tab" href="#tab_three_tag" role="tab" aria-controls="tab_three_tag" aria-selected="false">PG Diploma<span></span></a>
+		  </li>
+		  <li class="nav-item offer_cont_title">
+		    <a class="nav-link" id="tab_four" data-toggle="tab" href="#tab_four_tag" role="tab" aria-controls="tab_four_tag" aria-selected="false">Phd programs<span></span></a>
+		  </li>
+		</ul>
+	</div>
+
+	<div class="tab-content offer_tab_cont" id="myTabContent">
+		<div class="tab-pane fade show active" id="tab_one_tag" role="tabpanel" aria-labelledby="tab_one">
+
+		  	<div class="row offer_tab_head_title">
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_one">Course</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_two">Eligibility</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_three">Curriculum</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_four">Career Prospects</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_five">Select Campus</div>
+		  		</div>
+		  	</div>
+
+		  	<div class="ctm-tab-cont">
+			  	<div class="row offer_tab_cont_row">
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Architecture
+
+                          </span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
+			  		</div>
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
+                          @if(count($msceligibilitypublichlths) > 0)	
+@foreach($msceligibilitypublichlths as $msceligibilitypublichlth)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilitypublichlth->eligibility}}</div>
+			  			@endforeach
+                      @endif    
+			  		</div>
+			  		<div class="col_auto_set">
+             @if(count($msccurriculumpublichlths) > 0)	
+                   @foreach($msccurriculumpublichlths as $msccurriculumpublichlth)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumpublichlth->curriculum}}</div>
+			  	  @endforeach
+             @endif   
+			  		</div>
+			  		<div class="col_auto_set">
+           @if(count($msccareerprospectpublichlths) > 0)	         
+                @foreach($msccareerprospectpublichlths as      $msccareerprospectpublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectpublichlth->career_prospect}}</div>
+
+                @endforeach
+           @endif  
+			  		</div>
+			  		<div class="col_auto_set campus_col">
+             @if(count($msccampuspublichlths) > 0)	
+	              @foreach($msccampuspublichlths as $msccampuspublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampuspublichlth->image}}" class="campus_images"><span></span>{{$msccampuspublichlth->campus_name}}</div>
+                   @endforeach
+             @endif  
+
+			  		</div>
+			  	</div>
+		  	</div>
+
+		  </div>
+		  <div class="tab-pane fade" id="tab_two_tag" role="tabpanel" aria-labelledby="tab_two">
+          
+
+
+          
+		  	<div class="row offer_tab_head_title">
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_one">Course</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_two">Eligibility</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_three">Curriculum</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_four">Career Prospects</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_five">Select Campus</div>
+		  		</div>
+		  	</div>
+
+		  	<div class="ctm-tab-cont">
+			  	<div class="row offer_tab_cont_row">
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Architecture
+
+                          </span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
+			  		</div>
+
+
+                      <div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
+
+                          @if(count($bsceligibilitypublichlths) > 0)	
+	@foreach($bsceligibilitypublichlths as $bsceligibilitypublichlth)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilitypublichlth->eligibility}}</div>
+			  			@endforeach
+                      @endif 
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+                      @if(count($bsccurriculumpublichlths) > 0)	
+	@foreach($bsccurriculumpublichlths as $bsccurriculumpublichlth)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumpublichlth->curriculum}}</div>
+			  			@endforeach
+                      @endif   
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+                      @if(count($bsccareerprospectpublichlths) > 0)	
+	@foreach($bsccareerprospectpublichlths as $bsccareerprospectpublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectpublichlth->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
+
+			  		</div>
+			  		<div class="col_auto_set campus_col">
+
+                      @if(count($bsccampuspublichlths) > 0)	
+	@foreach($bsccampuspublichlths as $bsccampuspublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampuspublichlth->image}}" class="campus_images"><span></span>{{$bsccampuspublichlth->campus_name}}</div>
+                          @endforeach
+                      @endif  
+
+			  		</div>
+			  	</div>
+		  	</div>          
+          </div>
+
+
+
+
+
+		  <div class="tab-pane fade" id="tab_three_tag" role="tabpanel" aria-labelledby="tab_three">
+          
+          
+		  	<div class="row offer_tab_head_title">
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_one">Course</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_two">Eligibility</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_three">Curriculum</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_four">Career Prospects</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_five">Select Campus</div>
+		  		</div>
+		  	</div>
+
+              <div class="ctm-tab-cont">
+			  	<div class="row offer_tab_cont_row">
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span> Architecture
+
+                          </span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
+			  		</div>
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
+
+                          @if(count($pgdeligibilitypublichlths) > 0)	
+	@foreach($pgdeligibilitypublichlths as $pgdeligibilitypublichlth)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilitypublichlth->eligibility}}</div>
+			  			@endforeach
+                      @endif 
+
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+                      @if(count($pgdcurriculumpublichlths) > 0)	
+	@foreach($pgdcurriculumpublichlths as $pgdcurriculumpublichlth)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumpublichlth->curriculum}}</div>
+			  			@endforeach
+                      @endif  
+
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+
+                      @if(count($pgdcareerprospectpublichlths) > 0)	
+	@foreach($pgdcareerprospectpublichlths as $pgdcareerprospectpublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$pgdcareerprospectpublichlth->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
+
+
+			  		</div>
+			  		<div class="col_auto_set campus_col">
+
+
+			  		      @if(count($pgdcampuspublichlths) > 0)	
+	@foreach($pgdcampuspublichlths as $pgdcampuspublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampuspublichlth->image}}" class="campus_images"><span></span>{{$pgdcampuspublichlth->campus_name}}</div>
+                          @endforeach
+                      @endif 
+
+
+			  		</div>
+			  	</div>
+		  	</div>
+
+          
+          
+          </div>
+		  <div class="tab-pane fade" id="tab_four_tag" role="tabpanel" aria-labelledby="tab_four">
+          
+          
+		  	<div class="row offer_tab_head_title">
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_one">Course</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_two">Eligibility</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_three">Curriculum</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_four">Career Prospects</div>
+		  		</div>
+		  		<div class="col_auto_set">
+		  			<div class="offer_tab_cont_title offer_tab_cont_title_five">Select Campus</div>
+		  		</div>
+		  	</div>
+
+
+
+
+		  	<div class="ctm-tab-cont">
+			  	<div class="row offer_tab_cont_row">
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Architecture
+
+                          </span></div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
+			  		</div>
+			  		<div class="col_auto_set">
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
+
+                          @if(count($phdeligibilitypublichlths) > 0)	
+	@foreach($phdeligibilitypublichlths as $phdeligibilitypublichlth)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdeligibilitypublichlth->eligibility}}</div>
+			  			@endforeach
+                      @endif 
+
+			  		</div>
+			  		<div class="col_auto_set">
+
+                      @if(count($phdcurriculumpublichlths) > 0)	
+	@foreach($phdcurriculumpublichlths as $phdcurriculumpublichlth)
+
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$phdcurriculumpublichlth->curriculum}}</div>
+			  			@endforeach
+                      @endif 
+
+			  		</div>
+			  		<div class="col_auto_set">
+					  @if(count($phdcareerprospectpublichlths) > 0)	
+	@foreach($phdcareerprospectpublichlths as $phdcareerprospectpublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$phdcareerprospectpublichlth->career_prospect}}</div>
+
+                          @endforeach
+                      @endif  
+
+			  		</div>
+			  		<div class="col_auto_set campus_col">
+					  @if(count($phdcampuspublichlths) > 0)	
+	@foreach($phdcampuspublichlths as $phdcampuspublichlth)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$phdcampuspublichlth->image}}" class="campus_images"><span></span>{{$phdcampuspublichlth->campus_name}}</div>
+                          @endforeach
+                      @endif 
+
+			  		</div>
+			  	</div>
+		  	</div>
+
+
+
+
+
+          <div>
+    </div>
+</section>
+
+<secion class="cr_quote">
+	<div class="quote_wrap">
+		<div class="container">
+			<div class="cr_quote_wrap">
+				<span>Empower</span> People to <span>Improve</span> Their Lives.
+			</div>
+		</div>
+	</div>
+</secion>
+
+<section class="cr_placement_partners">
+	<div class="container">
+		<div class="cr_part_title">
+			<strong>Placements</strong>
+			Placements are provided with
+		</div>
+		<div class="cr_part_detials row">
+
+	@if(count($placementpublichlths) > 0)	
+	    @foreach($placementpublichlths as $placementpublichlth)
+
+			<div class="col-lg-3">
+				<div class="compny_part">
+					<div class="Part_warp">
+						<div class="image_wrap">
+							<img src="/icriindia/storage/app/public/{{$placementpublichlth->image}}">
+						</div>
+					</div>
+				</div>
+			</div>
+	    @endforeach
+	@endif
+
+	
+
+		</div>
+	</div>
+</section>
+
+
+@endsection
