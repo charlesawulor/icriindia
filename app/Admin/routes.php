@@ -398,6 +398,10 @@ Route::group([
     $router->resource('whyarchitectures', whyarchitectureController::class);
     $router->resource('deliverablesarchitectures', deliverablesarchitectureController::class);
     $router->resource('whyicriarchitectures', whyicriarchitectureController::class);
+    $router->resource('msceligibilityarchitectures', msceligibilityarchitectureController::class);
+    $router->resource('msccurriculumarchitectures', msccurriculumarchitectureController::class);
+    $router->resource('msccareerprospectarchitectures', msccareerprospectarchitectureController::class);
+    $router->resource('msccampusarchitectures', msccampusarchitectureController::class);
 
     
     

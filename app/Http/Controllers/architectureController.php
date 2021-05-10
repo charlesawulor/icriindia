@@ -49,6 +49,10 @@ use App\architecture;
 use App\whyarchitecture;
 use App\deliverablesarchitecture;
 use App\whyicriarchitecture;
+use App\msceligibilityarchitecture;
+use App\msccurriculumarchitecture;
+use App\msccareerprospectarchitecture;
+use App\msccampusarchitecture;
 
 
 
@@ -105,10 +109,14 @@ class architectureController extends Controller
         $whyarchitectures = whyarchitecture::orderBy('why_architecture','asc')->get();
         $deliverablesarchitectures = deliverablesarchitecture::orderBy('deliverables','asc')->get();
         $whyicriarchitectures = whyicriarchitecture::orderBy('why_icri_architecture','asc')->get();
+        $msceligibilityarchitectures = msceligibilityarchitecture::orderBy('eligibility','asc')->get();
+        $msccurriculumarchitectures = msccurriculumarchitecture::orderBy('curriculum','asc')->get();
+        $msccareerprospectarchitectures = msccareerprospectarchitecture::orderBy('career_prospect','asc')->get();
+        $msccampusarchitectures = msccampusarchitecture::orderBy('image','asc')->get();
 
 
      
-        return view('architecture',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies', 'bsceligibilityclinicalpsies', 'bsccurriculumclinicalpsies', 'bsccareerprospectclinicalpsies', 'bsccampusclinicalpsies', 'pgdeligibilityclinicalpsies', 'pgdcurriculumclinicalpsies', 'pgdcareerprospectclinicalpsies', 'pgdcampusclinicalpsies', 'phdeligibilityclinicalpsies', 'phdcurriculumclinicalpsies', 'phdcareerprospectclinicalpsies', 'phdcampusclinicalpsies', 'placementclinicalpsies', 'publichlths', 'whypublichlths', 'deliverablespublichlths', 'whyicripublichlths', 'msceligibilitypublichlths', 'msccurriculumpublichlths', 'msccareerprospectpublichlths', 'msccampuspublichlths', 'bsceligibilitypublichlths', 'bsccurriculumpublichlths', 'bsccareerprospectpublichlths','bsccampuspublichlths', 'pgdeligibilitypublichlths', 'pgdcurriculumpublichlths', 'pgdcareerprospectpublichlths', 'pgdcampuspublichlths', 'phdeligibilitypublichlths', 'phdcurriculumpublichlths', 'phdcareerprospectpublichlths', 'phdcampuspublichlths', 'placementpublichlths', 'architectures', 'whyarchitectures', 'deliverablesarchitectures', 'whyicriarchitectures'));
+        return view('architecture',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies', 'bsceligibilityclinicalpsies', 'bsccurriculumclinicalpsies', 'bsccareerprospectclinicalpsies', 'bsccampusclinicalpsies', 'pgdeligibilityclinicalpsies', 'pgdcurriculumclinicalpsies', 'pgdcareerprospectclinicalpsies', 'pgdcampusclinicalpsies', 'phdeligibilityclinicalpsies', 'phdcurriculumclinicalpsies', 'phdcareerprospectclinicalpsies', 'phdcampusclinicalpsies', 'placementclinicalpsies', 'publichlths', 'whypublichlths', 'deliverablespublichlths', 'whyicripublichlths', 'msceligibilitypublichlths', 'msccurriculumpublichlths', 'msccareerprospectpublichlths', 'msccampuspublichlths', 'bsceligibilitypublichlths', 'bsccurriculumpublichlths', 'bsccareerprospectpublichlths','bsccampuspublichlths', 'pgdeligibilitypublichlths', 'pgdcurriculumpublichlths', 'pgdcareerprospectpublichlths', 'pgdcampuspublichlths', 'phdeligibilitypublichlths', 'phdcurriculumpublichlths', 'phdcareerprospectpublichlths', 'phdcampuspublichlths', 'placementpublichlths', 'architectures', 'whyarchitectures', 'deliverablesarchitectures', 'whyicriarchitectures', 'msceligibilityarchitectures','msccurriculumarchitectures', 'msccareerprospectarchitectures', 'msccampusarchitectures'));
     }
 
     /**
