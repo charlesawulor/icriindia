@@ -241,33 +241,33 @@
 			  		</div>
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
-                          @if(count($msceligibilityarchitectures) > 0)	
-@foreach($msceligibilityarchitectures as $msceligibilityarchitecture)
+                          @if(count($msceligibilityaimachinelearns) > 0)	
+@foreach($msceligibilityaimachinelearns as $msceligibilityaimachinelearn)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilityarchitecture->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msceligibilityaimachinelearn->eligibility}}</div>
 			  			@endforeach
                       @endif    
 			  		</div>
 			  		<div class="col_auto_set">
-             @if(count($msccurriculumarchitectures) > 0)	
-                   @foreach($msccurriculumarchitectures as $msccurriculumarchitecture)
+             @if(count($msccurriculumaimachinelearns) > 0)	
+                   @foreach($msccurriculumaimachinelearns as $msccurriculumaimachinelearn)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumarchitecture->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$msccurriculumaimachinelearn->curriculum}}</div>
 			  	  @endforeach
              @endif   
 			  		</div>
 			  		<div class="col_auto_set">
-           @if(count($msccareerprospectarchitectures) > 0)	         
-                @foreach($msccareerprospectarchitectures as  $msccareerprospectarchitecture)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectarchitecture->career_prospect}}</div>
+           @if(count($msccareerprospectaimachinelearns) > 0)	         
+                @foreach($msccareerprospectaimachinelearns as  $msccareerprospectaimachinelearn)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$msccareerprospectaimachinelearn->career_prospect}}</div>
 
                 @endforeach
            @endif  
 			  		</div>
 			  		<div class="col_auto_set campus_col">
-             @if(count($msccampusarchitectures) > 0)	
-	              @foreach($msccampusarchitectures as $msccampusarchitecture)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusarchitecture->image}}" class="campus_images"><span></span>{{$msccampusarchitecture->campus_name}}</div>
+             @if(count($msccampusaimachinelearns) > 0)	
+	              @foreach($msccampusaimachinelearns as $msccampusaimachinelearn)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$msccampusaimachinelearn->image}}" class="campus_images"><span></span>{{$msccampusaimachinelearn->campus_name}}</div>
                    @endforeach
              @endif  
 

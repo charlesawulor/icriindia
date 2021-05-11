@@ -51,7 +51,10 @@ use App\aimachinelearn;
 use App\whyaimachinelearn;
 use App\deliverablesaimachinelearn;
 use App\whyicriaimachinelearn;
-
+use App\msceligibilityaimachinelearn;
+use App\msccurriculumaimachinelearn;
+use App\msccareerprospectaimachinelearn;
+use App\msccampusaimachinelearn;
 
 
 
@@ -107,10 +110,13 @@ class aimachinelearnController extends Controller
         $whyaimachinelearns = whyaimachinelearn::orderBy('why_aimachinelearn','asc')->get();
         $deliverablesaimachinelearns = deliverablesaimachinelearn::orderBy('deliverables','asc')->get();
         $whyicriaimachinelearns = whyicriaimachinelearn::orderBy('why_icri_aimachinelearn','asc')->get();
+        $msceligibilityaimachinelearns = msceligibilityaimachinelearn::orderBy('eligibility','asc')->get();
+        $msccurriculumaimachinelearns = msccurriculumaimachinelearn::orderBy('curriculum','asc')->get();
+        $msccareerprospectaimachinelearns = msccareerprospectaimachinelearn::orderBy('career_prospect','asc')->get();
 
 
      
-        return view('ai-machine-learning',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','architectures', 'whyarchitectures', 'deliverablesarchitectures', 'whyicriarchitectures', 'msceligibilityarchitectures','msccurriculumarchitectures', 'msccareerprospectarchitectures', 'msccampusarchitectures', 'bsceligibilityarchitectures', 'bsccurriculumarchitectures', 'bsccareerprospectarchitectures', 'bsccampusarchitectures', 'pgdeligibilityarchitectures', 'pgdcurriculumarchitectures', 'pgdcareerprospectarchitectures', 'pgdcampusarchitectures', 'pgdcampusarchitectures', 'phdeligibilityarchitectures', 'phdcurriculumarchitectures', 'phdcareerprospectarchitectures', 'phdcampusarchitectures', 'placementarchitectures', 'aimachinelearns', 'whyaimachinelearns', 'deliverablesaimachinelearns', 'whyicriaimachinelearns'));
+        return view('ai-machine-learning',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','architectures', 'whyarchitectures', 'deliverablesarchitectures', 'whyicriarchitectures', 'msceligibilityarchitectures','msccurriculumarchitectures', 'msccareerprospectarchitectures', 'msccampusarchitectures', 'bsceligibilityarchitectures', 'bsccurriculumarchitectures', 'bsccareerprospectarchitectures', 'bsccampusarchitectures', 'pgdeligibilityarchitectures', 'pgdcurriculumarchitectures', 'pgdcareerprospectarchitectures', 'pgdcampusarchitectures', 'pgdcampusarchitectures', 'phdeligibilityarchitectures', 'phdcurriculumarchitectures', 'phdcareerprospectarchitectures', 'phdcampusarchitectures', 'placementarchitectures', 'aimachinelearns', 'whyaimachinelearns', 'deliverablesaimachinelearns', 'whyicriaimachinelearns', 'msceligibilityaimachinelearns', 'msccurriculumaimachinelearns', 'msccareerprospectaimachinelearns', 'msccampusaimachinelearns'));
     }
 
     /**
