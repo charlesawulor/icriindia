@@ -172,6 +172,7 @@
 			<a class="catag" href="/icriindia/public/clinical-psychology/">Clinical Psychology</a>
 			<a class="catag" href="/icriindia/public/public-health/">Public Health</a>	
 			<a class="catag" href="/icriindia/public/architecture/">Architecture</a>	
+			<a class="catag" href="/icriindia/public/ai-machine-learning/">AI & Machine Learning</a>	
 
 
 

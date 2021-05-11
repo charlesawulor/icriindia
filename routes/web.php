@@ -32,6 +32,7 @@ Route::resource('banking-wealth-management','bankingwealthmanagementController')
 Route::resource('clinical-psychology','clinicalpsyController');
 Route::resource('public-health','publichlthController');
 Route::resource('architecture','architectureController');
+Route::resource('ai-machine-learning','aimachinelearnController');
 
 
 
