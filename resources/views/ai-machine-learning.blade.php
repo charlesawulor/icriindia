@@ -13,9 +13,9 @@
 <main class="cr_main">
 <div class="container">
 		<div class="slider_title">
-    @if(count($architectures) > 0)	
-	@foreach($architectures as $architecture)
-			<span>{{$architecture->course_title}}</span>
+    @if(count($aimachinelearns) > 0)	
+	@foreach($aimachinelearns as $aimachinelearn)
+			<span>{{$aimachinelearn->course_title}}</span>
             @endforeach
             @endif
 		</div>
@@ -63,11 +63,11 @@
 	<div class="container d-flex">
 		<ul class="nav nav-tabs" id="myTab" role="tablist">
 		  <li class="nav-item col-lg-3 col-sm-3 col-3">
-		    <a class="nav-link active" id="tab_ci" data-toggle="tab" href="#tab_ci_tag" role="tab" aria-controls="tab_ci_tag" aria-selected="true">Architecture
+		    <a class="nav-link active" id="tab_ci" data-toggle="tab" href="#tab_ci_tag" role="tab" aria-controls="tab_ci_tag" aria-selected="true">AI & Machine Learning
             <br>INDUSTRY<span></span></a>
 		  </li>
 		  <li class="nav-item col-lg-5 col-sm-5 col-5">
-		    <a class="nav-link" id="tab_wdpcr" data-toggle="tab" href="#tab_wdpcr_tag" role="tab" aria-controls="tab_wdpcr_tag" aria-selected="false">WHY DEGREE PROGRAMS IN Architecture
+		    <a class="nav-link" id="tab_wdpcr" data-toggle="tab" href="#tab_wdpcr_tag" role="tab" aria-controls="tab_wdpcr_tag" aria-selected="false">WHY DEGREE PROGRAMS IN AI & Machine Learning
 
             <span></span></a>
 		  </li>
@@ -80,18 +80,18 @@
 	<div class="tab-content offer_tab_cont" id="myTabContent">
 		  <div class="tab-pane fade show active" id="tab_ci_tag" role="tabpanel" aria-labelledby="tab_ci_tag">
 		  	<div class="container">
-              @if(count($architectures) > 0)	
-	@foreach($architectures as $architecture)
+              @if(count($aimachinelearns) > 0)	
+	@foreach($aimachinelearns as $aimachinelearn)
 				<div class="row">
 					<div class="col-lg-6 col-sm-6">
 						<div class="cr_sec_disc">
-						{{$architecture->about_course}}
+						{{$aimachinelearn->about_course}}
 
 						</div>
 					</div>
 			
 					<div class="col-lg-6 col-sm-3 col-sm-6">
-						<img src="/icriindia/storage/app/public/{{$architecture->image}}" width="100%" class="cr_cli_re_cont">
+						<img src="/icriindia/storage/app/public/{{$aimachinelearn->image}}" width="100%" class="cr_cli_re_cont">
 					</div>
 				</div>
               @endforeach
@@ -106,9 +106,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 
-                            @if(count($whyarchitectures) > 0)	
-	@foreach($whyarchitectures as $whyarchitecture)
-								<li><span>{{$whyarchitecture->why_architecture}}</span></li>
+                            @if(count($whyaimachinelearns) > 0)	
+	@foreach($whyaimachinelearns as $whyaimachinelearn)
+								<li><span>{{$whyaimachinelearn->why_aimachinelearn}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -128,9 +128,9 @@
 						<div class="cr_sec_disc">
 							<ul>
 								
-                            @if(count($deliverablesarchitectures) > 0)	
-	@foreach($deliverablesarchitectures as $deliverablesarchitecture)
-								<li><span>{{$deliverablesarchitecture->deliverables}}</span></li>
+                            @if(count($deliverablesaimachinelearns) > 0)	
+	@foreach($deliverablesaimachinelearns as $deliverablesaimachinelearn)
+								<li><span>{{$deliverablesaimachinelearn->deliverables}}</span></li>
                                     @endforeach
                                     @endif
 							
@@ -175,9 +175,9 @@
 			</div>
 			<div class="col-lg-6">
 				<div class="cr_why_icri_conten_wrap">
-                @if(count($whyicriarchitectures) > 0)	
-	@foreach($whyicriarchitectures as $whyicriarchitecture)
-					<div class="cr_why_icri_text_cont position-relative">{{$whyicriarchitecture->	why_icri_architecture}}</div>
+                @if(count($whyicriaimachinelearns) > 0)	
+	@foreach($whyicriaimachinelearns as $whyicriaimachinelearn)
+					<div class="cr_why_icri_text_cont position-relative">{{$whyicriaimachinelearn->	why_icri_aimachinelearn}}</div>
                 @endforeach
             @endif
 				</div>
@@ -234,7 +234,7 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>Architecture
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">MSc <span>AI & Machine Learning
 
                           </span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
@@ -302,7 +302,7 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>Architecture
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">BSc <span>AI & Machine Learning
 
                           </span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
@@ -381,7 +381,7 @@
               <div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span> Architecture
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">PG Diploma <span> AI & Machine Learning
 
                           </span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>
@@ -465,7 +465,7 @@
 		  	<div class="ctm-tab-cont">
 			  	<div class="row offer_tab_cont_row">
 			  		<div class="col_auto_set">
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>Architecture
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_head">Phd programs <span>AI & Machine Learning
 
                           </span></div>
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_main_dis">2 Year<br><span> UGC</span> Program Full-Time</div>

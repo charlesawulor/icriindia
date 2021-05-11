@@ -45,6 +45,16 @@ use App\phdcareerprospectarchitecture;
 use App\phdcampusarchitecture;
 use App\placementarchitecture;
 
+
+
+use App\aimachinelearn;
+use App\whyaimachinelearn;
+use App\deliverablesaimachinelearn;
+use App\whyicriaimachinelearn;
+
+
+
+
 class aimachinelearnController extends Controller
 {
     /**
@@ -92,8 +102,15 @@ class aimachinelearnController extends Controller
         $placementarchitectures = placementarchitecture::orderBy('image','asc')->get();
 
 
+
+        $aimachinelearns = aimachinelearn::orderBy('image','asc')->get();
+        $whyaimachinelearns = whyaimachinelearn::orderBy('why_aimachinelearn','asc')->get();
+        $deliverablesaimachinelearns = deliverablesaimachinelearn::orderBy('deliverables','asc')->get();
+        $whyicriaimachinelearns = whyicriaimachinelearn::orderBy('why_icri_aimachinelearn','asc')->get();
+
+
      
-        return view('ai-machine-learning',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','architectures', 'whyarchitectures', 'deliverablesarchitectures', 'whyicriarchitectures', 'msceligibilityarchitectures','msccurriculumarchitectures', 'msccareerprospectarchitectures', 'msccampusarchitectures', 'bsceligibilityarchitectures', 'bsccurriculumarchitectures', 'bsccareerprospectarchitectures', 'bsccampusarchitectures', 'pgdeligibilityarchitectures', 'pgdcurriculumarchitectures', 'pgdcareerprospectarchitectures', 'pgdcampusarchitectures', 'pgdcampusarchitectures', 'phdeligibilityarchitectures', 'phdcurriculumarchitectures', 'phdcareerprospectarchitectures', 'phdcampusarchitectures', 'placementarchitectures'));
+        return view('ai-machine-learning',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','architectures', 'whyarchitectures', 'deliverablesarchitectures', 'whyicriarchitectures', 'msceligibilityarchitectures','msccurriculumarchitectures', 'msccareerprospectarchitectures', 'msccampusarchitectures', 'bsceligibilityarchitectures', 'bsccurriculumarchitectures', 'bsccareerprospectarchitectures', 'bsccampusarchitectures', 'pgdeligibilityarchitectures', 'pgdcurriculumarchitectures', 'pgdcareerprospectarchitectures', 'pgdcampusarchitectures', 'pgdcampusarchitectures', 'phdeligibilityarchitectures', 'phdcurriculumarchitectures', 'phdcareerprospectarchitectures', 'phdcampusarchitectures', 'placementarchitectures', 'aimachinelearns', 'whyaimachinelearns', 'deliverablesaimachinelearns', 'whyicriaimachinelearns'));
     }
 
     /**

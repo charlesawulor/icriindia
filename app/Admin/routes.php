@@ -415,7 +415,10 @@ Route::group([
     $router->resource('phdcareerprospectarchitectures', phdcareerprospectarchitectureController::class);
     $router->resource('phdcampusarchitectures', phdcampusarchitectureController::class);
     $router->resource('placementarchitectures', placementarchitectureController::class);
-
+    $router->resource('aimachinelearns', aimachinelearnController::class);
+    $router->resource('whyaimachinelearns', whyaimachinelearnController::class);
+    $router->resource('deliverablesaimachinelearns', deliverablesaimachinelearnController::class);
+    $router->resource('whyicriaimachinelearns', whyicriaimachinelearnController::class);
     
     
 
