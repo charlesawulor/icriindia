@@ -389,10 +389,10 @@
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($pgdeligibilitypublichlths) > 0)	
-	@foreach($pgdeligibilitypublichlths as $pgdeligibilitypublichlth)
+                          @if(count($pgdeligibilityarchitectures) > 0)	
+	@foreach($pgdeligibilityarchitectures as $pgdeligibilityarchitecture)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilitypublichlth->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityarchitecture->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
@@ -400,10 +400,10 @@
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($pgdcurriculumpublichlths) > 0)	
-	@foreach($pgdcurriculumpublichlths as $pgdcurriculumpublichlth)
+                      @if(count($pgdcurriculumarchitectures) > 0)	
+	@foreach($pgdcurriculumarchitectures as $pgdcurriculumarchitecture)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumpublichlth->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumarchitecture->curriculum}}</div>
 			  			@endforeach
                       @endif  
 
@@ -424,9 +424,9 @@
 			  		<div class="col_auto_set campus_col">
 
 
-			  		      @if(count($pgdcampuspublichlths) > 0)	
-	@foreach($pgdcampuspublichlths as $pgdcampuspublichlth)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampuspublichlth->image}}" class="campus_images"><span></span>{{$pgdcampuspublichlth->campus_name}}</div>
+			  		      @if(count($pgdcampusarchitectures) > 0)	
+	@foreach($pgdcampusarchitectures as $pgdcampusarchitecture)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$pgdcampusarchitecture->image}}" class="campus_images"><span></span>{{$pgdcampusarchitecture->campus_name}}</div>
                           @endforeach
                       @endif 
 

@@ -406,6 +406,10 @@ Route::group([
     $router->resource('bsccurriculumarchitectures', bsccurriculumarchitectureController::class);
     $router->resource('bsccareerprospectarchitectures', bsccareerprospectarchitectureController::class);
     $router->resource('bsccampusarchitectures', bsccampusarchitectureController::class);
+    $router->resource('pgdeligibilityarchitectures', pgdeligibilityarchitectureController::class);
+    $router->resource('pgdcurriculumarchitectures', pgdcurriculumarchitectureController::class);
+    $router->resource('pgdcareerprospectarchitectures', pgdcareerprospectarchitectureController::class);
+    $router->resource('pgdcampusarchitectures', pgdcampusarchitectureController::class);
 
     
     
