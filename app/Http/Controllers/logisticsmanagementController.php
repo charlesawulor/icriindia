@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\logoicri;
 use App\Admission;
 use App\legacy;
 use App\campus;
@@ -60,7 +61,7 @@ class logisticsmanagementController extends Controller
      */
     public function index()
     {
-
+        $logoicris = logoicri::orderBy('id','asc')->get();
         $admissions = Admission::orderBy('status','asc')->get();
         $legacies = legacy::orderBy('volume','asc')->get();
         $campuses = campus::orderBy('id','asc')->get();
@@ -106,7 +107,7 @@ class logisticsmanagementController extends Controller
         $placementlogisticsmanagements = placementlogisticsmanagement::orderBy('image','asc')->get();
      
      
-        return view('logistics-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','logisticsmanagements', 'whylogisticsmanagements', 'deliverableslogisticsmanagements', 'whyicrilogisticsmanagements', 'msceligibilitylogisticsmanagements', 'msccurriculumlogisticsmanagements', 'msccareerprospectlogisticsmanagements', 'msccampuslogisticsmanagements', 'bsceligibilitylogisticsmanagements', 'bsccurriculumlogisticsmanagements', 'bsccareerprospectlogisticsmanagements', 'bsccampuslogisticsmanagements', 'pgdeligibilitylogisticsmanagements', 'pgdcurriculumlogisticsmanagements', 'pgdcareerprospectlogisticsmanagements', 'pgdcampuslogisticsmanagements', 'phdeligibilitylogisticsmanagements', 'phdcurriculumlogisticsmanagements', 'phdcareerprospectlogisticsmanagements', 'phdcampuslogisticsmanagements', 'placementlogisticsmanagements' ));
+        return view('logistics-management',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','logisticsmanagements', 'whylogisticsmanagements', 'deliverableslogisticsmanagements', 'whyicrilogisticsmanagements', 'msceligibilitylogisticsmanagements', 'msccurriculumlogisticsmanagements', 'msccareerprospectlogisticsmanagements', 'msccampuslogisticsmanagements', 'bsceligibilitylogisticsmanagements', 'bsccurriculumlogisticsmanagements', 'bsccareerprospectlogisticsmanagements', 'bsccampuslogisticsmanagements', 'pgdeligibilitylogisticsmanagements', 'pgdcurriculumlogisticsmanagements', 'pgdcareerprospectlogisticsmanagements', 'pgdcampuslogisticsmanagements', 'phdeligibilitylogisticsmanagements', 'phdcurriculumlogisticsmanagements', 'phdcareerprospectlogisticsmanagements', 'phdcampuslogisticsmanagements', 'placementlogisticsmanagements' ));
     }
 
     /**

@@ -15,7 +15,7 @@ Route::group([
 
     $router->resource('users', UserController::class);
      
-
+    $router->resource('logoicris', logoicriController::class);
     $router->resource('admission', AdmissionController::class);
 
     $router->resource('research', ResearchController::class);
@@ -414,6 +414,7 @@ Route::group([
     $router->resource('phdcurriculumarchitectures', phdcurriculumarchitectureController::class);
     $router->resource('phdcareerprospectarchitectures', phdcareerprospectarchitectureController::class);
     $router->resource('phdcampusarchitectures', phdcampusarchitectureController::class);
+    $router->resource('placementarchitectures', placementarchitectureController::class);
 
     
     

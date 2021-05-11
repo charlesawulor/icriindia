@@ -51,7 +51,13 @@
 	<div class="container-fluid">
 		<nav>
 			<a class="logo" href="http://localhost/icriindia/public/">
-				<img src="Images/logo.png" class="img-fluid">
+			@if(count($logoicris) > 0)	
+					@foreach($logoicris as $logoicri)
+
+				<img src="/icriindia/storage/app/public/{{$logoicri->image}}" class="img-fluid">
+				@endforeach
+			@endif
+
 			</a>
 			<div class="header_contact_detals">
 				<ul class="contact_content d-flex">
@@ -134,7 +140,12 @@
 	<div class="container">
 		<div class="d-flex top_cont">
 			<a class="footer_logo" href="http://localhost/icriindia/public/">
-				<img src="Images/logo.png" class="fo_logo">
+			@if(count($logoicris) > 0)	
+					@foreach($logoicris as $logoicri)
+
+				<img src="/icriindia/storage/app/public/{{$logoicri->image}}" class="img-fluid">
+				@endforeach
+			@endif
 			</a>
 			<div class="location d-flex">
 				<i class="fas fa-map-marker-alt"></i>

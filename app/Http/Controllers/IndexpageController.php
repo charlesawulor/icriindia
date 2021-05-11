@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
+use App\logoicri;
 use App\Admission;
 use App\Research;
 use App\Publication;
@@ -53,6 +54,7 @@ class IndexpageController extends Controller
      */
     public function index()
     {
+        $logoicris = logoicri::orderBy('id','asc')->get();
         $publications = Publication::orderBy('id','asc')->get();
         $admissions = Admission::orderBy('status','asc')->get();
         $researches = Research::orderBy('type','asc')->get();
@@ -93,7 +95,7 @@ class IndexpageController extends Controller
 
 
 
-        return view('indexpage',compact ('publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches'));
+        return view('indexpage',compact ( 'logoicris','publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches'));
 
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\logoicri;
 use App\Admission;
 use App\legacy;
 use App\campus;
@@ -53,6 +54,7 @@ class clinicalresearchController extends Controller
      */
     public function index()
     {
+        $logoicris = logoicri::orderBy('id','asc')->get();
         $admissions = Admission::orderBy('status','asc')->get();
         $legacies = legacy::orderBy('volume','asc')->get();
         $campuses = campus::orderBy('id','asc')->get();
@@ -100,7 +102,7 @@ class clinicalresearchController extends Controller
 
         
 
-        return view('clinical-research',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches', 'bsccampusclinicalresearches', 'pgdeligibilityclinicalresearches', 'pgdcurriculumclinicalresearches', 'pgdcareerprospectclinicalresearches', 'pgdcampusclinicalresearches', 'phdeligibilityclinicalresearches', 'phdcurriculumclinicalresearches', 'phdcareerprospectclinicalresearches', 'phdcampusclinicalresearches', 'placementclinicalresearches' ));
+        return view('clinical-research',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','clinicalresearches','whyclinicalresearches','deliverablesclinicalresearches', 'whyicriclinicalresearches', 'msceligibilityclinicalresearches','msccurriculumclinicalresearches', 'msccareerprospectclinicalresearches', 'msccampusclinicalresearches', 'bsceligibilityclinicalresearches', 'bsccurriculumclinicalresearches', 'bsccareerprospectclinicalresearches', 'bsccampusclinicalresearches', 'pgdeligibilityclinicalresearches', 'pgdcurriculumclinicalresearches', 'pgdcareerprospectclinicalresearches', 'pgdcampusclinicalresearches', 'phdeligibilityclinicalresearches', 'phdcurriculumclinicalresearches', 'phdcareerprospectclinicalresearches', 'phdcampusclinicalresearches', 'placementclinicalresearches' ));
     }
 
     /**

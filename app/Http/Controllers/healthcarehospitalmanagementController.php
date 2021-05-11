@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-
+use App\logoicri;
 use App\Admission;
 use App\legacy;
 use App\campus;
@@ -55,6 +55,7 @@ class healthcarehospitalmanagementController extends Controller
      */
     public function index()
     {
+        $logoicris = logoicri::orderBy('id','asc')->get();
         $admissions = Admission::orderBy('status','asc')->get();
         $legacies = legacy::orderBy('volume','asc')->get();
         $campuses = campus::orderBy('id','asc')->get();
@@ -90,7 +91,7 @@ class healthcarehospitalmanagementController extends Controller
         $placementhealthcarehospitalmanagements = placementhealthcarehospitalmanagement::orderBy('image','asc')->get();
 
 
-        return view('healthcare-hospital-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','healthcarehospitalmanagements', 'whyhealthcarehospitalmanagements', 'deliverableshealthcarehospitalmanagements', 'whyicrihealthcarehospitalmanagements', 'msceligibilityhealthcarehospitalmanagements', 'msccurriculumhealthcarehospitalmanagements', 'msccareerprospecthealthcarehospitalmanagements', 'msccampushealthcarehospitalmanagements', 'bsceligibilityhealthcarehospitalmanagements', 'bsccurriculumhealthcarehospitalmanagements', 'bsccareerprospecthealthcarehospitalmanagements', 'bsccampushealthcarehospitalmanagements', 'pgdeligibilityhealthcarehospitalmanagements', 'pgdcurriculumhealthcarehospitalmanagements', 'pgdcareerprospecthealthcarehospitalmanagements', 'pgdcampushealthcarehospitalmanagements', 'phdeligibilityhealthcarehospitalmanagements', 'phdcurriculumhealthcarehospitalmanagements', 'phdcareerprospecthealthcarehospitalmanagements', 'phdcampushealthcarehospitalmanagements', 'placementhealthcarehospitalmanagements' ));
+        return view('healthcare-hospital-management',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','healthcarehospitalmanagements', 'whyhealthcarehospitalmanagements', 'deliverableshealthcarehospitalmanagements', 'whyicrihealthcarehospitalmanagements', 'msceligibilityhealthcarehospitalmanagements', 'msccurriculumhealthcarehospitalmanagements', 'msccareerprospecthealthcarehospitalmanagements', 'msccampushealthcarehospitalmanagements', 'bsceligibilityhealthcarehospitalmanagements', 'bsccurriculumhealthcarehospitalmanagements', 'bsccareerprospecthealthcarehospitalmanagements', 'bsccampushealthcarehospitalmanagements', 'pgdeligibilityhealthcarehospitalmanagements', 'pgdcurriculumhealthcarehospitalmanagements', 'pgdcareerprospecthealthcarehospitalmanagements', 'pgdcampushealthcarehospitalmanagements', 'phdeligibilityhealthcarehospitalmanagements', 'phdcurriculumhealthcarehospitalmanagements', 'phdcareerprospecthealthcarehospitalmanagements', 'phdcampushealthcarehospitalmanagements', 'placementhealthcarehospitalmanagements' ));
     }
 
     /**

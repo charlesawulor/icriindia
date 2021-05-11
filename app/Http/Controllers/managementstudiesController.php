@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\logoicri;
 use App\Admission;
 use App\legacy;
 use App\campus;
@@ -51,6 +52,7 @@ class managementstudiesController extends Controller
      */
     public function index()
     {
+        $logoicris = logoicri::orderBy('id','asc')->get();
         $admissions = Admission::orderBy('status','asc')->get();
         $legacies = legacy::orderBy('volume','asc')->get();
         $campuses = campus::orderBy('id','asc')->get();
@@ -87,7 +89,7 @@ class managementstudiesController extends Controller
         $placementmanagementstudies = placementmanagementstudy::orderBy('image','asc')->get();
 
      
-        return view('management-studies',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'managementstudies', 'whymanagementstudies', 'deliverablesmanagementstudies', 'whyicrimanagementstudies', 'msceligibilitymanagementstudies', 'msccurriculummanagementstudies', 'msccareerprospectmanagementstudies', 'msccampusmanagementstudies', 'bsceligibilitymanagementstudies', 'bsccurriculummanagementstudies', 'bsccareerprospectmanagementstudies', 'bsccampusmanagementstudies', 'pgdeligibilitymanagementstudies', 'pgdcurriculummanagementstudies', 'pgdcareerprospectmanagementstudies', 'pgdcampusmanagementstudies', 'phdeligibilitymanagementstudies', 'phdcurriculummanagementstudies', 'phdcareerprospectmanagementstudies', 'phdcampusmanagementstudies', 'placementmanagementstudies' ));
+        return view('management-studies',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'managementstudies', 'whymanagementstudies', 'deliverablesmanagementstudies', 'whyicrimanagementstudies', 'msceligibilitymanagementstudies', 'msccurriculummanagementstudies', 'msccareerprospectmanagementstudies', 'msccampusmanagementstudies', 'bsceligibilitymanagementstudies', 'bsccurriculummanagementstudies', 'bsccareerprospectmanagementstudies', 'bsccampusmanagementstudies', 'pgdeligibilitymanagementstudies', 'pgdcurriculummanagementstudies', 'pgdcareerprospectmanagementstudies', 'pgdcampusmanagementstudies', 'phdeligibilitymanagementstudies', 'phdcurriculummanagementstudies', 'phdcareerprospectmanagementstudies', 'phdcampusmanagementstudies', 'placementmanagementstudies' ));
     }
 
     /**

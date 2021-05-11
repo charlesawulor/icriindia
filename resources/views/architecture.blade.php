@@ -537,14 +537,14 @@
 		</div>
 		<div class="cr_part_detials row">
 
-	@if(count($placementpublichlths) > 0)	
-	    @foreach($placementpublichlths as $placementpublichlth)
+	@if(count($placementarchitectures) > 0)	
+	    @foreach($placementarchitectures as $placementarchitecture)
 
 			<div class="col-lg-3">
 				<div class="compny_part">
 					<div class="Part_warp">
 						<div class="image_wrap">
-							<img src="/icriindia/storage/app/public/{{$placementpublichlth->image}}">
+							<img src="/icriindia/storage/app/public/{{$placementarchitecture->image}}">
 						</div>
 					</div>
 				</div>

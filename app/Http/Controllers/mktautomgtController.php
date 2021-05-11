@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\logoicri;
 use App\Admission;
 use App\legacy;
 use App\campus;
@@ -75,7 +76,7 @@ class mktautomgtController extends Controller
      */
     public function index()
     {
-       
+        $logoicris = logoicri::orderBy('id','asc')->get();
         $admissions = Admission::orderBy('status','asc')->get();
         $legacies = legacy::orderBy('volume','asc')->get();
         $campuses = campus::orderBy('id','asc')->get();
@@ -141,7 +142,7 @@ class mktautomgtController extends Controller
      
 
      
-        return view('marketing-automobile-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','pharmamktmgts', 'whypharmamktmgts', 'deliverablespharmamktmgts', 'whyicripharmamktmgts', 'msceligibilitypharmamktmgts', 'msccurriculumpharmamktmgts', 'msccareerprospectpharmamktmgts', 'msccampuspharmamktmgts', 'bsceligibilitypharmamktmgts', 'bsccurriculumpharmamktmgts', 'bsccareerprospectpharmamktmgts', 'bsccampuspharmamktmgts', 'pgdeligibilitypharmamktmgts', 'pgdcurriculumpharmamktmgts', 'pgdcareerprospectpharmamktmgts','pgdcampuspharmamktmgts', 'phdeligibilitypharmamktmgts', 'phdcurriculumpharmamktmgts', 'phdcareerprospectpharmamktmgts', 'phdcampuspharmamktmgts', 'placementpharmamktmgts', 'mktautomgts', 'whymktautomgts', 'deliverablesmktautomgts', 'whyicrimktautomgts', 'msceligibilitymktautomgts', 'msccurriculummktautomgts', 'msccareerprospectmktautomgts', 'msccampusmktautomgts', 'bsceligibilitymktautomgts', 'bsccurriculummktautomgts', 'bsccareerprospectmktautomgts', 'bsccampusmktautomgts', 'pgdeligibilitymktautomgts', 'pgdcurriculummktautomgts', 'pgdcareerprospectmktautomgts', 'pgdcampusmktautomgts', 'phdeligibilitymktautomgts', 'phdcurriculummktautomgts', 'phdcareerprospectmktautomgts', 'phdcampusmktautomgts', 'placementmktautomgts' ));
+        return view('marketing-automobile-management',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners','pharmamktmgts', 'whypharmamktmgts', 'deliverablespharmamktmgts', 'whyicripharmamktmgts', 'msceligibilitypharmamktmgts', 'msccurriculumpharmamktmgts', 'msccareerprospectpharmamktmgts', 'msccampuspharmamktmgts', 'bsceligibilitypharmamktmgts', 'bsccurriculumpharmamktmgts', 'bsccareerprospectpharmamktmgts', 'bsccampuspharmamktmgts', 'pgdeligibilitypharmamktmgts', 'pgdcurriculumpharmamktmgts', 'pgdcareerprospectpharmamktmgts','pgdcampuspharmamktmgts', 'phdeligibilitypharmamktmgts', 'phdcurriculumpharmamktmgts', 'phdcareerprospectpharmamktmgts', 'phdcampuspharmamktmgts', 'placementpharmamktmgts', 'mktautomgts', 'whymktautomgts', 'deliverablesmktautomgts', 'whyicrimktautomgts', 'msceligibilitymktautomgts', 'msccurriculummktautomgts', 'msccareerprospectmktautomgts', 'msccampusmktautomgts', 'bsceligibilitymktautomgts', 'bsccurriculummktautomgts', 'bsccareerprospectmktautomgts', 'bsccampusmktautomgts', 'pgdeligibilitymktautomgts', 'pgdcurriculummktautomgts', 'pgdcareerprospectmktautomgts', 'pgdcampusmktautomgts', 'phdeligibilitymktautomgts', 'phdcurriculummktautomgts', 'phdcareerprospectmktautomgts', 'phdcampusmktautomgts', 'placementmktautomgts' ));
     }
 
     /**

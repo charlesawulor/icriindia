@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-
+use App\logoicri;
 use App\Admission;
 use App\legacy;
 use App\campus;
@@ -51,6 +51,7 @@ class aviationmanagementController extends Controller
      */
     public function index()
     {
+        $logoicris = logoicri::orderBy('id','asc')->get();
         $admissions = Admission::orderBy('status','asc')->get();
         $legacies = legacy::orderBy('volume','asc')->get();
         $campuses = campus::orderBy('id','asc')->get();
@@ -110,10 +111,7 @@ class aviationmanagementController extends Controller
 
         
 
-        return view('aviation-management',compact ('admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners',
-        
-        
-        'aviationmanagements','whyaviationmanagements', 'deliverablesaviationmanagements', 'whyicriaviationmanagements', 'msceligibilityaviationmanagements', 'msccurriculumaviationmanagements', 'msccareerprospectaviationmanagements', 'msccampusaviationmanagements', 'bsceligibilityaviationmanagements', 'bsccurriculumaviationmanagements', 'bsccareerprospectaviationmanagements', 'bsccampusaviationmanagements' , 'pgdeligibilityaviationmanagements', 'pgdcurriculumaviationmanagements', 'pgdcareerprospectaviationmanagements', 'pgdcampusaviationmanagements', 'phdeligibilityaviationmanagements', 'phdcurriculumaviationmanagements', 'phdcareerprospectaviationmanagements', 'phdcampusaviationmanagements', 'placementaviationmanagements' ));
+        return view('aviation-management',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners',  'aviationmanagements','whyaviationmanagements', 'deliverablesaviationmanagements', 'whyicriaviationmanagements', 'msceligibilityaviationmanagements', 'msccurriculumaviationmanagements', 'msccareerprospectaviationmanagements', 'msccampusaviationmanagements', 'bsceligibilityaviationmanagements', 'bsccurriculumaviationmanagements', 'bsccareerprospectaviationmanagements', 'bsccampusaviationmanagements' , 'pgdeligibilityaviationmanagements', 'pgdcurriculumaviationmanagements', 'pgdcareerprospectaviationmanagements', 'pgdcampusaviationmanagements', 'phdeligibilityaviationmanagements', 'phdcurriculumaviationmanagements', 'phdcareerprospectaviationmanagements', 'phdcampusaviationmanagements', 'placementaviationmanagements' ));
     }
 
     /**
