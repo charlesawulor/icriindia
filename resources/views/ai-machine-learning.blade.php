@@ -312,29 +312,29 @@
                       <div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($bsceligibilityarchitectures) > 0)	
-	@foreach($bsceligibilityarchitectures as $bsceligibilityarchitecture)
+                          @if(count($bsceligibilityaimachinelearns) > 0)	
+	@foreach($bsceligibilityaimachinelearns as $bsceligibilityaimachinelearn)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilityarchitecture->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsceligibilityaimachinelearn->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccurriculumarchitectures) > 0)	
-	@foreach($bsccurriculumarchitectures as $bsccurriculumarchitecture)
+                      @if(count($bsccurriculumaimachinelearns) > 0)	
+	@foreach($bsccurriculumaimachinelearns as $bsccurriculumaimachinelearn)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumarchitecture->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$bsccurriculumaimachinelearn->curriculum}}</div>
 			  			@endforeach
                       @endif   
 
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($bsccareerprospectarchitectures) > 0)	
-	@foreach($bsccareerprospectarchitectures as $bsccareerprospectarchitecture)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectarchitecture->career_prospect}}</div>
+                      @if(count($bsccareerprospectaimachinelearns) > 0)	
+	@foreach($bsccareerprospectaimachinelearns as $bsccareerprospectaimachinelearn)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis offer_tab_cont_carre">{{$bsccareerprospectaimachinelearn->career_prospect}}</div>
 
                           @endforeach
                       @endif  

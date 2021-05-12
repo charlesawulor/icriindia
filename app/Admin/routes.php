@@ -423,6 +423,10 @@ Route::group([
     $router->resource('msccurriculumaimachinelearns', msccurriculumaimachinelearnController::class);
     $router->resource('msccareerprospectaimachinelearns', msccareerprospectaimachinelearnController::class);
     $router->resource('msccampusaimachinelearns', msccampusaimachinelearnController::class);
+    $router->resource('bsceligibilityaimachinelearns', bsceligibilityaimachinelearnController::class);
+    $router->resource('bsccurriculumaimachinelearns', bsccurriculumaimachinelearnController::class);
+    $router->resource('bsccareerprospectaimachinelearns', bsccareerprospectaimachinelearnController::class);
+    $router->resource('bsccampusaimachinelearns', bsccampusaimachinelearnController::class);
     
     
 
