@@ -342,9 +342,9 @@
 			  		</div>
 			  		<div class="col_auto_set campus_col">
 
-                      @if(count($bsccampusarchitectures) > 0)	
-	@foreach($bsccampusarchitectures as $bsccampusarchitecture)
-			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusarchitecture->image}}" class="campus_images"><span></span>{{$bsccampusarchitecture->campus_name}}</div>
+                      @if(count($bsccampusaimachinelearns) > 0)	
+	@foreach($bsccampusaimachinelearns as $bsccampusaimachinelearn)
+			  			<div class="offer_tab_cont_disc offer_tab_cont_campus"><img src="/icriindia/storage/app/public/{{$bsccampusaimachinelearn->image}}" class="campus_images"><span></span>{{$bsccampusaimachinelearn->campus_name}}</div>
                           @endforeach
                       @endif  
 

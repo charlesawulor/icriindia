@@ -121,7 +121,7 @@ class aimachinelearnController extends Controller
         $bsceligibilityaimachinelearns = bsceligibilityaimachinelearn::orderBy('eligibility','asc')->get();
         $bsccurriculumaimachinelearns = bsccurriculumaimachinelearn::orderBy('curriculum','asc')->get();
         $bsccareerprospectaimachinelearns = bsccareerprospectaimachinelearn::orderBy('career_prospect','asc')->get();
-        $bsccampusaimachinelearns = bsccampusaimachinelearns::orderBy('image','asc')->get();
+        $bsccampusaimachinelearns = bsccampusaimachinelearn::orderBy('image','asc')->get();
 
 
      
