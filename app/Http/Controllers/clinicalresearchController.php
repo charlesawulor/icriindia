@@ -4,47 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\logoicri;
-use App\Admission;
-use App\legacy;
-use App\campus;
-use App\recruiter;
-use App\topcourse;
-use App\address;
-use App\subscriber;
-use App\usefullink;
-use App\socialconnectfacebook;
-use App\socialconnectinstagram;
-use App\socialconnecttwitter;
-use App\hiringpartner;
-
-
-
-use App\clinicalresearch;
-use App\whyclinicalresearch;
-use App\deliverablesclinicalresearch;
-use App\whyicriclinicalresearch;
-use App\msceligibilityclinicalresearch;
-use App\msccurriculumclinicalresearch;
-use App\msccareerprospectclinicalresearch;
-use App\msccampusclinicalresearch;
-use App\bsceligibilityclinicalresearch;
-use App\bsccurriculumclinicalresearch;
-use App\bsccareerprospectclinicalresearch;
-use App\bsccampusclinicalresearch;
-use App\pgdeligibilityclinicalresearch;
-use App\pgdcurriculumclinicalresearch;
-use App\pgdcareerprospectclinicalresearch;
-use App\pgdcampusclinicalresearch;
-use App\phdeligibilityclinicalresearch;
-use App\phdcurriculumclinicalresearch;
-use App\phdcareerprospectclinicalresearch;
-use App\phdcampusclinicalresearch;
-use App\placementclinicalresearch;
-
-
-
-
 class clinicalresearchController extends Controller
 {
     /**

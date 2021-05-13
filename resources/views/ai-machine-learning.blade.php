@@ -389,10 +389,10 @@
 			  		<div class="col_auto_set">
 			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi"><span>Graduate or Postgraduate in Life Sciences</span></div>
 
-                          @if(count($pgdeligibilityarchitectures) > 0)	
-	@foreach($pgdeligibilityarchitectures as $pgdeligibilityarchitecture)
+                          @if(count($pgdeligibilityaimachinelearns) > 0)	
+	@foreach($pgdeligibilityaimachinelearns as $pgdeligibilityaimachinelearn)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityarchitecture->eligibility}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdeligibilityaimachinelearn->eligibility}}</div>
 			  			@endforeach
                       @endif 
 
@@ -400,10 +400,10 @@
 			  		</div>
 			  		<div class="col_auto_set">
 
-                      @if(count($pgdcurriculumarchitectures) > 0)	
-	@foreach($pgdcurriculumarchitectures as $pgdcurriculumarchitecture)
+                      @if(count($pgdcurriculumaimachinelearns) > 0)	
+	@foreach($pgdcurriculumaimachinelearns as $pgdcurriculumaimachinelearn)
 
-			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumarchitecture->curriculum}}</div>
+			  			<div class="offer_tab_cont_disc offer_tab_cont_disc_elegi_dis">{{$pgdcurriculumaimachinelearn->curriculum}}</div>
 			  			@endforeach
                       @endif  
 

@@ -35,6 +35,15 @@ Route::resource('architecture','architectureController');
 Route::resource('ai-machine-learning','aimachinelearnController');
 
 
+Route::resource('innerpagecourse','innerpagecourseController');
+Route::resource('indexpage','innerpagecourseController');
+
+Route::resource('innercampuscourse','innercampuscourseController');
+Route::resource('indexpage','innercampuscourseController');
+
+
+
+
 
 
 

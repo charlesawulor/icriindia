@@ -1,28 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
-use App\logoicri;
-use App\Admission;
+
 use App\Research;
 use App\Publication;
-use App\legacy;
 use App\whyicri;
-use App\campus;
 use App\whyicricontent;
 use App\researchcontent;
 use App\application;
+use App\Admission;
 use App\admissioncourse;
 use App\researchpic;
 use App\event;
-use App\recruiter;
-use App\topcourse;
-use App\address;
 use App\subscriber;
 use App\studenttestimonial;
-use App\usefullink;
 use App\lifeaticri;
 use App\icrinetwork;
 use App\award;
@@ -34,18 +27,16 @@ use App\mumbaicampus;
 use App\mangalurucampus;
 use App\punecampus;
 use App\delhicampus;
-use App\socialconnectfacebook;
-use App\socialconnectinstagram;
-use App\socialconnecttwitter;
 use App\parenttestimonial;
 use App\industryspeaktestimonial;
-use App\hiringpartner;
 use App\clinicalresearch;
 
+use App\innerpagecourse;
+use App\innercampuscourse;
 
 
 
-class IndexpageController extends Controller
+class indexpageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -54,23 +45,19 @@ class IndexpageController extends Controller
      */
     public function index()
     {
-        $logoicris = logoicri::orderBy('id','asc')->get();
-        $publications = Publication::orderBy('id','asc')->get();
+      
+
+
         $admissions = Admission::orderBy('status','asc')->get();
-        $researches = Research::orderBy('type','asc')->get();
-        $legacies = legacy::orderBy('volume','asc')->get();
-        $whyicris = whyicri::orderBy('value','asc')->get();
-        $campuses = campus::orderBy('id','asc')->get();
+        $publications = Publication::orderBy('id','asc')->get();     
+        $researches = Research::orderBy('type','asc')->get();    
+        $whyicris = whyicri::orderBy('value','asc')->get();     
         $whyicricontents = whyicricontent::orderBy('content','asc')->get();
         $applications = application::orderBy('content','asc')->get();
         $admissioncourses = admissioncourse::orderBy('course','asc')->get();
         $researchpics = researchpic::orderBy('image','asc')->get();
-        $events = event::orderBy('image','asc')->get();
-        $recruiters = recruiter::orderBy('image','asc')->get();
-        $topcourses = topcourse::orderBy('degree','asc')->get();
-        $addresses = address::orderBy('location','asc')->get();
+        $events = event::orderBy('image','asc')->get();    
         $studenttestimonials = studenttestimonial::orderBy('image','asc')->get();
-        $usefullinks = usefullink::orderBy('title','asc')->get();
         $lifeaticris = lifeaticri::orderBy('title','asc')->get();
         $icrinetworks = icrinetwork::orderBy('title','asc')->get();
         $awards = award::orderBy('title','asc')->get();
@@ -82,25 +69,19 @@ class IndexpageController extends Controller
         $mangalurucampuses = mangalurucampus::orderBy('title','asc')->get();
         $punecampuses = punecampus::orderBy('title','asc')->get();
         $delhicampuses = delhicampus::orderBy('title','asc')->get();
-        $socialconnectfacebooks = socialconnectfacebook::orderBy('link','asc')->get();
-        $socialconnectinstagrams = socialconnectinstagram::orderBy('link','asc')->get();
-        $socialconnecttwitters = socialconnecttwitter::orderBy('link','asc')->get();
         $parenttestimonials = parenttestimonial::orderBy('image','asc')->get();
         $industryspeaktestimonials = industryspeaktestimonial::orderBy('image','asc')->get();
-        $hiringpartners = hiringpartner::orderBy('image','asc')->get();
         $clinicalresearches = clinicalresearch::orderBy('image','asc')->get();
+
+        $innerpagecourses = innerpagecourse::orderBy('id','asc')->get();
+        $innercampuscourses = innercampuscourse::orderBy('id','asc')->get();
 
         
 
-
-
-
-        return view('indexpage',compact ( 'logoicris','publications','admissions', 'researches', 'legacies', 'whyicris', 'campuses', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'recruiters', 'topcourses', 'addresses', 'studenttestimonials', 'usefullinks', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters', 'parenttestimonials', 'industryspeaktestimonials', 'hiringpartners', 'clinicalresearches'));
-
-
-
+        return view('indexpage',compact ( 'publications','admissions','researches', 'whyicris', 'whyicricontents', 'applications', 'admissioncourses', 'researchpics', 'events', 'studenttestimonials', 'lifeaticris', 'icrinetworks','awards', 'anantapurcampuses', 'bhopalcampuses', 'dehraduncampuses', 'jaipurcampuses', 'mumbaicampuses', 'mangalurucampuses', 'punecampuses', 'delhicampuses', 'parenttestimonials', 'industryspeaktestimonials', 'clinicalresearches', 'innerpagecourses','innercampuscourses'));
 
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -119,15 +100,7 @@ class IndexpageController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'email' => 'required|unique:subscribers,email'
-            
-            ]);
-      
-            $subscribers = new subscriber;
-            $subscribers->email = $request->input('email');
-            $subscribers->save();
-            return redirect('/')->with('success', 'You have successfully subscribed to our newsletter.');
+        //
     }
 
     /**

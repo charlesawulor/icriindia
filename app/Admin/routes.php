@@ -427,6 +427,11 @@ Route::group([
     $router->resource('bsccurriculumaimachinelearns', bsccurriculumaimachinelearnController::class);
     $router->resource('bsccareerprospectaimachinelearns', bsccareerprospectaimachinelearnController::class);
     $router->resource('bsccampusaimachinelearns', bsccampusaimachinelearnController::class);
+    $router->resource('pgdeligibilityaimachinelearns', pgdeligibilityaimachinelearnController::class);
+    $router->resource('pgdcurriculumaimachinelearns', pgdcurriculumaimachinelearnController::class);
+
+    $router->resource('innerpagecourses', innerpagecourseController::class);
+    $router->resource('innercampuscourses', innercampuscourseController::class);
     
     
 

@@ -68,9 +68,9 @@
 		<div class="clinic_re_pages_cont">
 			<ul>
 
-			@if(count($admissioncourses) > 0 )
-	         @foreach($admissioncourses as $admissioncourse)	
-				<a href="clinical-research.html"><i class="fa fa-caret-right"></i><li>{{$admissioncourse->course}}</li></a>
+			@if(count($innerpagecourses) > 0 )
+	         @foreach($innerpagecourses as $innerpagecourse)	
+				<a href="/icriindia/public/innerpagecourse/{{$innerpagecourse->id}}"><i class="fa fa-caret-right"></i><li>{{$innerpagecourse->course_title}}</li></a>
 				
 				@endforeach
 		      @endif
@@ -78,6 +78,23 @@
 
 			</ul>
 		</div>
+
+		<div class="clinic_re_pages_cont">
+			<ul>
+
+			@if(count($innercampuscourses) > 0 )
+	         @foreach($innercampuscourses as $innercampuscourse)	
+				<a href="/icriindia/public/innercampuscourse/{{$innercampuscourse->id}}"><i class="fa fa-caret-right"></i><li>{{$innercampuscourse->campus_name}}
+				{{$innercampuscourse->course_name}}</li></a>
+				
+				@endforeach
+		      @endif
+
+
+			</ul>
+		</div>
+
+
 	</div>
 
 	<div class="id_call_scroller">

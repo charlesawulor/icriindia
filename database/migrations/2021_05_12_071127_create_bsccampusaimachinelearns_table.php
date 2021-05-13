@@ -15,6 +15,8 @@ class CreateBsccampusaimachinelearnsTable extends Migration
     {
         Schema::create('bsccampusaimachinelearns', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('image');
+            $table->string('campus_name');
             $table->timestamps();
         });
     }

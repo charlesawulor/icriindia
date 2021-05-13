@@ -5,19 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 
-use App\logoicri;
-use App\Admission;
-use App\legacy;
-use App\campus;
-use App\recruiter;
-use App\topcourse;
-use App\address;
-use App\subscriber;
-use App\usefullink;
-use App\socialconnectfacebook;
-use App\socialconnectinstagram;
-use App\socialconnecttwitter;
-use App\hiringpartner;
+
 
 
 
@@ -82,18 +70,7 @@ class publichlthController extends Controller
      */
     public function index()
     {
-        $logoicris = logoicri::orderBy('id','asc')->get();
-        $admissions = Admission::orderBy('status','asc')->get();
-        $legacies = legacy::orderBy('volume','asc')->get();
-        $campuses = campus::orderBy('id','asc')->get();
-        $recruiters = recruiter::orderBy('image','asc')->get();
-        $topcourses = topcourse::orderBy('degree','asc')->get();
-        $addresses = address::orderBy('location','asc')->get();
-        $usefullinks = usefullink::orderBy('title','asc')->get();
-        $socialconnectfacebooks = socialconnectfacebook::orderBy('link','asc')->get();
-        $socialconnectinstagrams = socialconnectinstagram::orderBy('link','asc')->get();
-        $socialconnecttwitters = socialconnecttwitter::orderBy('link','asc')->get();
-        $hiringpartners = hiringpartner::orderBy('image','asc')->get();
+
 
 
 
@@ -152,7 +129,7 @@ class publichlthController extends Controller
 
 
      
-        return view('public-health',compact ( 'logoicris','admissions', 'legacies',  'campuses','recruiters', 'topcourses', 'addresses', 'usefullinks','socialconnectfacebooks', 'socialconnectinstagrams', 'socialconnecttwitters','hiringpartners', 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies', 'bsceligibilityclinicalpsies', 'bsccurriculumclinicalpsies', 'bsccareerprospectclinicalpsies', 'bsccampusclinicalpsies', 'pgdeligibilityclinicalpsies', 'pgdcurriculumclinicalpsies', 'pgdcareerprospectclinicalpsies', 'pgdcampusclinicalpsies', 'phdeligibilityclinicalpsies', 'phdcurriculumclinicalpsies', 'phdcareerprospectclinicalpsies', 'phdcampusclinicalpsies', 'placementclinicalpsies', 'publichlths', 'whypublichlths', 'deliverablespublichlths', 'whyicripublichlths', 'msceligibilitypublichlths', 'msccurriculumpublichlths', 'msccareerprospectpublichlths', 'msccampuspublichlths', 'bsceligibilitypublichlths', 'bsccurriculumpublichlths', 'bsccareerprospectpublichlths','bsccampuspublichlths', 'pgdeligibilitypublichlths', 'pgdcurriculumpublichlths', 'pgdcareerprospectpublichlths', 'pgdcampuspublichlths', 'phdeligibilitypublichlths', 'phdcurriculumpublichlths', 'phdcareerprospectpublichlths', 'phdcampuspublichlths', 'placementpublichlths' ));
+        return view('public-health',compact ( 'clinicalpsies', 'whyclinicalpsies', 'deliverablesclinicalpsies', 'whyicriclinicalpsies', 'msceligibilityclinicalpsies', 'msccurriculumclinicalpsies', 'msccareerprospectclinicalpsies', 'msccampusclinicalpsies', 'bsceligibilityclinicalpsies', 'bsccurriculumclinicalpsies', 'bsccareerprospectclinicalpsies', 'bsccampusclinicalpsies', 'pgdeligibilityclinicalpsies', 'pgdcurriculumclinicalpsies', 'pgdcareerprospectclinicalpsies', 'pgdcampusclinicalpsies', 'phdeligibilityclinicalpsies', 'phdcurriculumclinicalpsies', 'phdcareerprospectclinicalpsies', 'phdcampusclinicalpsies', 'placementclinicalpsies', 'publichlths', 'whypublichlths', 'deliverablespublichlths', 'whyicripublichlths', 'msceligibilitypublichlths', 'msccurriculumpublichlths', 'msccareerprospectpublichlths', 'msccampuspublichlths', 'bsceligibilitypublichlths', 'bsccurriculumpublichlths', 'bsccareerprospectpublichlths','bsccampuspublichlths', 'pgdeligibilitypublichlths', 'pgdcurriculumpublichlths', 'pgdcareerprospectpublichlths', 'pgdcampuspublichlths', 'phdeligibilitypublichlths', 'phdcurriculumpublichlths', 'phdcareerprospectpublichlths', 'phdcampuspublichlths', 'placementpublichlths' ));
     }
     
     /**
