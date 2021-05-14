@@ -5,19 +5,26 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
+
 	<link rel="icon" href="{{asset('Images/fevicon.png')}}" type="image/gif" sizes="16x16">
 
 	<link rel="stylesheet" href="{{asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')}}">
+
 	<script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')}}"></script>
+
 	<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')}}"></script>
+
 	<script src="{{asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')}}"></script>
+
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 	<script src="{{asset('./js/script.js')}}"></script>
+
 	<link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')}}">
 
 	<!-- font awsome cdn -->
 
 	<link rel="stylesheet" type="text/css" href="{{asset('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}">
+
 	<script src="{{asset('https://kit.fontawesome.com/d97382eb84.js')}}" crossorigin="anonymous"></script>
 
 	<!-- font awsome cdn -->
@@ -25,13 +32,16 @@
 	<!-- owl carasol cdn -->
 
 	<link rel="stylesheet" type="text/css" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css')}}">
+
 	<link rel="stylesheet" type="text/css" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')}}">
+
 	<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')}}"></script>
 	<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js')}}"></script>
 
 	<!-- owl carasol cdn End -->
 
 	<link rel="stylesheet" type="text/css" href="{{asset('css/clinical_research.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/delhi-compus.css')}}">
 
 
 	<!-- font awsome cdn -->
@@ -162,8 +172,7 @@
           
 		<div class="footer_cata_option d-flex">
 	
-
-
+	
 
 			<a class="catag" href="/icriindia/public/clinical-research/">Clinical Research</a>
 			<a class="catag" href="/icriindia/public/aviation-management/">Aviation Management</a>
@@ -211,38 +220,38 @@
 		</div>
 		<div class="d-flex justify-content-between socialmedia_wrap">
 			<div class="barcode">
-				<img src="Images/Paytm_scanner.jpg" alt="barcode">
+				<img src="{{asset('Images/Paytm_scanner.jpg')}}" alt="barcode">
 			</div>
 			<div class="socialmedia">
 				<div class="connect_title">Social Connect</div>
 				<div class="social_media_icon">
 		@if(count($socialconnectfacebooks) > 0)	
 		      @foreach($socialconnectfacebooks as $socialconnectfacebook)
-					<a href="{{$socialconnectfacebook->link}}"><img src="Images/facebook.png" alt="facebook"></a>
+					<a href="{{$socialconnectfacebook->link}}"><img src="{{asset('Images/facebook.png')}}" alt="facebook"></a>
 				@endforeach
 		@endif
 
 
 		@if(count($socialconnectinstagrams) > 0)	
 		       @foreach($socialconnectinstagrams as $socialconnectinstagram)    
-					<a href="{{$socialconnectinstagram->link}}"><img src="Images/instagram.png" alt="instagram"></a>
+					<a href="{{$socialconnectinstagram->link}}"><img src="{{asset('Images/instagram.png')}}" alt="instagram"></a>
 
 			    @endforeach
 		@endif
 
 		@if(count($socialconnecttwitters) > 0)	
 		     @foreach($socialconnecttwitters as $socialconnecttwitter)  
-					<a href="{{$socialconnecttwitter->link}}"><img src="Images/twitter.png" alt="twitter"></a>
+					<a href="{{$socialconnecttwitter->link}}"><img src="{{asset('Images/twitter.png')}}" alt="twitter"></a>
 					@endforeach
 		@endif 
-					<a href="#"><img src="Images/linkedin.png" alt="linkedin"></a>
-					<a href="#"><img src="Images/youtube.png" alt="youtube"></a>
-					<a href="#"><img src="Images/whats_app.png" alt="whats_app"></a>
-					<a href="#"><img src="Images/quora.png" alt="quora"></a>
+					<a href="#"><img src="{{asset('Images/linkedin.png')}}" alt="linkedin"></a>
+					<a href="#"><img src="{{asset('Images/youtube.png')}}" alt="youtube"></a>
+					<a href="#"><img src="{{asset('Images/whats_app.png')}}" alt="whats_app"></a>
+					<a href="#"><img src="{{asset('Images/quora.png')}}" alt="quora"></a>
 				</div>
 			</div>
 			<div class="barcode">
-				<img src="Images/Paytm_scanner.jpg" alt="barcode">
+				<img src="{{asset('Images/Paytm_scanner.jpg')}}" alt="barcode">
 			</div>
 		</div>
 	</div>

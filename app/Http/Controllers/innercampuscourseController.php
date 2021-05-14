@@ -19,6 +19,7 @@ class innercampuscourseController extends Controller
         $innercampuscourses = innercampuscourse::orderBy('id','asc')->get();
 
         return view('indexpage',compact ( 'innercampuscourses'));
+       
 
 
 
@@ -54,8 +55,9 @@ class innercampuscourseController extends Controller
      */
     public function show($id)
     {
-        $innercampuscourse=innercampuscourse::find($id);
-        return view('innercampuscourse')->with('innercampuscourses', '$innercampuscourses');
+        $innercampuscourses = innercampuscourse::find($id);
+        return view('innercampuscourse')->with('innercampuscourses',$innercampuscourses);
+
     }
 
     /**

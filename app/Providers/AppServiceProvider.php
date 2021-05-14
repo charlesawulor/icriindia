@@ -20,6 +20,7 @@ use App\socialconnectinstagram;
 use App\socialconnecttwitter;
 use App\hiringpartner;
 
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -52,6 +53,7 @@ class AppServiceProvider extends ServiceProvider
        View::share('socialconnectinstagrams', socialconnectinstagram::orderBy('id')->get());
        View::share('socialconnecttwitters', socialconnecttwitter::orderBy('id')->get());
        View::share('hiringpartners', hiringpartner::orderBy('id')->get());
+
 
     }
 }
