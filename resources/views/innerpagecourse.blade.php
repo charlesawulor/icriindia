@@ -5,8 +5,7 @@
 @extends('layouts.app1')
 
 @section('content')
-<div class="call_func"><img src="Images/call_us_icon.png" class="img-fluid">Free Counselling</div>
-<div class="call_func wp_func"><i class="fa fa-whatsapp"></i>Call Us</div>
+
 
 <!-- left sticky stuffs end -->
 
