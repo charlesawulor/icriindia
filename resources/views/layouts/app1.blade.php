@@ -118,9 +118,6 @@
 <div class="call_func wp_func"><i class="fa fa-whatsapp"></i>Call Us</div>
 
 
-
-
-
 @yield('content')
 
 
